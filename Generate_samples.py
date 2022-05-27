@@ -18,6 +18,7 @@ import networkx as nx
 import plotly
 import thewalrus.quantum as qt
 import thewalrus.samples as sp
+from thewalrus.symplectic import loss
 
 def create_directory():
     cwd=os.getcwd()
@@ -60,11 +61,34 @@ def create_cov(Adj,c,alpha,n_subspace,hbar=2):
     cov_rescaled = qt.Covmat(inv(np.eye(2 * n_subspace) - qt.Xmat(n_subspace) @ A_matrix),hbar=hbar)  # Covariance matrix of the gaussian state, a 2M*2M array
     return cov_rescaled
 
-def samples_cov(Adj,c,alpha,n_subspace,nsamples,data_directory,hbar=2):
+def samples_cov(Adj,c,alpha,n_subspace,nsamples,data_directory,loss_mode=0,mu=None,hbar=2):
     #Generate samples from the adjacency matrix
+    # Adj is the complete adjacency matrix: not necessarily the one used for the sampling!!!!
+    # c is the scaling coefficient of the omega matrix
+    # alpha is a coefficient that has to be chosen carefully and could introduce a bias in the clique detection
+    # nsubpsace is the dimension of the submatrix from the total adjacency matrix to speed-up the sampling
+    # nsamples is the number of samples we want to produce
+    # data_directory is the directory for the csv results file
+    # loss is a float number taking into account the loss
+    # mu is the displacement
+    # Return a 2D numpy array of samples
+    t=1.-loss_mode
+    if mu==None:
+        mu=np.zeros(2*n_subspace)
+
     cov_rescaled=create_cov(Adj,c,alpha,n_subspace,hbar=hbar)
-    samples=sp.hafnian_sample_state(cov=cov_rescaled, samples=nsamples)
-    np.savetxt(data_directory + '\\' + 'nsamples={:.1f}'.format(nsamples) + '_nsubspace={:.1f}'.format(n_subspace) + '_samples_cov.csv', samples, delimiter=',')
+
+
+    if loss_mode!=0:
+        mu_loss=mu.copy()
+        cov_loss = cov_rescaled.copy()
+        for i in range (n_subspace):
+            mu_loss,cov_loss=loss(mu=mu_loss,cov=cov_loss,T=t,nbar=0,mode=i)
+        samples = sp.hafnian_sample_state(cov=cov_loss, mean=mu_loss, samples=nsamples,hbar=hbar)
+        np.savetxt(data_directory + '\\' + 'nsamples={:.1f}'.format(nsamples) + '_nsubspace={:.1f}'.format(n_subspace) +'loss={:.2f}'.format(loss_mode)+ '_samples_cov.csv', samples, delimiter=',')
+    else:
+        samples=sp.hafnian_sample_state(cov=cov_rescaled,mean=mu, samples=nsamples)
+        np.savetxt(data_directory + '\\' + 'nsamples={:.1f}'.format(nsamples) + '_nsubspace={:.1f}'.format(n_subspace) + '_samples_cov.csv', samples, delimiter=',')
     return samples
 
 def mean_n(squeezing_params,is_lambda=True):

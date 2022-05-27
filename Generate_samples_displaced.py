@@ -41,7 +41,7 @@ weight=np.diag(Adj)
 c1=qt.adj_scaling(Adj,0.45)
 c2=qt.adj_scaling(laplacian(Adj),0.45)
 print(Adj.shape)
-nsamples=100 #number of samples
+nsamples=5000 #number of samples
 samples=samples_cov(Adj,c,alpha,n_subspace,nsamples,data_directory,hbar=2)
 hist_cov=hist_coinc(samples,n_subspace)
 #Test between the hafnian_sample_state taking a cov matrix as an argument and hafnian_sample_graph taking an adj matrix and mean photon number
