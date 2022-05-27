@@ -77,7 +77,7 @@ def mean_n(squeezing_params,is_lambda=True):
             n+=(squeezing_params[i])**2/(1-(squeezing_params[i])**2)
     return n
 
-def hist_coinc(samples):
+def hist_coinc(samples,n_subspace):
     #Return normalized histogram from click coincidence between the modes
     samples_2fold = np.array(postselect(samples, 2, 2))
     samples_2fold = samples_2fold.astype(int)
@@ -119,7 +119,7 @@ if __name__=='__main__':
     print(Adj.shape)
     nsamples=10000 #number of samples
     samples=samples_cov(Adj,c,alpha,n_subspace,nsamples,data_directory,hbar=2)
-    hist_cov=hist_coinc(samples)
+    hist_cov=hist_coinc(samples,n_subspace)
     #Test between the hafnian_sample_state taking a cov matrix as an argument and hafnian_sample_graph taking an adj matrix and mean photon number
     omega = create_omega(c, 0, weight)
 
@@ -135,7 +135,7 @@ if __name__=='__main__':
     print(mean_photon_rescaled)
 
     samples_adj = hafnian_sample_graph(laplacian(Adj), mean_photon_rescaled, samples=nsamples)
-    hist_adj=hist_coinc(samples_adj)
+    hist_adj=hist_coinc(samples_adj,n_subspace)
 
     np.savetxt(data_directory + '\\' +'nsamples={:.1f}'.format(nsamples)+'_nsubspace={:.1f}'.format(n_subspace)+'_samples_adj.csv', samples_adj, delimiter=',')
     tvd_v=tvd(hist_adj,hist_cov)
