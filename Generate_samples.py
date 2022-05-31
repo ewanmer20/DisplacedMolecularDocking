@@ -2,6 +2,9 @@ import traceback  # For displaying exceptions
 import os
 
 import logging
+
+import matplotlib.pyplot as plt
+
 from log_utils import LogUtils
 from datetime import datetime  # For current day and time
 from datetime import date
@@ -125,49 +128,6 @@ def hist_coinc(samples,n_subspace):
 def tvd(hist1,hist2):
     #Return the Total Variation distance between two normalized distribution hist1 and hist2, two 1D numpy arrays of same size
     return 0.5*np.sum(np.abs(hist1-hist2))
-if __name__=='__main__':
-    #Convention hbar=2 like the one used in Strawberry fields and The Walrus
-    # The convention used is an xxpp ordering and handling position, momentum operatorss
-    LogUtils.log_config('Generate_samples')
-    start_all=time()
-    n_subspace=10 # Has to be less or equal to 24
-    data_directory = create_directory()
-    TA = data.TaceAs()
-    Adj = TA.adj
-    Adj=Adj[:n_subspace,:n_subspace]
-    alpha=0
-    c=0.2
-    weight=np.diag(Adj)
-    c1=qt.adj_scaling(Adj,0.45)
-    c2=qt.adj_scaling(laplacian(Adj),0.45)
-    print(Adj.shape)
-    nsamples=10000 #number of samples
-    samples=samples_cov(Adj,c,alpha,n_subspace,nsamples,data_directory,hbar=2)
-    hist_cov=hist_coinc(samples,n_subspace)
-    #Test between the hafnian_sample_state taking a cov matrix as an argument and hafnian_sample_graph taking an adj matrix and mean photon number
-    omega = create_omega(c, 0, weight)
-
-
-    # With this rescaling convention tanh(ri) can be replaced by tanh(ri)*c**2 where tanh(ri) has been calculated from laplacian(Adj)
-    A_rescaled = np.dot(np.dot(omega, laplacian(Adj)), omega)
-
-    (lambdal, U) = takagi(laplacian(Adj))
-    (lambdal_rescaled, U_rescaled) = takagi(A_rescaled)
-
-    # Check the mean photon number
-    mean_photon_rescaled=mean_n(lambdal_rescaled)
-    print(mean_photon_rescaled)
-
-    samples_adj = hafnian_sample_graph(laplacian(Adj), mean_photon_rescaled, samples=nsamples)
-    hist_adj=hist_coinc(samples_adj,n_subspace)
-
-    np.savetxt(data_directory + '\\' +'nsamples={:.1f}'.format(nsamples)+'_nsubspace={:.1f}'.format(n_subspace)+'_samples_adj.csv', samples_adj, delimiter=',')
-    tvd_v=tvd(hist_adj,hist_cov)
-
-    time=time()-start_all
-    print('Total Variation Distance between the covariance matrix and adjacency matrix method for N={:.3f}, {:.3f}'.format(nsamples,tvd_v))
-    # print('Sampling time from the hafnian distribution for N={:.3f}'.format(nsamples,hafnian_time))
-    print('Total running time{:.3f}'.format(time))
 
 
 
