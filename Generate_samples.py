@@ -43,10 +43,10 @@ def create_omega(c,alpha,weight):
 
 def create_Amatrix(Adj,c,alpha,n_subspace):
     #Create and return the A_matrix used to generate the samples from a GBS experiment
-    #Adj is the complete adjacency matrix: not necessarily the one used for the sampling!!!!
+    #Adj is the complete adjacency matrix: not necessarily the one used for the sampling since we can take a submatrix with the dimension tuned by n_subspace!!!!
     #c is the scaling coefficient of the omega matrix
     #alpha is a coefficient that has to be chosen carefully and could introduce a bias in the clique detection
-    #nsubpsace is the dimension of the submatrix from the total adjacency matrix to speed-up the sampling
+    #nsubpsace is a positive integer for the dimension of the submatrix from the total adjacency matrix to speed-up the sampling
     Adj=Adj[:n_subspace,:n_subspace]
     weight = np.diag(Adj)
     omega = create_omega(c, alpha, weight)
