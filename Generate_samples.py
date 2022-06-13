@@ -1,6 +1,6 @@
 import traceback  # For displaying exceptions
 import os
-
+import csv
 import logging
 
 import matplotlib.pyplot as plt
@@ -22,6 +22,7 @@ import plotly
 import thewalrus.quantum as qt
 import thewalrus.samples as sp
 from thewalrus.symplectic import loss
+EXP_PATH=os.getcwd()
 
 def create_directory():
     cwd=os.getcwd()
@@ -32,26 +33,139 @@ def create_directory():
     os.makedirs(logging_filename)
     return logging_filename
 
-def create_omega(c,alpha,weight):
-    ##Return the rescaling matrix omega, a 2D complex array
-    ## c is the scaling coefficient controlling the squeezing required for GBS
-    ## alpha is a coefficient that has to be chosen carefully and could introduce a bias in the clique detection
-    ## weights is a 1D array of complex coefficients of the diagonal elements of the adjacency matrix of the graph
-    n=len(weight)
-    omega=c*(np.eye(n,dtype=np.complex64)+alpha*np.diag(weight))
+def get_my_keys(tau):
+
+    # function to retrieve the keys for the BIG matrix, according to the
+    # formatting produced by make_adj.py
+    # # tau is the flexibility constant used to define the adjacency matrix
+    # returns a list of list of strings
+
+    raw_keys = []
+    with open(EXP_PATH + "/big/key_tau" + str(tau) + "_.csv",
+              newline="") as csvfile:
+        keymaker = csv.reader(csvfile, delimiter=";", quotechar="'")
+        for row in keymaker:
+            raw_keys.append(row)
+    raw_keys = raw_keys[0]
+    raw_keys.pop()
+
+    # put the keys in list of list format
+    list_keys = []
+    for key in raw_keys:
+        p_type = key[1:4]
+        l_type = key[5:-1]
+        while p_type[-1].isdigit():
+            p_type = p_type[:-1]
+        while l_type[-1].isdigit():
+            l_type = l_type[:-1]
+
+        list_keys.append([p_type, l_type])
+
+    return list_keys
+
+def make_potential_vect():
+    """
+    function to generate the potential matrix given the potential value in Banchi et al. using the same formatting
+    """
+    ligand_dists, pocket_dists, ligand_key, pocket_key = get_data()
+
+    v_set = [[i, j] for i in range(len(ligand_key))
+             for j in range(len(pocket_key))]
+
+    potential_vect=[]
+    potential_data=np.array([[0.5244,0.6686,0.1453],[0.6686,0.5478,0.2317],[0.1453,0.2317,0.0504]])
+    # potential data given in the table S1 given in Banchi et al.: First coloumn: Hydrogen-bond donor (HD)
+    # Second column: Hydrogen-bond acceptor (HA) and in the last column: Hydrophobe (Hp)
+    for vertex in v_set:
+        row=str(ligand_key[vertex[0]])[0:2]
+        column=str(pocket_key[vertex[1]])[0:2]
+        row_index=mapping(row)
+        column_index=mapping(column)
+        potential_vect.append(potential_data[row_index,column_index])
+    potential_vect=np.array(potential_vect)
+    return potential_vect
+
+def get_data():
+
+    ligand_dists = np.array([
+        [0.0, 4.6, 9.1, 9.9],
+        [0.0, 0.0, 8.1, 8.4],
+        [0.0, 0.0, 0.0, 1.2],
+        [0.0, 0.0, 0.0, 0.0],
+    ])
+    ligand_dists = ligand_dists + ligand_dists.T
+    ligand_key = ["HD1", "HA1", "Hp1", "Hp2"]
+
+
+    pocket_dists = np.array([
+        [0.0, 2.8, 4.6, 7.6, 5.9, 11.1],
+        [0.0, 0.0, 2.7, 5.1, 3.6, 10.5],
+        [0.0, 0.0, 0.0, 3.9, 3.5, 12.0],
+        [0.0, 0.0, 0.0, 0.0, 2.2, 10.6],
+        [0.0, 0.0, 0.0, 0.0, 0.0, 9.00],
+        [0.0, 0.0, 0.0, 0.0, 0.0, 0.00],
+
+    ])
+    pocket_dists = pocket_dists + pocket_dists.T
+    pocket_key = ["HD1", "HD2", "HA1", "HA2", "HA3", "Hp1"]
+
+
+    return ligand_dists, pocket_dists, ligand_key, pocket_key
+
+
+def mapping(pharmacopore):
+            if pharmacopore=='HD':
+                return 0
+            elif pharmacopore=='HA':
+                return 1
+            elif pharmacopore=='Hp':
+                return 2
+
+
+
+
+def make_omega(list_keys, renorm, alpha):
+    """
+    function to generate the rescaling matrix omega, as defined in Banchi et.
+    al.
+
+    returns a 2-d numpy array
+    """
+    # generate vertex weights
+
+    # big_potentials = []
+    # print(list_keys)
+    # for pair in list_keys:
+    #     row = list_keys.index(pair[0])
+    #     col = list_keys.index(pair[1])
+    #     big_potentials.append(potential_mat[row, col])
+    big_potentials=make_potential_vect()
+
+
+    # generate the rescaling matrix Omega
+    # c and alpha are tunable parameters
+    # WARNING: they must be carefully chosen.
+    omega = renorm * (np.eye(len(big_potentials)) +
+                      alpha * np.diag(big_potentials))
     return omega
 
-def create_Amatrix(Adj,c,alpha,n_subspace):
+
+# define pharmacophore interaction potentials in a matrix
+# these are copied straight from table S1 in Banchi et al.
+
+
+
+def create_Amatrix(Adj,c,alpha,n_subspace,tau=1.1):
     #Create and return the A_matrix used to generate the samples from a GBS experiment
     #Adj is the complete adjacency matrix: not necessarily the one used for the sampling since we can take a submatrix with the dimension tuned by n_subspace!!!!
     #c is the scaling coefficient of the omega matrix
     #alpha is a coefficient that has to be chosen carefully and could introduce a bias in the clique detection
     #nsubpsace is a positive integer for the dimension of the submatrix from the total adjacency matrix to speed-up the sampling
+    #tau is the flexibility constant used to define the adjacency matrix with the formatting from make_adj.py. The default value for tau is the one used for Tace-As in Banchi et al.
     Adj=Adj[:n_subspace,:n_subspace]
-    weight = np.diag(Adj)
-    omega = create_omega(c, alpha, weight)
-    A_rescaled=np.dot(np.dot(omega, laplacian(Adj)), omega)
-    A_matrix = np.block([[A_rescaled, np.zeros((n_subspace, n_subspace))], [np.zeros((n_subspace, n_subspace)), np.conj(A_rescaled)]])
+    omega = make_omega(get_my_keys(tau),c, alpha)[:n_subspace,:n_subspace]
+    BIG=np.dot(np.dot(omega, laplacian(Adj)), omega)
+    A_matrix = np.block([[BIG, np.zeros((n_subspace, n_subspace))], [np.zeros((n_subspace, n_subspace)), np.conj(BIG)]])
     return A_matrix
 
 def create_cov(Adj,c,alpha,n_subspace,hbar=2):
@@ -80,6 +194,7 @@ def samples_cov(Adj,c,alpha,n_subspace,nsamples,data_directory,loss_mode=0,mu=No
         mu=np.zeros(2*n_subspace)
 
     cov_rescaled=create_cov(Adj,c,alpha,n_subspace,hbar=hbar)
+    photon_mean = mean_n(cov_rescaled)  # initial mean photon number before the interferometer
 
 
     if loss_mode!=0:
@@ -88,20 +203,19 @@ def samples_cov(Adj,c,alpha,n_subspace,nsamples,data_directory,loss_mode=0,mu=No
         for i in range (n_subspace):
             mu_loss,cov_loss=loss(mu=mu_loss,cov=cov_loss,T=t,nbar=0,mode=i)
         samples = sp.hafnian_sample_state(cov=cov_loss, mean=mu_loss, samples=nsamples,hbar=hbar)
-        np.savetxt(data_directory + '\\' + 'nsamples={:.1f}'.format(nsamples) + '_nsubspace={:.1f}'.format(n_subspace) +'loss={:.2f}'.format(loss_mode)+ '_samples_cov.csv', samples, delimiter=',')
+        np.savetxt(data_directory + '\\' + 'nsamples={:.1f}'.format(nsamples)+'photon_mean={:.2f}'.format(photon_mean) + '_nsubspace={:.1f}'.format(n_subspace) +'loss={:.2f}'.format(loss_mode)+ '_samples_cov.csv', samples, delimiter=',')
     else:
         samples=sp.hafnian_sample_state(cov=cov_rescaled,mean=mu, samples=nsamples)
-        np.savetxt(data_directory + '\\' + 'nsamples={:.1f}'.format(nsamples) + '_nsubspace={:.1f}'.format(n_subspace) + '_samples_cov.csv', samples, delimiter=',')
+        np.savetxt(data_directory + '\\' + 'nsamples={:.1f}'.format(nsamples) +'photon_mean={:.2f}'.format(photon_mean) + '_nsubspace={:.1f}'.format(n_subspace) + '_samples_cov.csv', samples, delimiter=',')
     return samples
 
-def mean_n(squeezing_params,is_lambda=True):
+def mean_n(BIG):
     ##Return the mean photon number for a normal GBS experiment
-    ## lambdal is the list of squeezing coefficients
-    ## c is the scaling coefficient of the omega matrix
+    ## BIG is the binding interaction graph, a numpy array
     n = 0
-    if is_lambda:
-        for i in range(len(squeezing_params)):
-            n+=(squeezing_params[i])**2/(1-(squeezing_params[i])**2)
+    (lambdal_rescaled, U_rescaled) = takagi(BIG)
+    for i in range(len(lambdal_rescaled)):
+        n+=(lambdal_rescaled[i])**2/(1-(lambdal_rescaled[i])**2)
     return n
 
 def hist_coinc(samples,n_subspace):
@@ -128,8 +242,6 @@ def hist_coinc(samples,n_subspace):
 def tvd(hist1,hist2):
     #Return the Total Variation distance between two normalized distribution hist1 and hist2, two 1D numpy arrays of same size
     return 0.5*np.sum(np.abs(hist1-hist2))
-
-
 
 
 

@@ -18,7 +18,7 @@ import plotly
 import thewalrus.quantum as qt
 import thewalrus.samples as sp
 from Generate_samples import *
-
+EXP_PATH=os.getcwd()
 def create_directory():
     cwd=os.getcwd()
     today_date=date.today()
