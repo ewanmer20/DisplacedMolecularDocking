@@ -13,7 +13,7 @@ if __name__=='__main__':
     data_directory = create_directory()
     TA = data.TaceAs()
     Adj = TA.adj
-    Adj=Adj[:n_subspace,:n_subspace]
+    Adj_reduced=TA.adj[:10,:10]
     alpha=0
     c=0.2
     tau=1.1 #Default value for the flexibility constant in Tace-As
@@ -21,23 +21,31 @@ if __name__=='__main__':
     nsamples=20000 #number of samples
     alpha=np.logspace(-1,3,50)
     tvd_hist=[]
-    # Test between the hafnian_sample_state taking a cov matrix as an argument and hafnian_sample_graph taking an adj matrix and mean photon number
-
-    omega = make_omega(get_my_keys(tau),c, alpha)[:10,:10]
-
-    # With this rescaling convention tanh(ri) can be replaced by tanh(ri)*c**2 where tanh(ri) has been calculated from laplacian(Adj)
-    BIG = np.dot(np.dot(omega, laplacian(Adj)), omega)
-
-    # Check the mean photon number
-    mean_photon_rescaled = mean_n(BIG)
+    omega = make_omega(get_my_keys(tau), c,0)[:10,:10]
+    BIG_reduced= np.dot(np.dot(omega, laplacian(Adj_reduced)), omega)
+    mean_photon_rescaled=mean_n(BIG_reduced)
+    samples_adj = hafnian_sample_graph(BIG_reduced, mean_photon_rescaled, samples=nsamples)
+    hist_adj = hist_coinc(samples_adj, n_subspace)
     print(mean_photon_rescaled)
-    for i in range(len(alpha)):
-        # samples_adj = hafnian_sample_graph(laplacian(Adj), mean_photon_rescaled, samples=nsamples)
-        # hist_adj = hist_coinc(samples_adj, n_subspace)
 
+
+
+
+
+    for i in range(len(alpha)):
+        # Test between the hafnian_sample_state taking a cov matrix as an argument and hafnian_sample_graph taking an adj matrix and mean photon number
+
+        # With this rescaling convention tanh(ri) can be replaced by tanh(ri)*c**2 where tanh(ri) has been calculated from laplacian(Adj)
+        omega = make_omega(get_my_keys(tau), c, alpha[i])[:10, :10]
+        BIG_reduced = np.dot(np.dot(omega, laplacian(Adj_reduced)), omega)
         samples=samples_cov(Adj,c,alpha[i],n_subspace,nsamples,data_directory,hbar=2)
-        # hist_cov=hist_coinc(samples,n_subspace)
-        # tvd_hist.append(tvd(hist_adj,hist_cov))
+        hist_cov=hist_coinc(samples,n_subspace)
+        tvd_hist.append(tvd(hist_adj,hist_cov))
+
+        # Check the mean photon number
+
+        print(mean_n(BIG_reduced))
+        print(i)
 
 
     time=time()-start_all

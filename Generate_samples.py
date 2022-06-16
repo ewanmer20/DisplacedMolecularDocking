@@ -194,7 +194,7 @@ def samples_cov(Adj,c,alpha,n_subspace,nsamples,data_directory,loss_mode=0,mu=No
         mu=np.zeros(2*n_subspace)
 
     cov_rescaled=create_cov(Adj,c,alpha,n_subspace,hbar=hbar)
-    photon_mean = mean_n(cov_rescaled)  # initial mean photon number before the interferometer
+
 
 
     if loss_mode!=0:
