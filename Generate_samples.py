@@ -14,6 +14,7 @@ from strawberryfields.apps import data, plot, sample, clique
 from strawberryfields.apps.sample import postselect
 from strawberryfields.decompositions import takagi
 from scipy.sparse.csgraph import laplacian
+from scipy.optimize import minimize_scalar
 from thewalrus.samples import hafnian_sample_graph
 import numpy as np
 from numpy.linalg import inv
@@ -75,7 +76,7 @@ def make_potential_vect():
     potential_vect=[]
     potential_data=np.array([[0.5244,0.6686,0.1453],[0.6686,0.5478,0.2317],[0.1453,0.2317,0.0504]])
     # potential data given in the table S1 given in Banchi et al.: First coloumn: Hydrogen-bond donor (HD)
-    # Second column: Hydrogen-bond acceptor (HA) and in the last column: Hydrophobe (Hp)
+    # Second column: Hydrogen-bond acceptor (HA) and in the last column: Hydrophobe (Hp). To change the ordering, one have to change the mapping function and the potential matrix
     for vertex in v_set:
         row=str(ligand_key[vertex[0]])[0:2]
         column=str(pocket_key[vertex[1]])[0:2]
@@ -124,10 +125,12 @@ def mapping(pharmacopore):
 
 
 
-def make_omega(list_keys, renorm, alpha):
+def make_omega(renorm, alpha):
     """
     function to generate the rescaling matrix omega, as defined in Banchi et.
     al.
+    renorm is a positive scalar that is supposed to control the amount squeezing required
+    alpha is the strength of the weigth potentials in the matrix
 
     returns a 2-d numpy array
     """
@@ -163,7 +166,7 @@ def create_Amatrix(Adj,c,alpha,n_subspace,tau=1.1):
     #nsubpsace is a positive integer for the dimension of the submatrix from the total adjacency matrix to speed-up the sampling
     #tau is the flexibility constant used to define the adjacency matrix with the formatting from make_adj.py. The default value for tau is the one used for Tace-As in Banchi et al.
     Adj=Adj[:n_subspace,:n_subspace]
-    omega = make_omega(get_my_keys(tau),c, alpha)[:n_subspace,:n_subspace]
+    omega = make_omega(c, alpha)[:n_subspace,:n_subspace]
     BIG=np.dot(np.dot(omega, laplacian(Adj)), omega)
     A_matrix = np.block([[BIG, np.zeros((n_subspace, n_subspace))], [np.zeros((n_subspace, n_subspace)), np.conj(BIG)]])
     return A_matrix
@@ -186,7 +189,7 @@ def samples_cov(Adj,c,alpha,n_subspace,nsamples,data_directory,loss_mode=0,mu=No
     # nsubpsace is the dimension of the submatrix from the total adjacency matrix to speed-up the sampling
     # nsamples is the number of samples we want to produce
     # data_directory is the directory for the csv results file
-    # loss is a float number taking into account the loss
+    # loss is a float number taking into account total loss of the GBS experiment including: coupling and collection efficiency, transmission, fiber coupling and detection efficiency
     # mu is the displacement
     # Return a 2D numpy array of samples
     t=1.-loss_mode
@@ -203,10 +206,10 @@ def samples_cov(Adj,c,alpha,n_subspace,nsamples,data_directory,loss_mode=0,mu=No
         for i in range (n_subspace):
             mu_loss,cov_loss=loss(mu=mu_loss,cov=cov_loss,T=t,nbar=0,mode=i)
         samples = sp.hafnian_sample_state(cov=cov_loss, mean=mu_loss, samples=nsamples,hbar=hbar)
-        np.savetxt(data_directory + '\\' + 'nsamples={:.1f}'.format(nsamples)+'photon_mean={:.2f}'.format(photon_mean) + '_nsubspace={:.1f}'.format(n_subspace) +'loss={:.2f}'.format(loss_mode)+ '_samples_cov.csv', samples, delimiter=',')
+        np.savetxt(data_directory + '\\' + 'nsamples={:.1f}'.format(nsamples)+ '_nsubspace={:.1f}'.format(n_subspace) +'loss={:.2f}'.format(loss_mode)+ '_samples_cov.csv', samples, delimiter=',')
     else:
         samples=sp.hafnian_sample_state(cov=cov_rescaled,mean=mu, samples=nsamples)
-        np.savetxt(data_directory + '\\' + 'nsamples={:.1f}'.format(nsamples) +'photon_mean={:.2f}'.format(photon_mean) + '_nsubspace={:.1f}'.format(n_subspace) + '_samples_cov.csv', samples, delimiter=',')
+        np.savetxt(data_directory + '\\' + 'nsamples={:.1f}'.format(nsamples) + '_nsubspace={:.1f}'.format(n_subspace) + '_samples_cov.csv', samples, delimiter=',')
     return samples
 
 def mean_n(BIG):
@@ -242,6 +245,21 @@ def hist_coinc(samples,n_subspace):
 def tvd(hist1,hist2):
     #Return the Total Variation distance between two normalized distribution hist1 and hist2, two 1D numpy arrays of same size
     return 0.5*np.sum(np.abs(hist1-hist2))
+
+def tune_c(alpha,target_n,Adjtot,nsubpsace):
+    #Return the c parameter such that the GBS experiment reaches a mean photon number target
+    #alpha=the alpha at the input of the adjacency matrix
+    #target_n=a positive number representing  target mean photon n
+    #Adjtot= the adjacency matrix of the total graph
+    #nsubspace= the dimension of the considered subspace
+    Adj = Adjtot[:nsubpsace, :nsubpsace]
+    def cost(c,alpha,target_n,Adj,n_subspace):
+        omega = make_omega(c, alpha)[:n_subspace, :n_subspace]
+        BIG = np.dot(np.dot(omega, laplacian(Adj)), omega)
+        return np.abs(target_n-mean_n(BIG))
+    res=minimize_scalar(cost,args=(alpha,target_n,Adj,nsubpsace))
+    return res.x
+
 
 
 
