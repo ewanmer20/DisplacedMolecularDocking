@@ -9,11 +9,10 @@ from time import time
 # tot_samples=log_data(excel_file)
 
 #Loading the graph from TaceAs problem
-TA = np.array(data.TaceAs()[:10000])
-
+TA = np.array(postselect(data.TaceAs()[:20000],8,19))
+print(TA[:2])
 #Using the adjacency matrix reduced to the first 10 modes to be consistent with the GBS simulation
 Adj =  data.TaceAs().adj
-
 
 #Retrieving the potential values for the adjacency matrix
 weights=make_potential_vect()
@@ -35,11 +34,14 @@ print(a)
 
 
 #Find the maximum clique with classical algorithm
-clique_max,clique_weight=find_max_clique(Adj,weights)
+clique_max,clique_weight=find_max_clique(Adj,weights,networkx_conv=False)
 print('clique_max',clique_max)
-print(clique_weight)
+print('clique_weight',clique_weight)
+cwd='big\\big_tau1.1_.csv'
+BIG=log_data(cwd)
+print(BIG)
 
-plot_success_rate_vs_niter(cleaned_GBS_samples=TA,nmax=nmax,Adj=Adj,weights=weights,niter=7)
+plot_success_rate_vs_niter(cleaned_GBS_samples=TA,nmax=nmax,Adj=BIG,weights=weights,niter=20)
 # plot_histogram_clique_values(cleaned_samples,nmax,Adj,weights)
 # samples_GBS=postselect(tot_samples,postselection_number+4,postselection_number+4) # Postselecting the samples according the number of clicks
 

@@ -15,15 +15,19 @@ if __name__=='__main__':
     data_directory = create_directory()
     TA = data.TaceAs()
     Adj = TA.adj
-    Adj_reduced=TA.adj[:10,:10]
-    alpha=0
-    c=0.2
+    alpha=1
     tau=1.1 #Default value for the flexibility constant in Tace-As
     print(Adj.shape)
-    c=tune_c(alpha=1,target_n=10,Adjtot=Adj,nsubpsace=10)
-    omega = make_omega(c,1)[:n_subspace, :n_subspace]
-    BIG = np.dot(np.dot(omega, laplacian(Adj_reduced)), omega)
+    c=tune_c(alpha=1,target_n=10,Adjtot=Adj,nsubpsace=24)
+    omega = make_omega(c,1)
+    BIG = np.dot(np.dot(omega, laplacian(Adj)), omega)
     print(mean_n(BIG))
+    start_all=time()
+
+    samples = samples_cov(Adj, c, alpha, n_subspace=24, nsamples=10000, data_directory=data_directory,loss_mode=0.5, hbar=2)
+    time = time() - start_all
+    print(time)
+
     print(c)
     # nsamples=100000 #number of samples
     # nsamples_list=np.logspace(2,5,20)
