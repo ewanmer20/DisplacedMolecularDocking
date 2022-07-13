@@ -24,7 +24,7 @@ if __name__=='__main__':
     print(mean_n(BIG))
     start_all=time()
 
-    samples = samples_cov(Adj, c, alpha, n_subspace=24, nsamples=10000, data_directory=data_directory,loss_mode=0.5, hbar=2)
+    samples = samples_cov(Adj, c, alpha, n_subspace=24, nsamples=1000, data_directory=data_directory,loss_mode=0.5, hbar=2)
     time = time() - start_all
     print(time)
 

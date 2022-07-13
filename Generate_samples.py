@@ -1,9 +1,6 @@
 import traceback  # For displaying exceptions
 import os
 import csv
-import logging
-
-import matplotlib.pyplot as plt
 
 from log_utils import LogUtils
 from datetime import datetime  # For current day and time
@@ -18,8 +15,6 @@ from scipy.optimize import minimize_scalar
 from thewalrus.samples import hafnian_sample_graph
 import numpy as np
 from numpy.linalg import inv
-import networkx as nx
-import plotly
 import thewalrus.quantum as qt
 import thewalrus.samples as sp
 from thewalrus.symplectic import loss

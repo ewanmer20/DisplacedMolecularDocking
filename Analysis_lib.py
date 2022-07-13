@@ -30,6 +30,7 @@ def log_data(csv_file):
             tot_samples.append(row)
     tot_samples = np.array(tot_samples)
     tot_samples = tot_samples.astype(np.float64)
+    tot_samples=tot_samples.astype(np.int64)
     return tot_samples
 
 def clean_samples(tot_samples,n_max):
@@ -105,34 +106,16 @@ def count_clique_occurence(list_samples,clique):
             count+=1
     return count
 
-# def count_clique_occurence_networkx1(list_samples,clique,graph_ref):
-#     # Count the number of times where a clique occurs in the list of samples
-#     # list_samples is the list of samples considered
-#     # clique is the clique we are considering
-#     # WARNING: Assuming networkx convention for each arguments!
-#     count=0
-#     G2 = graph_ref.subgraph(clique)
-#     for s in list_samples:
-#         # if len(s)==len(clique) and (np.sort(s)==np.sort(clique)).all():
-#         #     count += 1
-#         G1=graph_ref.subgraph(s)
-#         if nx.is_isomorphic(G1,G2)==True:
-#             count+=1
-#     return count
-
 def count_clique_occurence_networkx(list_samples,clique):
     # Count the number of times where a clique occurs in the list of samples
     # list_samples is the list of samples considered
     # clique is the clique we are considering
     # WARNING: Assuming networkx convention for each arguments!
     count=0
-    # G2 = graph_ref.subgraph(clique)
     for s in list_samples:
         if len(s)==len(clique) and (np.sort(s)==np.sort(clique)).all():
             count += 1
-        # G1=graph_ref.subgraph(s)
-        # if nx.is_isomorphic(G1,G2)==True:
-        #     count+=1
+
     return count
 
 
@@ -200,7 +183,7 @@ def plot_histogram(tot_samples,plot=True,phot_dist=False):
         else:
             pass
 
-        return hist, nmax,phot_dist
+        return hist, nmax,photon_number
 
 
 def plot_success_rate_vs_niter(cleaned_GBS_samples,nmax,Adj,niter,weights,plot=True):
@@ -217,9 +200,14 @@ def plot_success_rate_vs_niter(cleaned_GBS_samples,nmax,Adj,niter,weights,plot=T
     if len(weights)!=len(Adj):
         raise Exception("Weigths and Adj needs the same length")
     _,_,photo_dist=plot_histogram(cleaned_GBS_samples,plot=False,phot_dist=True)
-    subgraph_size=np.random.normal(loc=np.mean(photo_dist),scale=np.std(photo_dist),size=len(cleaned_GBS_samples)).astype(np.int64)
-    samples_uni=np.array([list(np.random.choice(len(Adj),subgraph_size[i],replace=False)) for i in range(len(cleaned_GBS_samples))]) # generates uniform samples in the networkx convention
+    print('photo_dist',photo_dist[:2])
+    print('mean',np.mean(photo_dist))
+    print('std',np.std(photo_dist))
+
+    samples_uni=np.array([list(np.random.choice(len(Adj),np.abs(photo_dist[i]),replace=False)) for i in range(len(cleaned_GBS_samples))]) # generates uniform samples in the networkx convention
+    print('samples_uni', samples_uni[:10])
     max_clique_sample_nxconv=find_max_clique(Adj,weights,networkx_conv=True) #The maximum clique
+
     print('max_clique_plot_success_rate_vs',max_clique_sample_nxconv)
     # Adj_copy=copy.deepcopy(Adj)
     # for i in range(len(Adj)):
@@ -228,33 +216,30 @@ def plot_success_rate_vs_niter(cleaned_GBS_samples,nmax,Adj,niter,weights,plot=T
 
     searched_GBS=copy.deepcopy(cleaned_GBS_samples)
     searched_GBS = sample.to_subgraphs(searched_GBS,graph_ref)
-    print('searched_GBS',searched_GBS[:20])
-    searched_uni=sample.to_subgraphs(copy.deepcopy(samples_uni),graph_ref)
-
-
-
     shrunk_GBS = [clique.shrink(s, graph_ref) for s in searched_GBS]
-    test=clicks_distribution_to_networkx(sample.postselect(networkx_distribution_to_clicks(shrunk_GBS,24),8,8))
-    print('len(test)',len(test))
-    print('shrunk_GBS',test[:20])
+    print('searched_GBS',searched_GBS[:20])
+    searched_uni=copy.deepcopy(samples_uni)
     shrunk_uni = [clique.shrink(s, graph_ref) for s in searched_uni]
+    print('searched_uni',searched_uni[:20])
 
-
-    succ_rate_GBS = [count_clique_occurence_networkx(test, max_clique_sample_nxconv)/(len(test))*100]  # Comparison
-    print(succ_rate_GBS)
-
-    succ_rate_uni = [count_clique_occurence_networkx(shrunk_uni, max_clique_sample_nxconv)]
+    succ_rate_GBS = [count_clique_occurence_networkx(shrunk_GBS, max_clique_sample_nxconv)/(len(shrunk_GBS))*100]  # Comparison
+    succ_rate_uni = [count_clique_occurence_networkx(shrunk_uni, max_clique_sample_nxconv)/(len(shrunk_uni))*100]
     clique_rate_GBS=[]
-    searched_GBS = [clique.search(s, graph_ref,niter,node_select=weights) for s in test]
-    # test2 = clicks_distribution_to_networkx(sample.postselect(networkx_distribution_to_clicks(searched_GBS, 24), 8, 8))
+    clique_rate_uni = []
+    searched_GBS = [clique.search(clique=s, graph=graph_ref,iterations=niter,node_select=weights) for s in shrunk_GBS]
+    searched_uni = [clique.search(clique=s, graph=graph_ref, iterations=niter, node_select=weights) for s in shrunk_uni]
+
     succ_rate_GBS.append(count_clique_occurence_networkx(searched_GBS,max_clique_sample_nxconv)/(len(searched_GBS))*100)#Count the occurences of the max clique in the networkx convention
+    succ_rate_uni.append(count_clique_occurence_networkx(searched_uni, max_clique_sample_nxconv) / (len(searched_uni)) * 100)  # Count the occurences of the max clique in the networkx convention
+
+
     clique_rate_GBS.append(sum([clique.is_clique(graph_ref.subgraph(s)) for s in searched_GBS]))
-    searched_uni = [clique.search(s, graph_ref,niter,node_select=weights) for s in shrunk_uni]
-    succ_rate_uni.append(count_clique_occurence_networkx(searched_uni,max_clique_sample_nxconv)) #Count the occurences of the max clique in the networkx convention
-    clique_rate_uni=[]
     clique_rate_uni.append(sum([clique.is_clique(graph_ref.subgraph(s)) for s in searched_uni]))
+
     print(np.array(succ_rate_GBS))
-    print(np.array(succ_rate_uni)/len(cleaned_GBS_samples)*100)
+    print(np.array(succ_rate_uni))
+    print(searched_uni[:20])
+    print(searched_GBS[:20])
 
 
     # for i in range(1,niter):
