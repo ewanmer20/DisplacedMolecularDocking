@@ -208,7 +208,7 @@ def plot_success_rate_vs_niter(cleaned_GBS_samples,nmax,Adj,niter,weights,plot=T
     print('samples_uni', samples_uni[:10])
     max_clique_sample_nxconv=find_max_clique(Adj,weights,networkx_conv=True) #The maximum clique
 
-    print('max_clique_plot_success_rate_vs',max_clique_sample_nxconv)
+    print('max_clique',max_clique_sample_nxconv)
     # Adj_copy=copy.deepcopy(Adj)
     # for i in range(len(Adj)):
     #     Adj_copy[i,i]=weights[i]
@@ -241,14 +241,14 @@ def plot_success_rate_vs_niter(cleaned_GBS_samples,nmax,Adj,niter,weights,plot=T
     print(searched_uni[:20])
     print(searched_GBS[:20])
 
-
+    #
     # for i in range(1,niter):
     #
     #     searched_GBS = [clique.search(s, graph_ref,i) for s in shrunk_GBS]
-    #     succ_rate_GBS.append(count_clique_occurence_networkx(searched_GBS,max_clique_sample_nxconv))#Count the occurences of the max clique in the networkx convention
+    #     succ_rate_GBS.append(count_clique_occurence_networkx(searched_GBS,max_clique_sample_nxconv)/(len(searched_GBS))*100)#Count the occurences of the max clique in the networkx convention
     #     # clique_rate_GBS.append(sum([clique.is_clique(graph_ref.subgraph(s)) for s in searched_GBS]))
     #     searched_uni = [clique.search(s, graph_ref,i) for s in shrunk_uni]
-    #     succ_rate_uni.append(count_clique_occurence_networkx(searched_uni,max_clique_sample_nxconv)) #Count the occurences of the max clique in the networkx convention
+    #     succ_rate_uni.append(count_clique_occurence_networkx(searched_uni,max_clique_sample_nxconv)/ (len(searched_uni)) * 100) #Count the occurences of the max clique in the networkx convention
     #     # clique_rate_uni.append(sum([clique.is_clique(graph_ref.subgraph(s)) for s in searched_uni]))
     # t1=time()
     # print(t1-t0)
@@ -256,8 +256,8 @@ def plot_success_rate_vs_niter(cleaned_GBS_samples,nmax,Adj,niter,weights,plot=T
     # print(succ_rate_GBS)
     #
     # fig,ax=plt.subplots(nrows=1,ncols=1,figsize=(16,16))
-    # ax.plot(np.array(succ_rate_GBS)/len(cleaned_GBS_samples)*100,label='GBS samples networkx',color='g')
-    # ax.plot(np.array(succ_rate_uni)/len(cleaned_GBS_samples)*100,label='Uniform samples',color='r')
+    # ax.plot(np.array(succ_rate_GBS),label='GBS samples networkx',color='g')
+    # ax.plot(np.array(succ_rate_uni),label='Uniform samples',color='r')
     # # ax.plot(np.array(clique_rate_uni)/len(cleaned_GBS_samples)*100,'r--',label='Uniform samples bound',)
     # # ax.plot(np.array(clique_rate_GBS)/len(cleaned_GBS_samples)*100,'g--',label='GBS samples bound')
     # ax.set_xlabel('Iteration step of local search algorithm')
