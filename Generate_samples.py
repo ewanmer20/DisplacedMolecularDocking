@@ -200,11 +200,11 @@ def samples_cov(Adj,c,alpha,n_subspace,nsamples,data_directory,loss_mode=0,mu=No
         cov_loss = cov_rescaled.copy()
         for i in range (n_subspace):
             mu_loss,cov_loss=loss(mu=mu_loss,cov=cov_loss,T=t,nbar=0,mode=i)
-        samples = sp.hafnian_sample_state(cov=cov_loss, mean=mu_loss, samples=nsamples,hbar=hbar,parallel=False)
-        np.savetxt(data_directory + '\\' + 'nsamples={:.1f}'.format(nsamples)+ '_nsubspace={:.1f}'.format(n_subspace) +'loss={:.2f}'.format(loss_mode)+ '_samples_cov.csv', samples, delimiter=',')
+        samples = sp.torontonian_sample_state(cov=cov_loss, mu=mu_loss, samples=nsamples,hbar=hbar,parallel=False)
+        np.savetxt(data_directory + '\\' + 'nsamples={:.1f}'.format(nsamples)+ '_nsubspace={:.1f}'.format(n_subspace) +'alpha={:.1f}'.format(alpha)+'loss={:.2f}'.format(loss_mode)+ '_samples_cov.csv', samples, delimiter=',')
     else:
-        samples=sp.hafnian_sample_state(cov=cov_rescaled,mean=mu, samples=nsamples,parallel=False)
-        np.savetxt(data_directory + '\\' + 'nsamples={:.1f}'.format(nsamples) + '_nsubspace={:.1f}'.format(n_subspace) + '_samples_cov.csv', samples, delimiter=',')
+        samples=sp.torontonian_sample_state(cov=cov_rescaled,mu=mu, samples=nsamples,parallel=False)
+        np.savetxt(data_directory + '\\' + 'nsamples={:.1f}'.format(nsamples) + '_nsubspace={:.1f}'.format(n_subspace) + 'alpha={:.1f}'.format(alpha)+'_samples_cov.csv', samples, delimiter=',')
     return samples
 
 def mean_n(BIG):
