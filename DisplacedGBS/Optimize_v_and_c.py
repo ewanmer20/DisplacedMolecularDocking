@@ -4,19 +4,20 @@ from Generate_displaced_samples import*
 EXP_PATH=os.getcwd()
 
 
-def return_r(c,v):
+def return_r(Adj,c,v,alpha):
     """""
     Return the list of squeezing parameter tanh(r) computed from the Tagaki-Autonne decomposition of the BIG matrix
     BIG: 2D numpy array of floats
     tanhr: 1D numpy array of floats tanh(r)
     """""
+    nsubspace=len(Adj)
     omega=make_generalized_omega(c,alpha)[:nsubspace,:nsubspace]
     BIG = omega @ Adj @ omega + np.diag(v) @ np.eye(nsubspace)
     tanhr=np.abs(eigvalsh(BIG))
     return np.sort(tanhr)[::-1]
 
 
-def return_alpha(c,v):
+def return_alpha(Adj,c,v,alpha):
     """""
     Return the displacement vector of the Gaussian state in the aadag convention 
     omega: rescaling matrix as a diagonal 2D numpy array of floats 
@@ -50,8 +51,8 @@ def tune_rescaled_parameters(target_tanhr,target_ncoh,alpha,Adjtot,nsubspace):
     def cost(params):
         v=params[:nsubspace]
         c=params[nsubspace:]
-        output_alpha=return_alpha(c,v)
-        output_tanhr=return_r(c,v)
+        output_alpha=return_alpha(Adj,c,v,alpha)
+        output_tanhr=return_r(Adj,c,v,alpha)
         relative_error_displacement=((np.sum(output_alpha[:nsubspace]**2)-target_ncoh))**2
         # relative_error_displacement=0
         relative_error_r=abs_error(target_tanhr,output_tanhr)
@@ -70,8 +71,8 @@ def tune_rescaled_parameters(target_tanhr,target_ncoh,alpha,Adjtot,nsubspace):
 def cost(params):
     v=params[:nsubspace]
     c=params[nsubspace:]
-    output_alpha=return_alpha(c,v)
-    output_tanhr=return_r(c,v)
+    output_alpha=return_alpha(Adj,c,v,alpha)
+    output_tanhr=return_r(Adj,c,v,alpha)
     relative_error_displacement=((np.sum(output_alpha[:nsubspace]**2)-target_ncoh))**2
     relative_error_r=abs_error(target_tanhr,output_tanhr)
     if any(np.abs(output_tanhr)>1):
@@ -100,36 +101,37 @@ def is_collision(cov,d,epsilon):
     return np.any(photon_dist(cov,d)>epsilon)
 
 
-cwd='big\\big_tau1.1_.csv'
-BIG=log_data(cwd)
-alpha=2.1
-nsubspace=24
-target_ncoh=1
-
-Adj = data.TaceAs().adj[:nsubspace,:nsubspace]
-sq_min=0.2
-sq_max=0.4
-sq_target = np.random.uniform(low=sq_min, high=sq_max, size=(nsubspace,))
-target_tanhr= np.sort(np.tanh(sq_target))[::-1]
-
-res=tune_rescaled_parameters(target_tanhr=target_tanhr,target_ncoh=target_ncoh,alpha=alpha,Adjtot=Adj,nsubspace=nsubspace)
-v=res.x[:nsubspace]
-c=res.x[nsubspace:]
-
-omega_output=make_generalized_omega(c,alpha)
-output_alpha=return_alpha(c,v)
-output_tanhr=return_r(c,v)
-nphotoncoh=np.sum(output_alpha**2)
-cost=cost(res.x)
-cov,mean=create_cov_mean(Adj=Adj,c=c,v=v,alpha=alpha,nsubspace=nsubspace,conv='real')
-dist=photon_dist(cov,mean)
-print(np.sum(dist))
-print(target_ncoh+np.sum(np.divide((target_tanhr)**2,1-(target_tanhr)**2)))
-print(is_collision(cov,mean,1))
-
-
-if is_collision(cov,mean,1)==False and cost<1e-5:
-    np.savetxt('Parameters_c_v\\TaceAs\\'+'sqmin={:.1f}'.format(sq_min)+'sqmax={:.1f}'.format(sq_max)+'dim={:.1f}'.format(nsubspace)+'ncoh={:.1f}'.format(target_ncoh)+'alpha={:.2f}'.format(alpha)+'cparameters.csv',c,delimiter=',')
-    np.savetxt('Parameters_c_v\\TaceAs\\' + 'sqmin={:.1f}'.format(sq_min) + 'sqmax={:.1f}'.format(sq_max) + 'dim={:.1f}'.format(nsubspace) + 'ncoh={:.1f}'.format(target_ncoh)  +'alpha={:.2f}'.format(alpha)+'vparameters.csv', v,delimiter=',')
-    np.savetxt('Parameters_c_v\\TaceAs\\' + 'sqmin={:.1f}'.format(sq_min) + 'sqmax={:.1f}'.format(sq_max) + 'dim={:.1f}'.format(nsubspace) + 'ncoh={:.1f}'.format(target_ncoh) +'alpha={:.2f}'.format(alpha)+ 'target_squeezing.csv', target_tanhr,delimiter=',')
-
+# cwd='big\\adj_mat_tau1.1_.csv'
+# Adj=log_data(cwd)
+# alpha=1.5
+# nsubspace=24
+# target_ncohs=[0.001,0.050,0.100,0.500,1,1.5,5,10,50,100]
+# sq_min=0.2
+# sq_max=0.4
+# sq_target = np.random.uniform(low=sq_min, high=sq_max, size=(nsubspace,))
+# target_tanhr= np.sort(np.tanh(sq_target))[::-1]
+# for target_ncoh in target_ncohs:
+#
+#
+#     res=tune_rescaled_parameters(target_tanhr=target_tanhr,target_ncoh=target_ncoh,alpha=alpha,Adjtot=Adj,nsubspace=nsubspace)
+#     v=res.x[:nsubspace]
+#     c=res.x[nsubspace:]
+#
+#     omega_output=make_generalized_omega(c,alpha)
+#     output_alpha=return_alpha(Adj,c,v,alpha)
+#     output_tanhr=return_r(Adj,c,v,alpha)
+#     nphotoncoh=np.sum(output_alpha**2)
+#     cost_opt=cost(res.x)
+#     cov,mean=create_cov_mean(Adj=Adj,c=c,v=v,alpha=alpha,nsubspace=nsubspace,conv='real')
+#     dist=photon_dist(cov,mean)
+#     print(np.sum(dist))
+#     print(target_ncoh+np.sum(np.divide((target_tanhr)**2,1-(target_tanhr)**2)))
+#     print(is_collision(cov,mean,1))
+#
+#
+#     if is_collision(cov,mean,1)==False and cost_opt<1e-5:
+#         np.savetxt('Parameters_c_v\\TaceAs\\'+'sqmin={:.1f}'.format(sq_min)+'sqmax={:.1f}'.format(sq_max)+'dim={:.1f}'.format(nsubspace)+'ncoh={:.3f}'.format(target_ncoh)+'alpha={:.2f}'.format(alpha)+'cparameters.csv',c,delimiter=',')
+#         np.savetxt('Parameters_c_v\\TaceAs\\' + 'sqmin={:.1f}'.format(sq_min) + 'sqmax={:.1f}'.format(sq_max) + 'dim={:.1f}'.format(nsubspace) + 'ncoh={:.3f}'.format(target_ncoh)  +'alpha={:.2f}'.format(alpha)+'vparameters.csv', v,delimiter=',')
+#         np.savetxt('Parameters_c_v\\TaceAs\\' + 'sqmin={:.1f}'.format(sq_min) + 'sqmax={:.1f}'.format(sq_max) + 'dim={:.1f}'.format(nsubspace) + 'ncoh={:.3f}'.format(target_ncoh) +'alpha={:.2f}'.format(alpha)+ 'target_squeezing.csv', target_tanhr,delimiter=',')
+#         print("Success for ncoh={:.3f}".format(target_ncoh))
+#

@@ -160,8 +160,10 @@ def create_cov_mean(Adj,c,v,alpha,nsubspace,hbar=2,tau=1.1,conv='real'):
     d_alpha=(Sigma_Q @ gamma)[:nsubspace]
     if conv=='real':
         return qt.Covmat(Sigma_Q,hbar=hbar),np.sqrt(2*hbar)*np.concatenate([d_alpha, np.zeros(nsubspace)])
+
+
     elif conv=='complex':
-        return Sigma_Q-np.eye(2 * nsubspace) / 2,np.concatenate([d_alpha,np.conj(d_alpha)])
+        return Sigma_Q-np.eye(2 * nsubspace) / 2,np.sqrt(2*hbar)*np.concatenate([d_alpha,np.conj(d_alpha)])
 
 
 def samples_cov(Adj,c,v,alpha,n_subspace,nsamples,data_directory,loss_mode=0,hbar=2):
@@ -194,6 +196,7 @@ def samples_cov(Adj,c,v,alpha,n_subspace,nsamples,data_directory,loss_mode=0,hba
         samples=sp.torontonian_sample_state(cov=cov_rescaled,mu=mean_rescaled, samples=nsamples)
         np.savetxt(data_directory + '\\' + 'nsamples={:.1f}'.format(nsamples) + '_nsubspace={:.1f}'.format(n_subspace) + 'alpha={:.1f}'.format(alpha)+'loss=0.00'+'ncoh={:2f}'.format(ncoh)+'_displaced_samples_cov.csv', samples, delimiter=',')
     return samples
+
 
 # cwd='big\\big_tau1.1_.csv'
 # BIG=log_data(cwd)

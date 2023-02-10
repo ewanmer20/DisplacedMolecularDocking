@@ -80,6 +80,18 @@ def make_potential_vect():
         potential_vect.append(potential_data[row_index,column_index])
     potential_vect=np.array(potential_vect)
     return potential_vect
+def get_data_10():
+    """
+
+    :return: the matrices of the distances for the ligand and the protein of the molecular docking problem 7ew9 along with the keys of these two molecules
+    """
+    ligand_dists=np.array([[0.0,9.35],[0.0,0.0]])
+    ligand_dists=ligand_dists+ligand_dists.T
+    ligand_key=["HD1","HA1"]
+
+    protein_dists=np.array([[0.0,4.62,5.27,8.32,9.63],[0.0,0.0,2.2,8.6,9.97],[0.0,0.0,0.0,7.93,9.65],[0.0,0.0,0.0,0.0,2.22]])
+    protein_key=["HA1","HA2","HD1","HA3","HD2"]
+    return ligand_dists,protein_dists,ligand_key,protein_key
 
 def get_data():
 

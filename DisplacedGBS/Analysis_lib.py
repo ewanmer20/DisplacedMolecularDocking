@@ -270,12 +270,13 @@ def plot_success_rate_vs_niter(cleaned_GBS_samples,Adj,niter,weights,plot=True):
     plt.legend()
     if plot==True:
         plt.show()
+        return searched_GBS,searched_uni
     else:
         pass
 
 def plot_histogram_clique_values(cleaned_GBS_samples,nmax,Adj,weights,plot=True):
     #Plot the histograms for the different clique values with different number of photons: one histogram is for the uniform samples and the other one is for GBS sample
-    for i in range(1,nmax):
+    for i in range(1,nmax+1):
         cleaned_GBS_samples_nphoton=postselect(cleaned_GBS_samples,i,i)
         if cleaned_GBS_samples_nphoton==[]:
             pass
@@ -285,6 +286,7 @@ def plot_histogram_clique_values(cleaned_GBS_samples,nmax,Adj,weights,plot=True)
             for j in range(len(clique_list)):
                 if clique_list[j]==True:
                     hist.append(sample_weight(cleaned_GBS_samples_nphoton[j],weights))
+            print(len(hist))
             plt.hist(hist,bins=10,label="{:.2f}".format(i))
     plt.xlabel("Clique weight")
     plt.ylabel("Normalized probability(%)")

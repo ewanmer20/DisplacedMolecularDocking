@@ -12,7 +12,7 @@ if __name__=='__main__':
     LogUtils.log_config('Generate_samples')
     start_all=time()
     n_subspace=10 # Has to be less or equal to 24
-    n_phot_target=3.65
+    n_phot_target=2.34
     TA = data.TaceAs()
     Adj = TA.adj
     alpha=2.1
@@ -21,7 +21,7 @@ if __name__=='__main__':
 
     data_directory = create_directory()
     print(data_directory)
-    c=tune_c(alpha=alpha,target_n=3.65,Adjtot=Adj,nsubpsace=24)
+    c=tune_c(alpha=alpha,target_n=n_phot_target,Adjtot=Adj,nsubpsace=24)
     omega = make_omega(c,alpha)
     BIG = np.dot(np.dot(omega, laplacian(Adj)), omega)
     print(mean_n(BIG))

@@ -247,11 +247,11 @@ def plot_success_rate_vs_niter(cleaned_GBS_samples,Adj,niter,weights,plot=True):
 
     for i in range(1, niter):
         print(i)
-        searched_GBS = [clique.search(clique=s, graph=graph_ref, iterations=1, node_select=weights) for s in searched_GBS]
+        searched_GBS = [clique.search(clique=s, graph=graph_ref, iterations=1,node_select=weights) for s in searched_GBS]
         searched_GBS = [sample for sample in searched_GBS if is_clique_networkx(sample, max_clique_sample_nxconv) == False]
 
         succ_rate_GBS.append((len(shrunk_GBS) - len(searched_GBS)) / (len(shrunk_GBS)) * 100)  # Count the occurences of the max clique in the networkx convention
-        searched_uni = [clique.search(clique=s, graph=graph_ref, iterations=1, node_select=weights) for s in searched_uni]
+        searched_uni = [clique.search(clique=s, graph=graph_ref, iterations=1,node_select=weights) for s in searched_uni]
         searched_uni = [sample for sample in searched_uni if is_clique_networkx(sample, max_clique_sample_nxconv) == False]
         succ_rate_uni.append((len(shrunk_uni) - len(searched_uni)) / (len(shrunk_uni)) * 100)  # Count the occurences of the max clique in the networkx convention
 
@@ -270,12 +270,13 @@ def plot_success_rate_vs_niter(cleaned_GBS_samples,Adj,niter,weights,plot=True):
     plt.legend()
     if plot==True:
         plt.show()
+        return searched_GBS, searched_uni
     else:
         pass
 
 def plot_histogram_clique_values(cleaned_GBS_samples,nmax,Adj,weights,plot=True):
     #Plot the histograms for the different clique values with different number of photons: one histogram is for the uniform samples and the other one is for GBS sample
-    for i in range(1,nmax):
+    for i in range(1,nmax+1):
         cleaned_GBS_samples_nphoton=postselect(cleaned_GBS_samples,i,i)
         if cleaned_GBS_samples_nphoton==[]:
             pass
@@ -285,6 +286,7 @@ def plot_histogram_clique_values(cleaned_GBS_samples,nmax,Adj,weights,plot=True)
             for j in range(len(clique_list)):
                 if clique_list[j]==True:
                     hist.append(sample_weight(cleaned_GBS_samples_nphoton[j],weights))
+            print(len(hist),'hist')
             plt.hist(hist,bins=10,label="{:.2f}".format(i))
     plt.xlabel("Clique weight")
     plt.ylabel("Normalized probability(%)")
@@ -293,7 +295,27 @@ def plot_histogram_clique_values(cleaned_GBS_samples,nmax,Adj,weights,plot=True)
         plt.show()
     else:
         pass
-
+# def plot_histogram_clique_values(cleaned_GBS_samples,nmax,Adj,weights,plot=True):
+#     #Plot the histograms for the different clique values with different number of photons: one histogram is for the uniform samples and the other one is for GBS sample
+#     for i in range(1,nmax):
+#         cleaned_GBS_samples_nphoton=postselect(cleaned_GBS_samples,i,i)
+#         if cleaned_GBS_samples_nphoton==[]:
+#             pass
+#         else:
+#             clique_list,_=count_cliques(cleaned_GBS_samples_nphoton,nx.Graph(Adj))
+#             hist=[]
+#             for j in range(len(clique_list)):
+#                 if clique_list[j]==True:
+#                     hist.append(sample_weight(cleaned_GBS_samples_nphoton[j],weights))
+#             print(len(hist))
+#             plt.hist(hist,bins=10,label="{:.2f}".format(i))
+#     plt.xlabel("Clique weight")
+#     plt.ylabel("Normalized probability(%)")
+#     plt.legend(loc="upper right")
+#     if plot==True:
+#         plt.show()
+#     else:
+#         pass
 
 
 
