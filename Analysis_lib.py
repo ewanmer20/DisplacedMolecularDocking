@@ -261,7 +261,7 @@ def plot_success_rate_vs_niter(cleaned_GBS_samples,Adj,niter,weights,plot=True):
     print(succ_rate_GBS)
 
     fig, ax = plt.subplots(nrows=1, ncols=1, figsize=(16, 16))
-    ax.plot(np.array(succ_rate_GBS), label='GBS samples networkx', color='g')
+    ax.plot(np.array(succ_rate_GBS), label='GBS samples', color='g')
     ax.plot(np.array(succ_rate_uni), label='Uniform samples', color='r')
     # ax.plot(np.array(clique_rate_uni)/len(cleaned_GBS_samples)*100,'r--',label='Uniform samples bound',)
     # ax.plot(np.array(clique_rate_GBS)/len(cleaned_GBS_samples)*100,'g--',label='GBS samples bound')

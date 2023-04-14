@@ -1,8 +1,7 @@
 import matplotlib.pyplot as plt
 import numpy as np
-from Optimize_v_and_c import*
+
 from Analysis_lib import*
-from time import time
 import thewalrus as thw
 import random
 import networkx as nx
@@ -21,6 +20,60 @@ def random_subgraph_list(adj,nvertices):
     for i in range(len(indexes)):
         seq[indexes[i]]=1
     return seq
+
+def get_data():
+
+    ligand_dists = np.array([
+        [0.0, 3.68, 3.77],
+        [0.0,0.0,2.24],
+        [0.0, 0.0, 0.0]
+    ])
+    ligand_dists = ligand_dists + ligand_dists.T
+    ligand_key = ["AR", "HA", "HD"]
+
+
+    pocket_dists = np.array([
+        [0.0,5.48,6.97],
+        [0.0, 0.0,2.81],
+        [0.0, 0.0, 0.0]
+    ])
+    pocket_dists = pocket_dists + pocket_dists.T
+    pocket_key = ["AR", "HA", "HD"]
+
+
+    return ligand_dists, pocket_dists, ligand_key, pocket_key
+
+
+def mapping(pharmacopore):
+            if pharmacopore=='AR':
+                return 0
+            elif pharmacopore=='HA':
+                return 1
+            elif pharmacopore=='HD':
+                return 2
+
+def make_potential_vect():
+    """
+    function to generate the potential matrix given the potential value in Banchi et al. using the same formatting
+    """
+    ligand_dists, pocket_dists, ligand_key, pocket_key = get_data()
+
+    v_set = [[i, j] for i in range(len(ligand_key))
+             for j in range(len(pocket_key))]
+
+    potential_vect=[]
+    potential_data=np.array([[0.1943,0.6450,0.7114],[0.6450,0.5478,0.6686],[0.7144,0.6686,0.5244]])
+    # potential data given in the table S1 given in Banchi et al.: First coloumn: Aromatic (AR)
+    # Second column: Hydrogen-bond acceptor (HA) and in the last column: Hydrogen-bond donor (HD). To change the ordering, one have to change the mapping function and the potential matrix
+    for vertex in v_set:
+        row=str(ligand_key[vertex[0]])[0:2]
+        column=str(pocket_key[vertex[1]])[0:2]
+        row_index=mapping(row)
+        column_index=mapping(column)
+        potential_vect.append(potential_data[row_index,column_index])
+    potential_vect=np.array(potential_vect)
+    return potential_vect
+
 
 def max_clique_graph(adj,weights=None):
     if weights is None:
@@ -101,7 +154,7 @@ def make_generalized_omega(c,alpha):
     omega = np.diag(c) @ (np.eye(len(big_potentials)) +alpha * np.diag(big_potentials))
     return omega
 
-def probability_BIG(adj_tot,subgraph,c,v,alpha,loop=True):
+def probability_BIG(adj_tot,subgraph,c,v,alpha,nsubspace,loop=True):
     """
     Return the probability of obtaining a subgraph from a larger graph from a GBS experiment
     :param adj_tot: Adjacency matrix of the total graph
@@ -133,88 +186,88 @@ def probability_BIG(adj_tot,subgraph,c,v,alpha,loop=True):
 
 
 
-# sq_min=0.2
-# sq_max=0.4
-# nsubspace=24
-# alpha=1.5
-# cwd = 'big\\adj_mat_tau1.1_.csv'
-# Adj= log_data(cwd)
-# target_ncoh=[0.001,0.050,0.100,0.500,1,1.5]
-# problhaf_hist=np.zeros(6)
-# probhaf_hist=np.zeros(6)
-# nsqz1_hist=np.zeros(6)
-# ncoh_hist=np.zeros(6)
-weigths= make_potential_vect()
-# max_clique=max_clique_list(Adj,weigths)
-# for i in range (len(target_ncoh)):
-#     c=log_data('Parameters_c_v\\TaceAs\\'+'sqmin={:.1f}'.format(sq_min)+'sqmax={:.1f}'.format(sq_max)+'dim={:.1f}'.format(nsubspace)+'ncoh={:.3f}'.format(target_ncoh[i])+'alpha={:.2f}'.format(alpha)+'cparameters.csv').reshape((nsubspace,))
-#     v=log_data('Parameters_c_v\\TaceAs\\' + 'sqmin={:.1f}'.format(sq_min) + 'sqmax={:.1f}'.format(sq_max) + 'dim={:.1f}'.format(nsubspace) + 'ncoh={:.3f}'.format(target_ncoh[i])  +'alpha={:.2f}'.format(alpha)+'vparameters.csv').reshape((nsubspace,))
-#     prob1,nsqz1,ncoh=probability_BIG(Adj,max_clique,c,v,alpha,loop=True)
-#     prob2,_=probability_BIG(Adj,max_clique,c,v,alpha,loop=False)
-#     ncoh_hist[i]=ncoh
-#     problhaf_hist[i]=prob1
-#     probhaf_hist[i]=prob2
-#     nsqz1_hist[i]=nsqz1
-#
-# print("alpha",alpha)
-# print("Nsqz",nsqz1_hist)
-# print("Ratio of displacement",np.divide(ncoh_hist,nsqz1_hist))
-# print('Improvement of displacement',np.divide(problhaf_hist,probhaf_hist))
-#
+# # sq_min=0.2
+# # sq_max=0.4
+# # nsubspace=24
+# # alpha=1.5
+# # cwd = 'big\\adj_mat_tau1.1_.csv'
+# # Adj= log_data(cwd)
+# # target_ncoh=[0.001,0.050,0.100,0.500,1,1.5]
+# # problhaf_hist=np.zeros(6)
+# # probhaf_hist=np.zeros(6)
+# # nsqz1_hist=np.zeros(6)
+# # ncoh_hist=np.zeros(6)
+# weigths= make_potential_vect()
+max_clique=max_clique_list(Adj,weigths)
+for i in range (len(target_ncoh)):
+    c=log_data('Parameters_c_v\\TaceAs\\'+'sqmin={:.1f}'.format(sq_min)+'sqmax={:.1f}'.format(sq_max)+'dim={:.1f}'.format(nsubspace)+'ncoh={:.3f}'.format(target_ncoh[i])+'alpha={:.2f}'.format(alpha)+'cparameters.csv').reshape((nsubspace,))
+    v=log_data('Parameters_c_v\\TaceAs\\' + 'sqmin={:.1f}'.format(sq_min) + 'sqmax={:.1f}'.format(sq_max) + 'dim={:.1f}'.format(nsubspace) + 'ncoh={:.3f}'.format(target_ncoh[i])  +'alpha={:.2f}'.format(alpha)+'vparameters.csv').reshape((nsubspace,))
+    prob1,nsqz1,ncoh=probability_BIG(Adj,max_clique,c,v,alpha,loop=True)
+    prob2,_=probability_BIG(Adj,max_clique,c,v,alpha,loop=False)
+    ncoh_hist[i]=ncoh
+    problhaf_hist[i]=prob1
+    probhaf_hist[i]=prob2
+    nsqz1_hist[i]=nsqz1
 
-# hist_lhafnian=[]
-# hist_hafnian=[]
-# ngraphref=40
-# nrandomsubgraphs=20
-# edge_density=0.5
-# graph_size=np.linspace(10,20,10)
-# t0=time()
-# prob_haf=[]
-# prob_lhaf=[]
-# for size in graph_size:
-#     tot_lh=0
-#     tot_h=0
-#     prob_h_temp=0
-#     prob_lh_temp=0
-#     ngraph_modified=ngraphref
-#     for i in range(ngraphref):
-#
-#         diff_lhaf=np.inf
-#         diff_haf=np.inf
-#         graph_ref=random_adj_with_loop(int(size),edge_density)
-#         max_clique=max_clique_list(graph_ref)
-#         if int(np.sum(max_clique))%2==0:
-#             lhaf_clique = probability(graph_ref, max_clique, loop=True)
-#             haf_clique = probability(graph_ref, max_clique, loop=False)
-#
-#
-#             for j in range(nrandomsubgraphs):
-#                 subgraph = random_subgraph_list(graph_ref, len(max_clique))
-#                 temp_diff_lh = (lhaf_clique - probability(graph_ref,subgraph, loop=True)).real
-#                 temp_diff_h = (haf_clique - probability(graph_ref, subgraph, loop=False)).real
-#                 if is_a_clique(subgraph) == False and temp_diff_lh < diff_lhaf:
-#                     diff_lhaf = temp_diff_lh
-#                 if is_a_clique(subgraph) == False and temp_diff_h < diff_haf:
-#                     diff_haf = temp_diff_h
-#         else:
-#             ngraph_modified-=1
-#             diff_haf=0
-#             diff_lhaf=0
-#             haf_clique=0
-#             lhaf_clique=0
-#
-#         tot_h += diff_haf
-#         tot_lh += diff_lhaf
-#         prob_h_temp += haf_clique
-#         prob_lh_temp += lhaf_clique
-#
-#
-#     hist_hafnian.append(tot_h / ngraph_modified)
-#     hist_lhafnian.append(tot_lh / ngraph_modified)
-#     prob_haf.append(prob_h_temp/ngraph_modified)
-#     prob_lhaf.append(prob_lh_temp/ngraph_modified)
-#
-#
+print("alpha",alpha)
+print("Nsqz",nsqz1_hist)
+print("Ratio of displacement",np.divide(ncoh_hist,nsqz1_hist))
+print('Improvement of displacement',np.divide(problhaf_hist,probhaf_hist))
+
+
+hist_lhafnian=[]
+hist_hafnian=[]
+ngraphref=40
+nrandomsubgraphs=20
+edge_density=0.5
+graph_size=np.linspace(10,20,10)
+t0=time()
+prob_haf=[]
+prob_lhaf=[]
+for size in graph_size:
+    tot_lh=0
+    tot_h=0
+    prob_h_temp=0
+    prob_lh_temp=0
+    ngraph_modified=ngraphref
+    for i in range(ngraphref):
+
+        diff_lhaf=np.inf
+        diff_haf=np.inf
+        graph_ref=random_adj_with_loop(int(size),edge_density)
+        max_clique=max_clique_list(graph_ref)
+        if int(np.sum(max_clique))%2==0:
+            lhaf_clique = probability(graph_ref, max_clique, loop=True)
+            haf_clique = probability(graph_ref, max_clique, loop=False)
+
+
+            for j in range(nrandomsubgraphs):
+                subgraph = random_subgraph_list(graph_ref, len(max_clique))
+                temp_diff_lh = (lhaf_clique - probability(graph_ref,subgraph, loop=True)).real
+                temp_diff_h = (haf_clique - probability(graph_ref, subgraph, loop=False)).real
+                if is_a_clique(subgraph) == False and temp_diff_lh < diff_lhaf:
+                    diff_lhaf = temp_diff_lh
+                if is_a_clique(subgraph) == False and temp_diff_h < diff_haf:
+                    diff_haf = temp_diff_h
+        else:
+            ngraph_modified-=1
+            diff_haf=0
+            diff_lhaf=0
+            haf_clique=0
+            lhaf_clique=0
+
+        tot_h += diff_haf
+        tot_lh += diff_lhaf
+        prob_h_temp += haf_clique
+        prob_lh_temp += lhaf_clique
+
+
+    hist_hafnian.append(tot_h / ngraph_modified)
+    hist_lhafnian.append(tot_lh / ngraph_modified)
+    prob_haf.append(prob_h_temp/ngraph_modified)
+    prob_lhaf.append(prob_lh_temp/ngraph_modified)
+
+
 #
 #
 #

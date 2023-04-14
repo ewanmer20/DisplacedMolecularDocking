@@ -4,14 +4,14 @@ import matplotlib.pyplot as plt
 import numpy as np
 
 from Generate_samples import*
-
-
+from Analysis_lib import*
+plt.rcParams.update({'font.size': 28})
 if __name__=='__main__':
     # #Convention hbar=2 like the one used in Strawberry fields and The Walrus
     # # The convention used is an xxpp ordering and handling position, momentum operatorss
     LogUtils.log_config('Generate_samples')
     start_all=time()
-    n_subspace=10 # Has to be less or equal to 24
+    n_subspace=24 # Has to be less or equal to 24
     n_phot_target=2.34
     TA = data.TaceAs()
     Adj = TA.adj
@@ -30,6 +30,7 @@ if __name__=='__main__':
     samples = samples_cov(Adj, c, alpha, n_subspace=24, nsamples=10000, data_directory=data_directory,loss_mode=0.5, hbar=2)
     time1 = time() - start_all
     print(time1)
+    succ_GBS,succ_uni=plot_success_rate_vs_niter(samples,Adj,niter=7,weights=make_potential_vect())
     # nsamples=100000 #number of samples
     # nsamples_list=np.logspace(2,5,20)
     # tvd_hist=[]

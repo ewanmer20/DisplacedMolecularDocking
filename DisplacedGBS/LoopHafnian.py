@@ -7,6 +7,50 @@ import thewalrus as thw
 import random
 import networkx as nx
 from scipy.special import factorial
+from scipy.optimize import minimize_scalar
+
+def tune_c(alpha,target_nsqz,Adjtot,nsubpsace):
+    """
+
+    :param alpha: the alpha at the input of the adjacency matrix
+    :param target_nsqz:  positive number representing  target mean photon n for the squeezing
+    :param Adjtot:  adjacency matrix of the total graph
+    :param nsubpsace:  dimension of the considered subspace
+    :return: c
+    """
+    Adj = Adjtot[:nsubpsace, :nsubpsace]
+    def cost(c,alpha,target_nsqz,Adj,n_subspace):
+        omega = make_omega(c, alpha)[:n_subspace, :n_subspace]
+        BIG = np.dot(np.dot(omega, laplacian(Adj)), omega)
+        return np.abs(target_nsqz-mean_nsqz(BIG))
+    res=minimize_scalar(cost,args=(alpha,target_nsqz,Adj,nsubpsace))
+    return res.x
+
+def make_omega(c,alpha):
+    """""
+    function to generate a more generalized rescaling matrix omega, as defined in Banchi et. where c depends on the mode
+    al.
+    c is a numpy 1D array  of positive floats that controls the amount squeezing required
+    alpha is the strength of the weight potentials in the matrix
+
+    returns a 2-d numpy array
+    """""
+    big_potentials = make_potential_vect()
+    omega = c * (np.eye(len(big_potentials)) +alpha * np.diag(big_potentials))
+    return omega
+
+def mean_nsqz(BIG):
+    """
+
+    :param BIG: is the binding interaction graph, a numpy array
+    :return: the mean photon number for the squeezing for a normal GBS experiment
+    """
+    n = 0
+    (lambdal_rescaled, U_rescaled) = takagi(BIG)
+    for i in range(len(lambdal_rescaled)):
+        n+=(lambdal_rescaled[i])**2/(1-(lambdal_rescaled[i])**2)
+    return n
+
 
 def random_subgraph(adj,nvertices):
     indexes=np.array(random.sample(range(len(adj)),nvertices)).astype(np.int64)
@@ -59,7 +103,7 @@ def factorial_prod(v):
     :return:
     """
     return np.prod(factorial(v))
-def probability_c(adj_tot,subgraph,alpha,tanhrmax,loop=True):
+def probability_c(adj_tot,subgraph,alpha,target_nsqz,loop=True):
     """
     Return the probability of obtaining a subgraph from a larger graph from a GBS experiment
     :param adj_tot: Adjacency matrix of the total graph
@@ -68,14 +112,15 @@ def probability_c(adj_tot,subgraph,alpha,tanhrmax,loop=True):
     :return: the probability
     """
     Id = np.eye(len(adj_tot))
-    c=tanhrmax/(max(np.abs(np.linalg.eigvalsh(adj_tot))))
+    c=tune_c(alpha=alpha,target_nsqz=target_nsqz,Adjtot=adj_tot,nsubpsace=len(adj_tot))
     weights=make_potential_vect()[:len(adj_tot)]
-    omega=c*(Id+alpha*np.diag(weights))
+    omega=make_omega(c=c,alpha=alpha)
     BIG=omega@adj_tot@omega
     Sigma_Qinv = np.block([[Id, -BIG], [-BIG, Id]])
     Sigma_Q = inv(Sigma_Qinv)
-    gamma =np.block([[omega, np.zeros((len(adj_tot),len(adj_tot)))], [np.zeros((len(adj_tot),len(adj_tot))), omega]])@ np.concatenate(((1+weights)**3,(1+weights)**3))
+    gamma =np.block([[omega, np.zeros((len(adj_tot),len(adj_tot)))], [np.zeros((len(adj_tot),len(adj_tot))), omega]])@ np.concatenate(((1+weights)**4,(1+weights)**4))
     d_alpha = (Sigma_Q @ gamma)
+
     if loop==True:
         norm=np.exp(-0.5*np.dot(d_alpha,Sigma_Qinv@d_alpha))/np.sqrt(np.linalg.det(Sigma_Q))
         reduced_adj=thw.reduction(BIG,subgraph)
