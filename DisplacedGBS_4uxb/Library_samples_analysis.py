@@ -18,7 +18,7 @@ from thewalrus.samples import hafnian_sample_graph
 import numpy as np
 import networkx as nx
 import csv
-import plotly
+
 # from Generate_samples import*
 from time import time
 def log_data(csv_file):

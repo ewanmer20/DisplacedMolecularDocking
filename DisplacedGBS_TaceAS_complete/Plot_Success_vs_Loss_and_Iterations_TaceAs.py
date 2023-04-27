@@ -11,10 +11,10 @@ from matplotlib.ticker import IndexLocator
 
 plt.close('all')
 nsubspace=24
-# Adj = data.TaceAs().adj[:nsubspace,:nsubspace]
+Adj = data.TaceAs().adj[:nsubspace,:nsubspace]
 tau=1.1
 alpha=1
-
+data_directory = create_directory()
 start_all=time()
 nsamples=10000
 target_nsqz=3
@@ -65,29 +65,32 @@ np.savetxt('succ_loss_uni.txt',np.array(succ_loss_uni),delimiter=',')
 plt.close('all')
 succ_loss_gbs=succ_loss_gbs/100
 succ_loss_uni=succ_loss_uni/100
-fig=plt.figure(figsize=plt.figaspect(0.4))
+fig,ax=plt.subplots(nrows=1,ncols=1,figsize=plt.figaspect(0.4))
 
 Iterations,Loss=np.meshgrid(np.linspace(1,n_iterations_local_search,n_iterations_local_search),loss_mode)
 
-ax=fig.add_subplot(1,2,1,projection='3d')
-surf_gbs=ax.plot_surface(Loss,Iterations,succ_loss_gbs,cmap=cm.viridis)
-ax.zaxis.set_major_locator(IndexLocator(base=0.1,offset=0))
-fig.colorbar(surf_gbs,shrink=0.5)
-ax.set_title('Success rate vs loss \n and number of iterations with a GBS sampler' )
-ax.set_zlim(-0.1,1.1)
+# ax=fig.add_subplot(1,2,1,projection='3d')
+# surf_gbs=ax.plot_surface(Loss,Iterations,succ_loss_gbs,cmap=cm.viridis)
+# ax.zaxis.set_major_locator(IndexLocator(base=0.1,offset=0))
+# fig.colorbar(surf_gbs,shrink=0.5)
+# ax.set_title('Success rate vs loss \n and number of iterations with a GBS sampler' )
+# ax.set_zlim(-0.1,1.1)
+# ax.set_xlabel(r'$Loss$')
+# ax.set_ylabel(r'$Number of iterations of local search$')
+#
+# ax=fig.add_subplot(1,2,2,projection='3d')
+# surf_uni=ax.plot_surface(Loss,Iterations,succ_loss_uni,cmap=cm.viridis)
+# fig.colorbar(surf_uni,shrink=0.5)
+# ax.zaxis.set_major_locator(IndexLocator(base=0.1,offset=0))
+# ax.set_title('Success rate vs loss \n and number of iterations with a uniform sampler' )
+# ax.set_zlim(-0.1,1.1)
+# ax.set_xlabel(r'$Loss$')
+# ax.set_ylabel(r'$Number of iterations of local search$')
+
+ax.plot(loss_mode,succ_loss_gbs[:,-1])
+ax.set_title('Success rate vs loss with a GBS sampler')
 ax.set_xlabel(r'$Loss$')
-ax.set_ylabel(r'$Number of iterations of local search$')
-
-ax=fig.add_subplot(1,2,2,projection='3d')
-surf_uni=ax.plot_surface(Loss,Iterations,succ_loss_uni,cmap=cm.viridis)
-fig.colorbar(surf_uni,shrink=0.5)
-ax.zaxis.set_major_locator(IndexLocator(base=0.1,offset=0))
-ax.set_title('Success rate vs loss \n and number of iterations with a uniform sampler' )
-ax.set_zlim(-0.1,1.1)
-ax.set_xlabel(r'$Loss$')
-ax.set_ylabel(r'$Number of iterations of local search$')
-
-
+ax.set_ylabel(r'$Success rate$')
 plt.tight_layout()
-plt.savefig('Success Rate vs Iteration And Loss,nsqz={:.2f}ncoh={:.2f}.svg'.format(nsqz,ncoh),format='svg',transparent=True)
+plt.savefig('Success Rate vs Iteration And Loss,nsqz={:.2f}ncoh={:.2f}.pdf'.format(nsqz,ncoh),format='pdf')
 fig.show()

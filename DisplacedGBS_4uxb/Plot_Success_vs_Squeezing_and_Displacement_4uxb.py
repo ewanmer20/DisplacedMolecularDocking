@@ -109,22 +109,22 @@ from matplotlib.ticker import IndexLocator
 from scipy import ndimage
 # cwd='big\\big_tau1.1_.csv'
 # BIG=log_data(cwd)
-
+plt.rcParams.update({'font.size':23})
 plt.close('all')
 nsubspace=9
 tau=1.1
-alpha=1
+alpha=2
 
 start_all=time()
-nsamples=15000
+nsamples=10000
 
 
 ncoh_min=3
-ncoh_max=5
+ncoh_max=10
 nsqz_min=0.1
-nsqz_max=1.5
-ncoh_tot=7
-nsqz_tot=5
+nsqz_max=3
+ncoh_tot=10
+nsqz_tot=10
 
 n_iterations_local_search=3
 loss_mode=0.5
@@ -183,15 +183,14 @@ np.savetxt('Array_succ_gbs_nsamples_4uxb={:.1f},nsqz_min={:.1f},nsqz_max={:.1f},
 np.savetxt('Array_succ_uni_nsamples_4uxb={:.1f},nsqz_min={:.1f},nsqz_max={:.1f},ncoh_min={:.1f},ncoh_max={:.1f},loss={:.1f},niteration={:.1f}.txt'.format(nsamples,nsqz_min,nsqz_max,ncoh_min,ncoh_max,loss_mode,n_iterations_local_search),succ_sqzcoh_uni,delimiter=',')
 
 fig=plt.figure(figsize=plt.figaspect(0.4))
-X,Y=np.meshgrid(x_target_ncoh,y_target_nsqz)
 ax=fig.add_subplot(1,2,1)
-array_gbs=ax.imshow(ndimage.rotate(succ_sqzcoh_gbs,90),cmap=cm.viridis,extent=[ncoh_min,ncoh_max,nsqz_min,nsqz_max])
+array_gbs=ax.imshow(succ_sqzcoh_gbs,cmap=cm.viridis,extent=[ncoh_min,ncoh_max,nsqz_max,nsqz_min])
 fig.colorbar(array_gbs,shrink=0.5)
 ax.set_title('Success rate vs the input mean photon number of squeezing\n and displacement with a displaced GBS sampler \nafter {:.1f} iterations and {:.1f}'.format(n_iterations_local_search,loss_mode) )
 ax.set_xlabel(r'$\langle n_{coh}\rangle$')
 ax.set_ylabel(r'$\langle n_{sqz}\rangle$')
 ax=fig.add_subplot(1,2,2)
-array_uni=ax.imshow(ndimage.rotate(succ_sqzcoh_uni,90),cmap=cm.viridis,extent=[ncoh_min,ncoh_max,nsqz_min,nsqz_max])
+array_uni=ax.imshow(succ_sqzcoh_uni,cmap=cm.viridis,extent=[ncoh_min,ncoh_max,nsqz_max,nsqz_min])
 fig.colorbar(array_uni,shrink=0.5)
 ax.set_title('Success rate vs the input mean photon number of squeezing\n and displacement with a uniform sampler after \n{:.1f} iterations and {:.1f}'.format(n_iterations_local_search,loss_mode) )
 ax.set_xlabel(r'$\langle n_{coh}\rangle$')

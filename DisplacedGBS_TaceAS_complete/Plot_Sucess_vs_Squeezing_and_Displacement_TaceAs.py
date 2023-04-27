@@ -9,7 +9,7 @@ from matplotlib.ticker import IndexLocator
 from scipy import ndimage
 # cwd='big\\big_tau1.1_.csv'
 # BIG=log_data(cwd)
-
+plt.rcParams({'font.size':28})
 plt.close('all')
 nsubspace=24
 # Adj = data.TaceAs().adj[:nsubspace,:nsubspace]
@@ -22,12 +22,12 @@ nsamples=15000
 
 ncoh_min=3
 ncoh_max=15
-nsqz_min=0.1
-nsqz_max=0.2
+nsqz_min=1
+nsqz_max=2
 ncoh_tot=5
-nsqz_tot=2
+nsqz_tot=4
 
-n_iterations_local_search=2
+n_iterations_local_search=6
 loss_mode=0.5
 data_directory = create_directory()
 
@@ -86,9 +86,8 @@ np.savetxt('Array_succ_gbs_nsamples={:.1f},nsqz_min={:.1f},nsqz_max={:.1f},ncoh_
 np.savetxt('Array_succ_uni_nsamples={:.1f},nsqz_min={:.1f},nsqz_max={:.1f},ncoh_min={:.1f},ncoh_max={:.1f},loss={:.1f},niteration={:.1f}.txt'.format(nsamples,nsqz_min,nsqz_max,ncoh_min,ncoh_max,loss_mode,n_iterations_local_search),succ_sqzcoh_uni,delimiter=',')
 
 fig=plt.figure(figsize=plt.figaspect(0.4))
-X,Y=np.meshgrid(x_target_ncoh,y_target_nsqz)
 ax=fig.add_subplot(1,2,1)
-array_gbs=ax.imshow(ndimage.rotate(succ_sqzcoh_gbs,90),cmap=cm.viridis,extent=[ncoh_min,ncoh_max,nsqz_min,nsqz_max])
+array_gbs=ax.imshow(succ_sqzcoh_gbs,cmap=cm.viridis,extent=[ncoh_min,ncoh_max,nsqz_max,nsqz_min])
 fig.colorbar(array_gbs,shrink=0.5)
 ax.set_title('Success rate vs the input mean photon number of squeezing\n and displacement with a displaced GBS sampler \nafter {:.1f} iterations and {:.1f}'.format(n_iterations_local_search,loss_mode) )
 ax.set_xlabel(r'$\langle n_{coh}\rangle$')
@@ -96,7 +95,7 @@ ax.set_ylabel(r'$\langle n_{sqz}\rangle$')
 
 
 ax=fig.add_subplot(1,2,2)
-array_uni=ax.imshow(ndimage.rotate(succ_sqzcoh_uni,90),cmap=cm.viridis,extent=[ncoh_min,ncoh_max,nsqz_min,nsqz_max])
+array_uni=ax.imshow(succ_sqzcoh_uni,cmap=cm.viridis,extent=[ncoh_min,ncoh_max,nsqz_max,nsqz_min])
 fig.colorbar(array_uni,shrink=0.5)
 ax.set_title('Success rate vs the input mean photon number of squeezing\n and displacement with a uniform sampler after \n{:.1f} iterations and {:.1f}'.format(n_iterations_local_search,loss_mode) )
 ax.set_xlabel(r'$\langle n_{coh}\rangle$')

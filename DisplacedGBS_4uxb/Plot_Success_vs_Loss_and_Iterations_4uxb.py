@@ -1,8 +1,8 @@
 import matplotlib.pyplot as plt
 import numpy as np
 
-from Generate_displaced_samples_alternative_encoding_4uxb import *
-from Analysis_lib import*
+from Library_sampling_displaced_GBS_4uxb import *
+from Library_samples_analysis import*
 from time import time
 from matplotlib import cm
 from matplotlib.ticker import IndexLocator
@@ -14,14 +14,15 @@ nsubspace=9
 # Adj = data.TaceAs().adj[:nsubspace,:nsubspace]
 tau=1.1
 alpha=1
-
+data_directory=create_directory()
+Adj,_=make_adj(tau)
 start_all=time()
 nsamples=10000
 target_nsqz=3
 target_ncoh=1.5
 n_loss_points=10
 loss_mode=np.linspace(0,0.9,n_loss_points)
-n_iterations_local_search=7
+n_iterations_local_search=5
 succ_loss_gbs=np.zeros((n_loss_points,n_iterations_local_search))
 succ_loss_uni=np.zeros((n_loss_points,n_iterations_local_search))
 for i in range(n_loss_points):
