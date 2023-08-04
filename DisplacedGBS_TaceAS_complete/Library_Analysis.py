@@ -5,7 +5,6 @@ import logging
 
 import matplotlib.pyplot as plt
 
-from log_utils import LogUtils
 from datetime import datetime  # For current day and time
 from datetime import date
 from time import time  # For runtime of scripts
