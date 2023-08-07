@@ -6,15 +6,16 @@ from time import time
 from matplotlib import cm
 from matplotlib.ticker import IndexLocator,LinearLocator
 import os
+import pickle
 
 ####Set the working directory in the folder DisplacedGBS_GeneralGraphs
 #Graph properties
 
 
-ngraphs=100
+ngraphs=1
 nvertices=20
 prob_edges=[0.3,0.8]
-zero_samples=[] #Record the position of the graph simulation for which all the samples were zero clicks
+
 
 
 #Simulation properties
@@ -26,9 +27,10 @@ target_ncoh=5
 n_iterations_local_search=7
 loss_mode=0.5
 data_directory=create_directory()
-
-
+zero_samples=[] #Record the position of the graph simulation for which all the samples were zero clicks
 enhancement_array=np.zeros((len(prob_edges),nsqz_tot,ngraphs))
+results={'Samples':[], 'EnhancementArray':[],'ZeroSamples':[],'ngraphs':ngraphs,'nvertices':nvertices,'prob_edges':prob_edges,'nsamples':nsamples,'nsqz_tot':nsqz_tot,'alpha':alpha,'target_ncoh':target_ncoh,'target_nsqz':target_nsqz,'niteration_local':n_iterations_local_search,'loss_mode':loss_mode,'succ_gbs':[],'succ_uni':[]}
+
 for s in range(len(target_nsqz)):
     for p in range(len(prob_edges)):
         enhancement_temp=0
@@ -41,8 +43,8 @@ for s in range(len(target_nsqz)):
                                                         target_ncoh=target_ncoh, nsamples=nsamples,
                                                         data_directory=data_directory, loss_mode=loss_mode, hbar=2,
                                                         n_subspace=nvertices)
-            path=data_directory+'\\nsamples_{:.1f}_nvertices_{:.1f}_alpha_{:.1f}_loss_{:.1f}_ncoh_{:.1f}GeneralGraphsDispSamples'.format(nsamples, nvertices, alpha, loss_mode, ncoh)+"id"+str(i)+str(p)+str(s)+'.txt'
-            np.savetxt(path, samples)
+            #path=data_directory+'\\nsamples_{:.1f}_nvertices_{:.1f}_alpha_{:.1f}_loss_{:.1f}_ncoh_{:.1f}GeneralGraphsDispSamples'.format(nsamples, nvertices, alpha, loss_mode, ncoh)+"id"+str(i)+str(p)+str(s)+'.txt'
+            results['Samples'].append(samples)
             if np.array_equal(samples,np.zeros((nsamples,nsamples))):
                 enhancement_array[s,p,i]=1
                 zero_samples.append([s,p,i])
@@ -77,16 +79,27 @@ for s in range(len(target_nsqz)):
 
                 enhancement_array[s,p,i]= succ_sqzcoh_gbs/succ_sqzcoh_uni
                 print(i)
-                np.savetxt(data_directory+'\\succ_gbs_ncoh_{:.1f}_nsqz_{:.1f}_nvertices_{:.1f}_probedges_{:.1f}{:d}.txt'.format(ncoh, nsqz,nvertices,prob_edges[p],i), np.array(succ_gbs), delimiter=',')
-                np.savetxt(data_directory+'\\succ_uni_ncoh_{:.1f}_nsqz_{:.1f}_nvertices_{:.1f}_probedges_{:.1f}{:d}.txt'.format(ncoh, nsqz,nvertices,prob_edges[p],i), np.array(succ_uni), delimiter=',')
+                #np.savetxt(data_directory+'\\succ_gbs_ncoh_{:.1f}_nsqz_{:.1f}_nvertices_{:.1f}_probedges_{:.1f}{:d}.txt'.format(ncoh, nsqz,nvertices,prob_edges[p],i), np.array(succ_gbs), delimiter=',')
+                #np.savetxt(data_directory+'\\succ_uni_ncoh_{:.1f}_nsqz_{:.1f}_nvertices_{:.1f}_probedges_{:.1f}{:d}.txt'.format(ncoh, nsqz,nvertices,prob_edges[p],i), np.array(succ_uni), delimiter=',')
+                results['succ_gbs'].append(succ_gbs)
+                results['succ_uni'].append(succ_uni)
+
                 plt.close('all')
         time1 = time() - start_all
         print(time1)
 
 enhancement_array=enhancement_array.reshape((len(prob_edges),nsqz_tot*ngraphs))
-np.savetxt(data_directory+'\\Enhancement_array.txt',enhancement_array)
+#np.savetxt(data_directory+'\\Enhancement_array.txt',enhancement_array)
+results['EnhancementArray']=enhancement_array
 if zero_samples!=[]:
-    np.savetxt(data_directory+'\\Zero_samples',zero_samples)
+    #np.savetxt(data_directory+'\\Zero_samples',zero_samples)
+    results['ZeroSamples']=zero_samples
+
+with open(data_directory+'\\Results.pickle','wb') as handle:
+    pickle.dump(results,handle)
+with open(data_directory+'\\Results.pickle','rb') as handle:
+    output=pickle.load(handle)
+
 # fig = plt.figure(figsize=plt.figaspect(0.4))
 # ax = fig.add_subplot(121)
 # for i in range(len(prob_edges)):
@@ -100,6 +113,5 @@ if zero_samples!=[]:
 # fig.suptitle(r'Enhancement for Erdos-Renyi graphs of {:.1f} vertices and displacement of {:.1f} with {:.1f} graphs'.format(nvertices, target_ncoh, ngraphs), wrap=True)
 # plt.savefig('Enhancement for Erdos-Renyi graphs of {:.1f} vertices and displacement of {:.1f} with {:.1f} graphs.pdf'.format(nvertices, target_ncoh, ngraphs),format='pdf')
 # fig.show()
-plt.pause(200)
 
 
