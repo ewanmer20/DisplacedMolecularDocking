@@ -97,8 +97,8 @@ if zero_samples!=[]:
 
 with open(data_directory+'\\Results.pickle','wb') as handle:
     pickle.dump(results,handle)
-with open(data_directory+'\\Results.pickle','rb') as handle:
-    output=pickle.load(handle)
+#with open(data_directory+'\\Results.pickle','rb') as handle:
+#    output=pickle.load(handle)
 
 # fig = plt.figure(figsize=plt.figaspect(0.4))
 # ax = fig.add_subplot(121)
