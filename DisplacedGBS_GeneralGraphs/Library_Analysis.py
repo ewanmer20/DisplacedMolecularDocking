@@ -225,7 +225,9 @@ def plot_success_rate_vs_niter(cleaned_GBS_samples,Adj,niter,weights,plot=True):
 
     graph_ref = nx.Graph(Adj)
 
-    cleaned_samples_copy = copy.deepcopy(cleaned_GBS_samples)
+    cleaned_samples = copy.deepcopy(cleaned_GBS_samples)
+    cleaned_samples_copy=[x for x in cleaned_samples if np.sum(x)>=1] # Remove the the samples with zero photons 
+
     subgraph_GBS = sample.to_subgraphs(cleaned_samples_copy, graph_ref)
     shrunk_GBS = [clique.shrink(s, graph_ref) for s in subgraph_GBS]
     searched_uni = copy.deepcopy(samples_uni)
