@@ -1,8 +1,8 @@
 {
   "ExpandedNodes": [
     "",
-    "\\DisplacedGBS_TaceAS_complete"
+    "\\DisplacedGBS_GeneralGraphs"
   ],
-  "SelectedNode": "\\DisplacedGBS_TaceAS_complete\\Plot_Success_vs_Loss_and_Displacement_TaceAs.py",
+  "SelectedNode": "\\DisplacedGBS_GeneralGraphs\\Script_sampling_dispGBS_ErdosRenyigraph.py",
   "PreviewInSolutionExplorer": false
 }
