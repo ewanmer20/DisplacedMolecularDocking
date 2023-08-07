@@ -166,12 +166,12 @@ def samples_cov_alt(nvertices,prob_edges,alpha,target_nsqz,target_ncoh,n_subspac
         cov_loss = cov_rescaled.copy()
         for i in range (n_subspace):
             mu_loss,cov_loss=loss(mu=mu_loss,cov=cov_loss,T=t,nbar=0,mode=i)
-        samples = sp.torontonian_sample_state(cov=cov_loss, mu=mu_loss, samples=nsamples,hbar=hbar)
+        samples = sp.torontonian_sample_state(cov=cov_loss, mu=mu_loss, samples=nsamples,hbar=hbar,parallel=True,fanout=1)
 
         # np.savetxt(path, samples, delimiter=',')
     else:
 
-        samples=sp.torontonian_sample_state(cov=cov_rescaled,mu=mean_rescaled, samples=nsamples)
+        samples=sp.torontonian_sample_state(cov=cov_rescaled,mu=mean_rescaled, samples=nsamples,parallel=True,fanout=1)
         # np.savetxt(path, samples, delimiter=',')
     return samples,path,ncoh,mean_nsqz(BIG),Adj,weights
 
