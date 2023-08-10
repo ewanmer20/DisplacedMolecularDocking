@@ -97,6 +97,10 @@ if zero_samples!=[]:
 
 with open(data_directory+'\\Results.pickle','wb') as handle:
     pickle.dump(results,handle)
+
+for key,value in results.items():
+    print(key," : ",value)
+
 #with open(data_directory+'\\Results.pickle','rb') as handle:
 #    output=pickle.load(handle)
 
