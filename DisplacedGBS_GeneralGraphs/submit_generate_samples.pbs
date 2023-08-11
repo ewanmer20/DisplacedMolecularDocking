@@ -1,0 +1,8 @@
+#PBS -l walltime=00:05:00
+#PBS -l select=1:ncpus=10:mem=20gb
+
+module load anaconda3/personal
+source activate GBSDask
+export OMP_NUM_THREADS=1 
+cd $PBS_O_WORKDIR 
+python Script_sampling_dispGBS_ErdosRenyigraph.py > mylog
