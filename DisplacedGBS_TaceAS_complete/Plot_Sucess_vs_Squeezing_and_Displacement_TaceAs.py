@@ -9,7 +9,7 @@ from matplotlib.ticker import IndexLocator
 from scipy import ndimage
 # cwd='big\\big_tau1.1_.csv'
 # BIG=log_data(cwd)
-plt.rcParams({'font.size':28})
+plt.rcParams['font.size']=28
 plt.close('all')
 nsubspace=24
 # Adj = data.TaceAs().adj[:nsubspace,:nsubspace]

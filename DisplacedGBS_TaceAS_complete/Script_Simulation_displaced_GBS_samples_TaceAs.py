@@ -19,9 +19,9 @@ Adj,_=make_adj(tau)
 nsamples=10000
 
 target_nsqz=2.34
-target_ncoh=5
-n_iterations_local_search=7
-loss_mode=0.5
+target_ncoh=20
+n_iterations_local_search=10
+loss_mode=0.01
 
 
 data_directory=create_directory()
