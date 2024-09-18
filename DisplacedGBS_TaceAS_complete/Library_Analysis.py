@@ -169,10 +169,10 @@ def plot_histogram(tot_samples,plot=True,phot_dist=False):
     #Plot the histogram of the photon number distribution and return the histogram given the samples
     #Warning: the format of each samples must be the list of photons measured per mode (click convention). For instance [2,1,0] says 2 photons have been measured in mode 0, 1 in mode 1 and 0 in mode 2
     photon_number=np.array([sum(s) for s in tot_samples]).astype(np.int64)
-    nmax=np.int(np.amax(photon_number))
+    nmax=int(np.amax(photon_number))
     hist=np.zeros(nmax+1)
     for s in photon_number:
-        hist[np.int(s)]+=1
+        hist[int(s)]+=1
 
     if phot_dist==False:
         if plot==True:

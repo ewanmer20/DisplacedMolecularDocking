@@ -20,7 +20,7 @@ from scipy.optimize import minimize_scalar, Bounds
 import matplotlib.pyplot as plt
 import copy
 EXP_PATH=os.getcwd()
-def create_directory():
+def create_directory(main_file_dirctory):
     EXP_PATH = os.getcwd()
     time_stamp = datetime.now().strftime("%d-%b-%Y-(%H.%M.%S.%f)")
     logging_filename="{}".format(time_stamp)

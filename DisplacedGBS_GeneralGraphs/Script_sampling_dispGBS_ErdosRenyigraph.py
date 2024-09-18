@@ -11,11 +11,15 @@ import pickle
 ####Set the working directory in the folder DisplacedGBS_GeneralGraphs
 #Graph properties
 
+dir_path = os.path.dirname(os.path.realpath(__file__))
+os.chdir(dir_path)
 
-ngraphs=1
+ngraphs=500
 nvertices=20
 prob_edges=[0.3,0.8]
-
+size_pickle=10 # Number of graph samples per pickle file
+index_graph=1 # Index of the graph in the file 
+index_file=1 # File number of the graph
 
 
 #Simulation properties
@@ -28,8 +32,8 @@ n_iterations_local_search=7
 loss_mode=0.5
 data_directory=create_directory()
 zero_samples=[] #Record the position of the graph simulation for which all the samples were zero clicks
-enhancement_array=np.zeros((len(prob_edges),nsqz_tot,ngraphs))
-results={'Samples':[], 'EnhancementArray':[],'ZeroSamples':[],'ngraphs':ngraphs,'nvertices':nvertices,'prob_edges':prob_edges,'nsamples':nsamples,'nsqz_tot':nsqz_tot,'alpha':alpha,'target_ncoh':target_ncoh,'target_nsqz':target_nsqz,'niteration_local':n_iterations_local_search,'loss_mode':loss_mode,'succ_gbs':[],'succ_uni':[]}
+enhancement_array=np.zeros(size_pickle)
+results={'Size_pickle':size_pickle,'Index_file':index_file,'Samples':[], 'EnhancementArray':[],'ZeroSamples':[],'ngraphs':ngraphs,'nvertices':nvertices,'prob_edges':prob_edges,'nsamples':nsamples,'nsqz_tot':nsqz_tot,'alpha':alpha,'target_ncoh':target_ncoh,'target_nsqz':target_nsqz,'niteration_local':n_iterations_local_search,'loss_mode':loss_mode,'succ_gbs':[],'succ_uni':[]}
 
 for s in range(len(target_nsqz)):
     for p in range(len(prob_edges)):
@@ -37,17 +41,33 @@ for s in range(len(target_nsqz)):
         start_all = time()
         for i in range(ngraphs):
             
+            if index_graph>size_pickle:
 
+                results['EnhancementArray']=enhancement_array
+                if zero_samples!=[]:
+                
+                    results['ZeroSamples']=zero_samples
+
+                with open(data_directory+'\\Results_{:d}.pickle'.format(index_file),'wb') as handle:
+                    pickle.dump(results,handle)
+
+                enhancement_array=np.zeros(size_pickle)
+                index_graph=1
+                index_file+=1
+                results={'Size_pickle':size_pickle,'Index_file':index_file,'Samples':[], 'EnhancementArray':[],'ZeroSamples':[],'ngraphs':ngraphs,'nvertices':nvertices,'prob_edges':prob_edges,'nsamples':nsamples,'nsqz_tot':nsqz_tot,'alpha':alpha,'target_ncoh':target_ncoh,'target_nsqz':target_nsqz,'niteration_local':n_iterations_local_search,'loss_mode':loss_mode,'succ_gbs':[],'succ_uni':[]}
+
+
+                
 
             samples, path, ncoh, nsqz, graph_adj, weights= samples_cov_alt(nvertices=nvertices,prob_edges=prob_edges[p],alpha=alpha, target_nsqz=target_nsqz[s],
                                                         target_ncoh=target_ncoh, nsamples=nsamples,
                                                         data_directory=data_directory, loss_mode=loss_mode, hbar=2,
                                                         n_subspace=nvertices)
-            #path=data_directory+'\\nsamples_{:.1f}_nvertices_{:.1f}_alpha_{:.1f}_loss_{:.1f}_ncoh_{:.1f}GeneralGraphsDispSamples'.format(nsamples, nvertices, alpha, loss_mode, ncoh)+"id"+str(i)+str(p)+str(s)+'.txt'
             results['Samples'].append(samples)
+            
             if np.array_equal(samples,np.zeros((nsamples,nsamples))):
-                enhancement_array[s,p,i]=1
-                zero_samples.append([s,p,i])
+                enhancement_array[index_graph-1]=1
+                results['ZeroSamples'].append([s,p,index_file,index_graph])
                 
             else:
 
@@ -77,7 +97,8 @@ for s in range(len(target_nsqz)):
                 if np.abs(succ_sqzcoh_uni)<0.0001:
                     succ_sqzcoh_uni=0.001
 
-                enhancement_array[s,p,i]= succ_sqzcoh_gbs/succ_sqzcoh_uni
+                enhancement_array[index_graph-1]= succ_sqzcoh_gbs/succ_sqzcoh_uni
+                index_graph+=1
                 print(i)
                 #np.savetxt(data_directory+'\\succ_gbs_ncoh_{:.1f}_nsqz_{:.1f}_nvertices_{:.1f}_probedges_{:.1f}{:d}.txt'.format(ncoh, nsqz,nvertices,prob_edges[p],i), np.array(succ_gbs), delimiter=',')
                 #np.savetxt(data_directory+'\\succ_uni_ncoh_{:.1f}_nsqz_{:.1f}_nvertices_{:.1f}_probedges_{:.1f}{:d}.txt'.format(ncoh, nsqz,nvertices,prob_edges[p],i), np.array(succ_uni), delimiter=',')
@@ -88,14 +109,16 @@ for s in range(len(target_nsqz)):
         time1 = time() - start_all
         print(time1)
 
-enhancement_array=enhancement_array.reshape((len(prob_edges),nsqz_tot*ngraphs))
-#np.savetxt(data_directory+'\\Enhancement_array.txt',enhancement_array)
+
+
+   
 results['EnhancementArray']=enhancement_array
+results['Size_pickle']=index_graph-1
 if zero_samples!=[]:
     #np.savetxt(data_directory+'\\Zero_samples',zero_samples)
     results['ZeroSamples']=zero_samples
 
-with open(data_directory+'\\Results.pickle','wb') as handle:
+with open(data_directory+'\\Results_{:d}.pickle'.format(index_file),'wb') as handle:
     pickle.dump(results,handle)
 
 for key,value in results.items():
