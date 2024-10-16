@@ -1,12 +1,12 @@
 import matplotlib.pyplot as plt
 import numpy as np
-
+from scipy.linalg import inv
 from Library_Analysis import*
 import thewalrus as thw
 import random
 import networkx as nx
 from scipy.special import factorial
-
+thw.loop_hafnian
 def random_subgraph(adj,nvertices):
     indexes=np.array(random.sample(range(len(adj)),nvertices)).astype(np.int64)
     seq=np.zeros(len(adj),dtype=np.int64)
@@ -141,6 +141,22 @@ def probability_c(adj_tot,subgraph,alpha,tanhrmax,loop=True):
         reduced_adj=thw.reduction(BIG,subgraph)
         return norm*thw.hafnian(reduced_adj,loop=False)**2
 
+
+def mean_nsqz(BIG):
+    """
+
+    :param BIG: is the binding interaction graph, a numpy array
+    :return: the mean photon number for the squeezing for a normal GBS experiment
+    """
+    n = 0
+    (lambdal_rescaled, U_rescaled) = takagi(BIG)
+    for i in range(len(lambdal_rescaled)):
+        n+=(lambdal_rescaled[i])**2/(1-(lambdal_rescaled[i])**2)
+    return n
+
+
+
+
 def make_generalized_omega(c,alpha):
     """""
     function to generate a more generalized rescaling matrix omega, as defined in Banchi et. where c depends on the mode
@@ -163,10 +179,9 @@ def probability_BIG(adj_tot,subgraph,c,v,alpha,nsubspace,loop=True):
     :return: the probability
     """
     Id = np.eye(nsubspace)
-    tanhr=return_r(adj_tot,c,v,alpha)
-    nsqz=np.sum(np.divide((tanhr)**2,1-(tanhr)**2))
     omega = make_generalized_omega(c, alpha)[:nsubspace, :nsubspace]
     BIG = omega @ Adj @ omega + np.diag(v) @ np.eye(nsubspace)
+    nsqz=mean_nsqz(BIG)
     Sigma_Qinv = np.block([[Id, -BIG], [-BIG, Id]])
     Sigma_Q = inv(Sigma_Qinv)
     gamma = np.concatenate([np.diag(omega), np.diag(omega)])
@@ -186,18 +201,18 @@ def probability_BIG(adj_tot,subgraph,c,v,alpha,nsubspace,loop=True):
 
 
 
-# # sq_min=0.2
-# # sq_max=0.4
-# # nsubspace=24
-# # alpha=1.5
-# # cwd = 'big\\adj_mat_tau1.1_.csv'
-# # Adj= log_data(cwd)
-# # target_ncoh=[0.001,0.050,0.100,0.500,1,1.5]
-# # problhaf_hist=np.zeros(6)
-# # probhaf_hist=np.zeros(6)
-# # nsqz1_hist=np.zeros(6)
-# # ncoh_hist=np.zeros(6)
-# weigths= make_potential_vect()
+sq_min=0.2
+sq_max=0.4
+nsubspace=24
+alpha=1.5
+cwd = 'big\\adj_mat_tau1.1_.csv'
+Adj= log_data(cwd)
+target_ncoh=[0.001,0.050,0.100,0.500,1,1.5]
+problhaf_hist=np.zeros(6)
+probhaf_hist=np.zeros(6)
+nsqz1_hist=np.zeros(6)
+ncoh_hist=np.zeros(6)
+weigths= make_potential_vect()
 max_clique=max_clique_list(Adj,weigths)
 for i in range (len(target_ncoh)):
     c=log_data('Parameters_c_v\\TaceAs\\'+'sqmin={:.1f}'.format(sq_min)+'sqmax={:.1f}'.format(sq_max)+'dim={:.1f}'.format(nsubspace)+'ncoh={:.3f}'.format(target_ncoh[i])+'alpha={:.2f}'.format(alpha)+'cparameters.csv').reshape((nsubspace,))
@@ -237,14 +252,14 @@ for size in graph_size:
         graph_ref=random_adj_with_loop(int(size),edge_density)
         max_clique=max_clique_list(graph_ref)
         if int(np.sum(max_clique))%2==0:
-            lhaf_clique = probability(graph_ref, max_clique, loop=True)
-            haf_clique = probability(graph_ref, max_clique, loop=False)
+            lhaf_clique = probability_BIG(graph_ref, max_clique, loop=True)
+            haf_clique = probability_BIG(graph_ref, max_clique, loop=False)
 
 
             for j in range(nrandomsubgraphs):
                 subgraph = random_subgraph_list(graph_ref, len(max_clique))
-                temp_diff_lh = (lhaf_clique - probability(graph_ref,subgraph, loop=True)).real
-                temp_diff_h = (haf_clique - probability(graph_ref, subgraph, loop=False)).real
+                temp_diff_lh = (lhaf_clique - probability_BIG(graph_ref,subgraph, loop=True)).real
+                temp_diff_h = (haf_clique - probability_BIG(graph_ref, subgraph, loop=False)).real
                 if is_a_clique(subgraph) == False and temp_diff_lh < diff_lhaf:
                     diff_lhaf = temp_diff_lh
                 if is_a_clique(subgraph) == False and temp_diff_h < diff_haf:
