@@ -399,6 +399,14 @@ def entropy(prob):
     """
     return -np.sum(prob*np.log(prob))
 
+def renyi_entropy(prob,alpha):
+    """
+    :param prob: 1D numpy array of probabilities
+    :param alpha: the order of the Renyi entropy
+    :return: the Renyi entropy of the probability distribution
+    """
+    return 1/(1-alpha)*np.log(np.sum(np.array(prob)**alpha))
+
 def generate_twofoldstatistics(numodes):
     """
 
@@ -408,13 +416,46 @@ def generate_twofoldstatistics(numodes):
     array_index = []
     for i in range(numodes):
         for j in range(numodes):
-                if i <= j:
+                if i < j:
                     array_index.append([i, j])
     return array_index
+def generate_threefoldstatistics(numodes):
+    """
+
+    :param numodes: number of modes of the GBS experiment
+    :return:
+    """
+    array_index = []
+    for i in range(numodes):
+        for j in range(numodes):
+                for k in range(numodes):
+                    if i < j < k:
+                        array_index.append([i, j, k])
+    return array_index
+
+def create_binary_array(indices, array_length):
+  """Converts a list of indices to a binary array.
+
+  Args:
+    indices: A list of indices.
+    array_length: The desired length of the binary array.
+
+  Returns:
+    A binary array with ones at the specified indices and zeros elsewhere.
+  """
+
+  binary_array = np.zeros(array_length)
+  binary_array[indices] = 1
+  return binary_array
 
 if __name__ == "__main__":
     print("This is a utility file and cannot be run directly")
-    print(generate_twofoldstatistics(4))
+    print(generate_threefoldstatistics(4))
+    indices = [2, 5, 8]
+    array_length = 10
+    binary_array = create_binary_array(indices, array_length)
+    print(binary_array)
+    
 
 
 

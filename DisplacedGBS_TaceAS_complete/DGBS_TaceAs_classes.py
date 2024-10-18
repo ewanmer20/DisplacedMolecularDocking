@@ -42,6 +42,7 @@ class DGBS_Sampler():
         Args:
             
         """
+        
 
     #  Adj:is the complete adjacency matrix: not necessarily the one used for the sampling since we can take a submatrix with the dimension tuned by n_subspace!!!!
         Adj,_=make_adj(tau)
@@ -414,22 +415,41 @@ class OptimizerPhaseDisplacement():
     self.best_score = res.fun
    
 
-  def scipy_minimize_optimization_test2(self, initial_parameters, **kwargs):
+  def scipy_minimize_optimization_TwoFold(self, initial_parameters, alpha, **kwargs):
     """
     Performs the optimization using the chosen method.
 
     Args:
         initial_parameters (dict): Dictionary containing initial parameter values.
-        fixed_args (tuple): Tuple containing additional fixed arguments for the simulation in mm.
+        alpha (float): The alpha parameter for the Renyi entropy.
         **kwargs: Additional arguments for the optimization method.
     """
 
 
     # Just run the sampler once such that the BIG matrix is defined and can be used in the objective function
     result_dic=self.sampler.run_sampler(nsamples=10,foldername='test',custom_phase=[])
-    res = minimize(self.objective_wrapper_test2, initial_parameters,method='BFGS',bounds=[(0,2*np.pi)]*self.sampler.n_subspace,**kwargs)
+    res = minimize(self.objective_wrapper_TwoFold, initial_parameters,args=(alpha),method='BFGS',bounds=[(0,2*np.pi)]*self.sampler.n_subspace,**kwargs)
     self.optimal_parameters = res.x
     self.best_score = res.fun
+
+
+  def scipy_minimize_optimization_ThreeFold(self, initial_parameters,alpha, **kwargs):
+    """
+    Performs the optimization using the chosen method.
+
+    Args:
+        initial_parameters (dict): Dictionary containing initial parameter values.
+        alpha (float): The alpha parameter for the Renyi entropy.
+        **kwargs: Additional arguments for the optimization method.
+    """
+
+
+    # Just run the sampler once such that the BIG matrix is defined and can be used in the objective function
+    result_dic=self.sampler.run_sampler(nsamples=10,foldername='test',custom_phase=[])
+    res = minimize(self.objective_wrapper_ThreeFold, initial_parameters,args=(alpha),method='BFGS',bounds=[(0,2*np.pi)]*self.sampler.n_subspace,**kwargs)
+    self.optimal_parameters = res.x
+    self.best_score = res.fun
+
   def objective_wrapper_test(self,phase_parameters):
     """
     Wrapper function to calculate the probability of generating a max clique based on the loop hafnian.
@@ -456,7 +476,7 @@ class OptimizerPhaseDisplacement():
     np.fill_diagonal(reduced_BIG, reduced_diag)
     return (1-norm*thw.hafnian(reduced_BIG,loop=True)**2).real/(norm*thw.hafnian(reduced_BIG,loop=True)**2).real
   
-  def objective_wrapper_test2(self,phase_parameters):
+  def objective_wrapper_TwoFold(self,phase_parameters,alpha=1):
     """
     Wrapper function to calculate the probability of generating a max clique based on the 2-fold probability distribution
 
@@ -469,16 +489,32 @@ class OptimizerPhaseDisplacement():
     """
     twoFold_indices=generate_twofoldstatistics(self.sampler.n_subspace)
     twoFold_graph_list=[create_binary_array(twoFold_indices[i],self.sampler.n_subspace) for i in range(len(twoFold_indices))]
-    
-    max_clique=max_clique_list(self.sampler.Adj,self.sampler.weights)
-    print(max_clique)
-    BIG=self.sampler.BIG
-    Id = np.eye(self.sampler.n_subspace)
-    Sigma_Qinv = np.block([[Id, -np.conj(BIG)], [-BIG, Id]])
-    Sigma_Q = inv(Sigma_Qinv)
     d_alpha=self.sampler.mean_displacement_vector*np.concatenate([np.cos(phase_parameters),np.sin(phase_parameters)])
     probability_list=[thw.threshold_detection_prob(d_alpha,self.sampler.covariance_matrix,twoFold_graph_list[i],self.sampler.hbar) for i in range(len(twoFold_graph_list))]
-    return entropy(probability_list)
+    if alpha==1:
+        return entropy(probability_list)
+    else:
+        return renyi_entropy(probability_list,alpha)
+  
+  def objective_wrapper_ThreeFold(self,phase_parameters,alpha=1):
+    """
+    Wrapper function to calculate the probability of generating a max clique based on the 2-fold probability distribution
+
+    Args:
+        phase_parameters (array): Array containing the parameters for the simulation.
+        
+
+    Returns:
+        float: The value of the objective function for the given parameters.
+    """
+    twoFold_indices=generate_threefoldstatistics(self.sampler.n_subspace)
+    twoFold_graph_list=[create_binary_array(twoFold_indices[i],self.sampler.n_subspace) for i in range(len(twoFold_indices))]
+    d_alpha=self.sampler.mean_displacement_vector*np.concatenate([np.cos(phase_parameters),np.sin(phase_parameters)])
+    probability_list=[thw.threshold_detection_prob(d_alpha,self.sampler.covariance_matrix,twoFold_graph_list[i],self.sampler.hbar) for i in range(len(twoFold_graph_list))]
+    if alpha==1:
+        return entropy(probability_list)
+    else:
+        return renyi_entropy(probability_list,alpha)
     
   def objective_wrapper(self, phase_parameters,fixed_args_sampler,fixed_args_postprocessing,MAX_EVALUATIONS=1e10):
     """
@@ -558,9 +594,15 @@ if __name__ == "__main__":
 
     # optimizer.scipy_minimize_optimization_test(initial_phase)
     time1=time()
-    optimizer.scipy_minimize_optimization_test2(initial_phase)
+    optimizer.scipy_minimize_optimization_TwoFold(initial_phase,alpha=1.05)
     time2=time()
     print('Elapsed time for optimization',time2-time1)
+
+    # time1=time()
+    # optimizer.scipy_minimize_optimization_ThreeFold(initial_phase)
+    # time2=time()
+    # print('Elapsed time for optimization',time2-time1)
+
     # Retrieve the optimized parameters
     optimal_parameters = optimizer.get_optimal_parameters()
     best_score = optimizer.get_best_score()
@@ -570,7 +612,7 @@ if __name__ == "__main__":
 
     # Run the sampler with the optimal parameters to check if the results are consistent
     sampler_check=DGBS_Sampler(**sim_params)
-    result_dic = sampler_check.run_sampler(nsamples=1000, foldername="test", custom_phase=optimal_parameters.real)
+    result_dic = sampler_check.run_sampler(nsamples=5000, foldername="test", custom_phase=optimal_parameters.real)
     samples = result_dic["samples"]
     
     #Postprocessing the samples
