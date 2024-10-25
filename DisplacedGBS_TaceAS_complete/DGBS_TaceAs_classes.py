@@ -382,27 +382,29 @@ class OptimizerPhaseDisplacement():
     self.best_score = None
     self.evaluation_count = 0
 
-  def scipy_minimize_optimization(self, initial_parameters,fixed_args_sampler,fixed_args_postprocessing, **kwargs):
+  def scipy_minimize_optimization(self,initial_parameters,fixed_args_sampler,fixed_args_postprocessing,method='BFGS', **kwargs):
     """
     Performs the optimization using the chosen method.
 
     Args:
         initial_parameters (dict): Dictionary containing initial parameter values.
+        method (str): The optimization method to use.
         fixed_args (tuple): Tuple containing additional fixed arguments for the simulation in mm.
         **kwargs: Additional arguments for the optimization method.
     """
 
     
-    res = minimize(self.objective_wrapper, initial_parameters,args=(fixed_args_sampler,fixed_args_postprocessing),method='BFGS',tol=1e-1,bounds=[(0,2*np.pi)]*self.sampler.n_subspace,options={'maxiter': 10})
+    res = minimize(self.objective_wrapper, initial_parameters,args=(fixed_args_sampler,fixed_args_postprocessing),method=method,tol=1e-1,bounds=[(0,2*np.pi)]*self.sampler.n_subspace,options={'maxiter': 10})
     self.optimal_parameters = res.x
     self.best_score = res.fun
 
-  def scipy_minimize_optimization_test(self, initial_parameters, **kwargs):
+  def scipy_minimize_optimization_test(self, initial_parameters,method='BFGS', **kwargs):
     """
     Performs the optimization using the chosen method.
 
     Args:
         initial_parameters (dict): Dictionary containing initial parameter values.
+        method (str): The optimization method to use.
         fixed_args (tuple): Tuple containing additional fixed arguments for the simulation in mm.
         **kwargs: Additional arguments for the optimization method.
     """
@@ -410,43 +412,45 @@ class OptimizerPhaseDisplacement():
 
     # Just run the sampler once such that the BIG matrix is defined and can be used in the objective function
     result_dic=self.sampler.run_sampler(nsamples=10,foldername='test',custom_phase=[])
-    res = minimize(self.objective_wrapper_test, initial_parameters,method='BFGS',bounds=[(0,2*np.pi)]*self.sampler.n_subspace,**kwargs)
+    res = minimize(self.objective_wrapper_test, initial_parameters,method=method,bounds=[(0,2*np.pi)]*self.sampler.n_subspace,**kwargs)
     self.optimal_parameters = res.x
     self.best_score = res.fun
    
 
-  def scipy_minimize_optimization_TwoFold(self, initial_parameters, alpha, **kwargs):
+  def scipy_minimize_optimization_TwoFold(self, initial_parameters, alpha,method='BFGS', **kwargs):
     """
     Performs the optimization using the chosen method.
 
     Args:
         initial_parameters (dict): Dictionary containing initial parameter values.
         alpha (float): The alpha parameter for the Renyi entropy.
+        method (str): The optimization method to use.
         **kwargs: Additional arguments for the optimization method.
     """
 
 
     # Just run the sampler once such that the BIG matrix is defined and can be used in the objective function
     result_dic=self.sampler.run_sampler(nsamples=10,foldername='test',custom_phase=[])
-    res = minimize(self.objective_wrapper_TwoFold, initial_parameters,args=(alpha),method='BFGS',bounds=[(0,2*np.pi)]*self.sampler.n_subspace,**kwargs)
+    res = minimize(self.objective_wrapper_TwoFold, initial_parameters,args=(alpha),method=method,bounds=[(0,2*np.pi)]*self.sampler.n_subspace,**kwargs)
     self.optimal_parameters = res.x
     self.best_score = res.fun
 
 
-  def scipy_minimize_optimization_ThreeFold(self, initial_parameters,alpha, **kwargs):
+  def scipy_minimize_optimization_ThreeFold(self, initial_parameters,alpha,method='BFGS', **kwargs):
     """
     Performs the optimization using the chosen method.
 
     Args:
         initial_parameters (dict): Dictionary containing initial parameter values.
         alpha (float): The alpha parameter for the Renyi entropy.
+        method (str): The optimization method to use.
         **kwargs: Additional arguments for the optimization method.
     """
 
 
     # Just run the sampler once such that the BIG matrix is defined and can be used in the objective function
     result_dic=self.sampler.run_sampler(nsamples=10,foldername='test',custom_phase=[])
-    res = minimize(self.objective_wrapper_ThreeFold, initial_parameters,args=(alpha),method='BFGS',bounds=[(0,2*np.pi)]*self.sampler.n_subspace,**kwargs)
+    res = minimize(self.objective_wrapper_ThreeFold, initial_parameters,args=(alpha),method=method,bounds=[(0,2*np.pi)]*self.sampler.n_subspace,**kwargs)
     self.optimal_parameters = res.x
     self.best_score = res.fun
 
@@ -583,7 +587,7 @@ if __name__ == "__main__":
 
     # Define the fixed arguments for the postprocessing
     fixed_args_postprocessing = {
-        "niterations": 6,
+        "niterations": 7,
     }
 
     # Define the optimizer
@@ -593,10 +597,10 @@ if __name__ == "__main__":
     # optimizer.scipy_minimize_optimization(initial_phase, fixed_args_sampler, fixed_args_postprocessing)
 
     # optimizer.scipy_minimize_optimization_test(initial_phase)
-    time1=time()
-    optimizer.scipy_minimize_optimization_TwoFold(initial_phase,alpha=1.05)
-    time2=time()
-    print('Elapsed time for optimization',time2-time1)
+    # time1=time()
+    # optimizer.scipy_minimize_optimization_TwoFold(initial_phase,alpha=2)
+    # time2=time()
+    # print('Elapsed time for optimization',time2-time1)
 
     # time1=time()
     # optimizer.scipy_minimize_optimization_ThreeFold(initial_phase)
@@ -604,18 +608,94 @@ if __name__ == "__main__":
     # print('Elapsed time for optimization',time2-time1)
 
     # Retrieve the optimized parameters
-    optimal_parameters = optimizer.get_optimal_parameters()
-    best_score = optimizer.get_best_score()
-    print(f"Optimal parameters: {optimal_parameters}")
-    print(f"Best score: {best_score}")
-    print(len(optimal_parameters))
+    # optimal_parameters = optimizer.get_optimal_parameters()
+    # best_score = optimizer.get_best_score()
+    # print(f"Optimal parameters: {optimal_parameters}")
+    # print(f"Best score: {best_score}")
+    # print(len(optimal_parameters))
 
-    # Run the sampler with the optimal parameters to check if the results are consistent
-    sampler_check=DGBS_Sampler(**sim_params)
-    result_dic = sampler_check.run_sampler(nsamples=5000, foldername="test", custom_phase=optimal_parameters.real)
-    samples = result_dic["samples"]
+
+    # Compare the optimization methods
     
-    #Postprocessing the samples
-    postprocessing=PostProcessingSamples(samples,sampler_check.Adj)
-    succ_gbs,_=postprocessing.plot_success_rate_vs_niter(fixed_args_postprocessing["niterations"],plot=True)
+    # results = []
+    # methods = ['SLSQP', 'trust-constr', 'COBYLA', 'TNC', 'L-BFGS-B', 'Powell']
+    # num_trials = 5
+    # for method in methods:
+    #     runtimes = []
+    #     scores = []
+    #     params=[]
+    #     succRate=[]
+    #     for _ in range(num_trials):
+    #         start_time = time()
+    #         optimizer.scipy_minimize_optimization_TwoFold(initial_phase,alpha=2)
+    #         optimal_parameters = optimizer.get_optimal_parameters()
+    #         best_score = optimizer.get_best_score()
+    #         end_time = time()
+
+    #         # Run the sampler with the optimal parameters to check if the results are consistent
+    #         sampler_check=DGBS_Sampler(**sim_params)
+    #         result_dic = sampler_check.run_sampler(nsamples=2000, foldername="test", custom_phase=optimal_parameters.real)
+    #         samples = result_dic["samples"]
+    #         #Postprocessing the samples
+    #         postprocessing=PostProcessingSamples(samples,sampler_check.Adj)
+    #         succ_gbs,_=postprocessing.plot_success_rate_vs_niter(fixed_args_postprocessing["niterations"],plot=False)
+    #         succRate.append(succ_gbs[-1])
+    #         params.append(optimal_parameters)
+    #         runtimes.append(end_time - start_time)
+    #         scores.append(best_score)
+    #         print('Method:', method, 'Runtime:', end_time - start_time, 'succRate:', succRate)
+    #     results.append({'method': method, 'runtime': np.mean(runtimes), 'score': np.mean(scores),'params':np.mean(params),'succRate':np.mean(succRate),'std_dev_succRate': np.std(succRate)},)
+    # df = pd.DataFrame(results)
+    # # Plot histogram of average scores with error bars
+    # plt.bar(df['method'], df['succRate'], yerr=df['std_dev_succRate'], alpha=0.5)
+    # plt.xlabel('Method')
+    # plt.ylabel('Average Score')
+    # plt.title('Average Score with Error Bars')
+    # plt.xticks(rotation=45)
+    # plt.show()
+
+    results=[]
+    alpha_list=np.linspace(0,0.999,10)
+    num_trials = 5
+    for alpha in alpha_list:
+        runtimes = []
+        scores = []
+        params=[]
+        succRate=[]
+        for _ in range(num_trials):
+            start_time = time()
+            optimizer.scipy_minimize_optimization_TwoFold(initial_phase,method='L-BFGS-B',alpha=alpha)
+            optimal_parameters = optimizer.get_optimal_parameters()
+            best_score = optimizer.get_best_score()
+            end_time = time()
+
+            # Run the sampler with the optimal parameters to check if the results are consistent
+            sampler_check=DGBS_Sampler(**sim_params)
+            result_dic = sampler_check.run_sampler(nsamples=2000, foldername="test", custom_phase=optimal_parameters.real)
+            samples = result_dic["samples"]
+            #Postprocessing the samples
+            postprocessing=PostProcessingSamples(samples,sampler_check.Adj)
+            succ_gbs,_=postprocessing.plot_success_rate_vs_niter(fixed_args_postprocessing["niterations"],plot=False) 
+            succRate.append(succ_gbs[-1])
+            params.append(optimal_parameters)
+            runtimes.append(end_time - start_time)
+            scores.append(best_score)
+            print('alpha',alpha,'Runtime:', end_time - start_time, 'succRate:', succRate)
+        results.append({'runtime': np.mean(runtimes), 'score': np.mean(scores),'params':np.mean(params),'succRate':np.mean(succRate),'std_dev_succRate': np.std(succRate)},)
+    df = pd.DataFrame(results)
+    current_dir = os.path.dirname(__file__)
+    os.chdir(current_dir)
+    df.to_csv('SuccRtate_vs_AlphaRenyiLessThan1.csv', index=False)
+    # df=pd.read_csv('my_data.csv')
+    # Plot histogram of average scores with error bars
+    plt.figure()
+    plt.errorbar(alpha_list, df['succRate'], yerr=df['std_dev_succRate'], alpha=0.5)
+    plt.xlabel('alpha')
+    plt.ylabel('Average Score')
+    plt.title('Average Score with Error Bars')
+    plt.xticks(rotation=45)
+    plt.show()
+
+    
+   
     
