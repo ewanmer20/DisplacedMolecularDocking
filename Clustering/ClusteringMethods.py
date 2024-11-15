@@ -266,14 +266,49 @@ def GBS_Based_Clustering(N, L, n_mean,params_GBS_Sampler,Adj,foldername,tinit,we
                 clusters.append(best)
                 Go=False
             i+=1
+            
         remaining_nodes=removeFoundCluster(remaining_nodes,best)
         print(remaining_nodes)
         L, n_mean=updateParameters(Adj)
         counter+=1
-        print(f"counter: {counter}")
+        # print(f"counter: {counter}")
     remaining_nodes=remaining_nodes.astype(int)
     return postProcessing(clusters,remaining_nodes,Adj)
+    
 
+def GBS_Based_Clustering_Alternative(N, L, n_mean,params_GBS_Sampler,Adj,foldername,weights,MinPoints=3):
+    """
+    Perform the GBS based clustering
+    :param N: the number of samples
+    :param L: the threshold
+    :param n_mean: the mean number of photons
+    :param params_GBS_Sampler: the parameters of the GBS sampler
+    :param Adj: Adjacency matrix
+    :param foldername: the folder name
+    :param weights: the weights of the nodes in the graph (if unweighted graph, they should be set to 1)
+    :param MinPoints: the minimum number of points
+    :return: the clusters
+    """
+    remaining_nodes=np.ones(len(Adj))
+    clusters=[]
+    Sampler=DGBS_Sampler(**params_GBS_Sampler)
+    Sampler.target_nsqz=n_mean
+    counter=0
+    while BigEnough(remaining_nodes=remaining_nodes,MinPoints=MinPoints):
+
+        result_samples=Sampler.run_sampler(nsamples=N,foldername=foldername,Adj=Adj,weights=weights)
+        samples=postSelectSamples(result_samples["samples"],L)
+        best, _= findDensestCandidate(samples,Adj)
+        if samples!=[]:
+            
+            remaining_nodes=removeFoundCluster(remaining_nodes,best)
+            L, n_mean=updateParameters(Adj)
+        counter+=1
+    remaining_nodes=remaining_nodes.astype(int)
+    if clusters!=[]:
+        return postProcessing(clusters,remaining_nodes,Adj)
+    else:
+        return clusters
 
 def intra_inter_cluster_cohesion(Adj,labels):
     """
