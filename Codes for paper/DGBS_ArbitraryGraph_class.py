@@ -1,5 +1,5 @@
 from utils import *
-
+from OhSampler import *
 import pickle
 import pandas as pd
 import copy
@@ -303,10 +303,18 @@ class PostProcessingSamples():
         t0 = time()
         if len(self.weights) != len(self.Adj):
             raise Exception("Weigths and Adj needs the same length")
-        _, _, photo_dist = self.plot_histogram(plot=False, phot_dist=True)
-        samples_oh=[get_G_sample(self.Adj,np.abs(photo_dist[i]),1)[0]for i in range(len(self.cleaned_samples))]
-        samples_uni = [list(np.random.choice(len(self.Adj), np.abs(photo_dist[i]), replace=False)) for i in
-                        range(len(self.cleaned_samples))]  # generates uniform samples in the networkx convention
+        hist, _,_ = self.plot_histogram(plot=False, phot_dist=True)
+        samples_oh=[]
+        for i in range(1,len(hist)):
+            if hist[i]>=1:
+                # g_sample_list=get_G_l_sample(A_in=self.Adj,N=i,n_samples=int(hist[i]),loss=0.1,fix_photon=True).tolist()
+                g_sample_list=get_G_sample(A_in=self.Adj, N=i, n_samples = int(hist[i]), fix_photon = True).tolist()
+                samples_oh=samples_oh+g_sample_list
+            else: 
+                pass
+        
+
+        samples_oh_networkx=[np.where(np.array(sample)>=1)[0].tolist() for sample in samples_oh]
         max_clique_sample_nxconv = self.find_max_clique(networkx_conv=True)  # The maximum clique
         
         graph_ref = nx.Graph(self.Adj)
@@ -314,29 +322,29 @@ class PostProcessingSamples():
         cleaned_samples_copy = copy.deepcopy(self.cleaned_samples)
         subgraph_GBS = sample.to_subgraphs(cleaned_samples_copy, graph_ref)
         shrunk_GBS = [clique.shrink(s, graph_ref) for s in subgraph_GBS]
-        searched_uni = copy.deepcopy(samples_uni)
+        searched_oh = copy.deepcopy(samples_oh_networkx)
 
-        shrunk_uni = [clique.shrink(s, graph_ref) for s in searched_uni]
+        shrunk_oh = [clique.shrink(s, graph_ref) for s in searched_oh]
         succ_rate_GBS = [count_clique_occurence_networkx(shrunk_GBS, max_clique_sample_nxconv) / (len(shrunk_GBS)) * 100]  # Comparison
-        succ_rate_uni = [count_clique_occurence_networkx(shrunk_uni, max_clique_sample_nxconv) / (len(shrunk_uni)) * 100]
+        succ_rate_oh = [count_clique_occurence_networkx(shrunk_oh, max_clique_sample_nxconv) / (len(shrunk_oh)) * 100]
 
         searched_GBS = [clique.search(clique=s, graph=graph_ref, iterations=1) for s in shrunk_GBS]
         searched_GBS = [sample for sample in searched_GBS if is_clique_networkx(sample, max_clique_sample_nxconv) == False]
         succ_rate_GBS.append((len(shrunk_GBS) - len(searched_GBS)) / (len(shrunk_GBS)) * 100)  # Count the occurences of the max clique in the networkx convention
 
 
-        searched_uni = [clique.search(clique=s, graph=graph_ref, iterations=1) for s in shrunk_uni]
-        searched_uni = [sample for sample in searched_uni if is_clique_networkx(sample, max_clique_sample_nxconv) == False]
-        succ_rate_uni.append((len(shrunk_uni) - len(searched_uni)) / (len(shrunk_uni)) * 100)  # Count the occurences of the max clique in the networkx convention
+        searched_oh = [clique.search(clique=s, graph=graph_ref, iterations=1) for s in shrunk_oh]
+        searched_oh = [sample for sample in searched_oh if is_clique_networkx(sample, max_clique_sample_nxconv) == False]
+        succ_rate_oh.append((len(shrunk_oh) - len(searched_oh)) / (len(shrunk_oh)) * 100)  # Count the occurences of the max clique in the networkx convention
 
         for i in range(1, self.niterations-1):
             searched_GBS = [clique.search(clique=s, graph=graph_ref, iterations=1, node_select=self.weights) for s in searched_GBS]
             searched_GBS = [sample for sample in searched_GBS if is_clique_networkx(sample, max_clique_sample_nxconv) == False]
 
             succ_rate_GBS.append((len(shrunk_GBS) - len(searched_GBS)) / (len(shrunk_GBS)) * 100)  # Count the occurences of the max clique in the networkx convention
-            searched_uni = [clique.search(clique=s, graph=graph_ref, iterations=1, node_select=self.weights) for s in searched_uni]
-            searched_uni = [sample for sample in searched_uni if is_clique_networkx(sample, max_clique_sample_nxconv) == False]
-            succ_rate_uni.append((len(shrunk_uni) - len(searched_uni)) / (len(shrunk_uni)) * 100)  # Count the occurences of the max clique in the networkx convention
+            searched_oh = [clique.search(clique=s, graph=graph_ref, iterations=1, node_select=self.weights) for s in searched_oh]
+            searched_oh = [sample for sample in searched_oh if is_clique_networkx(sample, max_clique_sample_nxconv) == False]
+            succ_rate_oh.append((len(shrunk_oh) - len(searched_oh)) / (len(shrunk_oh)) * 100)  # Count the occurences of the max clique in the networkx convention
 
         t1 = time()
         print(t1 - t0)
@@ -347,16 +355,16 @@ class PostProcessingSamples():
         if plot==True:
             fig, ax = plt.subplots(nrows=1, ncols=1, figsize=(16, 16))
             ax.plot(np.array(succ_rate_GBS), label='Displaced GBS samples', color='g')
-            ax.plot(np.array(succ_rate_uni), label='Uniform samples', color='r')
+            ax.plot(np.array(succ_rate_oh), label='Uniform samples', color='r')
             # ax.plot(np.array(clique_rate_uni)/len(cleaned_GBS_samples)*100,'r--',label='Uniform samples bound',)
             # ax.plot(np.array(clique_rate_GBS)/len(cleaned_GBS_samples)*100,'g--',label='GBS samples bound')
             ax.set_xlabel('Iteration step of local search algorithm')
             ax.set_ylabel('Success rate (%)')
             plt.legend()
             plt.show()
-            return succ_rate_GBS,succ_rate_uni
+            return succ_rate_GBS,succ_rate_oh
         else:
-            return succ_rate_GBS,succ_rate_uni
+            return succ_rate_GBS,succ_rate_oh
 
 
     def plot_success_rate_vs_niter(self,niterations,plot=True):
