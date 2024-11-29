@@ -95,7 +95,7 @@ def get_C_sample(A_in, N, n_samples = 10 ** 3, L = 10 ** 3, weight = False): # N
 
 def get_G_sample(A_in, N, n_samples = 10 ** 3, fix_photon = True):
     rl, U = takagi(A_in)
-    nrl = rl / np.max(rl) * 0.7
+    nrl = rl / np.max(rl) * 0.85
     A_renorm = U @ np.diag(nrl) @ U.T
 
     k = N

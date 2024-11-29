@@ -61,7 +61,7 @@ class DGBS_Sampler():
             
             
 
-        self.data_directory=create_directory()
+        self.data_directory=None
         self.alpha=alpha
         self.target_nsqz=target_nsqz
         self.target_ncoh=target_ncoh
@@ -125,7 +125,7 @@ class DGBS_Sampler():
            elif self.conv=='complex':
                return np.dot(self.mean_displacement_vector, np.conjugate(self.mean_displacement_vector))/2
         
-    def run_sampler(self,nsamples,foldername=datetime.now().strftime("%d-%b-%Y-(%H.%M.%S.%f)"),custom_phase=[],Adj=None,weights=None):
+    def run_sampler(self,nsamples,foldername=datetime.now().strftime("%d-%b-%Y-(%H.%M.%S.%f)"),custom_phase=[],Adj=None,weights=None,data_id=None):
         """
         Run the sampler with the given parameters.
     
@@ -135,7 +135,7 @@ class DGBS_Sampler():
             custom_phase (numpy array): List of custom phases to apply to the displacement vector.
             Adj (numpy array): Adjacency matrix for the graph. (Only applies is self.arb_graph is True)
             weights (numpy array): Weights for the nodes of the graph. (Only applies is self.arb_graph is True)
-        
+            data_id (str): Identifier for the data.
         Returns:
             dict: Dictionary containing the simulation output.
         """
@@ -168,20 +168,35 @@ class DGBS_Sampler():
         'target_ncoh':self.target_ncoh,'mean_photon_squeezing':self.mean_photon_sqz,'mean_photon_displacement':self.mean_photon_displacement,'nsamples':nsamples,'custom_phase':custom_phase,'loss_mode':self.loss_mode,
         'covariance_matrix':self.covariance_matrix,'mean_displacement_vector':self.mean_displacement_vector}
         if self.save:
-            self.SaveData(foldername,self.result_dic)
+            self.SaveData(foldername,self.result_dic,data_id=data_id)
+            return self.result_dic
         else:
             return self.result_dic
 
-    def SaveData(self,foldername,raw_dict):
+    def SaveData(self,foldername,raw_dict,data_id=None):
     # Save raw data in the result path directory as pickle file 
     # Construct the complete path for saving the plot
-        result_path=self.data_directory + '\\' + foldername +'samples_cov.csv'
-        result_path_pickle = os.path.join(result_path, "data.pkl")
-        with open(result_path_pickle, "wb") as file:
-                # Dump the data using pickle.dump
-                 pickle.dump(raw_dict, file)
-        df=pd.DataFrame(raw_dict,index=[0])
-        df.to_csv(result_path+'data.csv',index=True)
+        if self.data_directory is None:
+            current_dir = os.path.dirname(__file__)
+            os.chdir(current_dir)
+            self.data_directory = current_dir+'\\'+foldername
+            if not os.path.exists(self.data_directory):
+                os.makedirs(self.data_directory)
+        else:
+            os.chdir(self.data_directory)
+            result_path=self.data_directory + '\\'+data_id+'_samples_'
+            results=copy.deepcopy(raw_dict)
+            samples=results['samples']
+            cov=results['covariance_matrix']
+            disp=results['mean_displacement_vector']
+            cust_phase=results['custom_phase']
+            results['covariance_matrix']=cov.flatten()
+            results['mean_displacement_vector']=disp.flatten()
+            results['custom_phase']=np.array(cust_phase).flatten()
+            results['samples']=samples.flatten()
+            df=pd.DataFrame(dict([(k, pd.Series(v)) for k, v in results.items()]))
+            df.to_csv(result_path+'_data.csv',index=True)
+            df.to_pickle(result_path+'_data.pkl')
 
 class PostProcessingSamples():
     """

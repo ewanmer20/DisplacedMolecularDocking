@@ -18,7 +18,7 @@ fixed_args_postprocessing = {
     "niterations": 7,
 }
 
-nsamples=500
+nsamples=5000
 
 # Run the sampler with the optimal parameters to check if the results are consistent
 sampler_check=DGBS_Sampler(**sim_params)
@@ -35,7 +35,7 @@ current_dir = os.path.dirname(__file__)
 os.chdir(current_dir)
 results={"succ_gbs":succ_gbs,"succ_uni":succ_uni,"succ_oh":succ_oh,"samples":samples.flatten(),"sim_params":sim_params}
 pd_result=pd.DataFrame(dict([(k, pd.Series(v)) for k, v in results.items()]))
-pd_result.to_csv("raw_data_TaceAs21112024_500_samples.csv")
+pd_result.to_csv("raw_data_TaceAs25112024_1000_samples.csv")
 plt.rcParams.update({'font.size': 22})
 fig, ax = plt.subplots(nrows=1, ncols=1, figsize=(16, 16))
 ax.plot(np.array(succ_gbs), label='Displaced GBS samples', color='g')
@@ -45,7 +45,8 @@ ax.set_xlabel('Iteration step of local search algorithm')
 ax.set_ylabel('Success rate (%)')
 ax.grid()
 plt.legend()
-plt.savefig('SuccessRate.png',dpi=300)
+# plt.savefig('SuccessRate.png',dpi=300)
+plt.savefig('SuccessRate10000.svg')
 plt.show()
 
 
