@@ -6,7 +6,7 @@ sim_params = {
     "alpha": 2.1,
     "target_nsqz": 2.34,
     "target_ncoh": 10,
-    "loss_mode": 0.5,
+    "loss_mode": 0.1,
     "hbar": 2,
     "n_subspace": 24,
     "conv": "real",
@@ -24,9 +24,9 @@ ncoh_min=3
 ncoh_max=15
 nsqz_min=1
 nsqz_max=4
-nsamples=1000
-foldername_data="data_success_rate_vs_disp_vs_sqz_2"
-n_points=10
+nsamples=500
+foldername_data="data_success_rate_vs_disp_vs_sqz_test"
+n_points=4
 
 
 
@@ -40,10 +40,11 @@ sampler=DGBS_Sampler(**sim_params)
 for i in range(n_points):
     for j in range(n_points):
         start_all=time()
-        result_dic=sampler.run_sampler(nsamples=nsamples, foldername=foldername_data,data_id=f"{i}_{j}")
         sampler.target_nsqz=y_target_nsqz[j]
         sampler.target_ncoh=x_target_ncoh[i]
+        result_dic=sampler.run_sampler(nsamples=nsamples, foldername=foldername_data,data_id=f"{i}_{j}")
         samples = result_dic["samples"]
+        print(sampler.target_ncoh,sampler.target_nsqz)
         print("First samples:",samples[:5])
         #Postprocessing the samples
         postprocessing=PostProcessingSamples(samples,sampler.Adj)
