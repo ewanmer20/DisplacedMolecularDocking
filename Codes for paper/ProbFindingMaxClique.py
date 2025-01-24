@@ -4,8 +4,7 @@ import sys
 # Add the Script_DGBS directory to sys.path
 sys.path.append(r'C:\Users\em1120\DisplacedMolecularDocking')
 
-# Import calc_unitary from scripts
-from Prakash.scripts.calc_unitary import calc_mesh
+
 import os
 import numpy as np
 import matplotlib.pyplot as plt
@@ -19,39 +18,38 @@ plot_dir = os.path.join(current_dir, 'Plots')
 os.makedirs(plot_dir, exist_ok=True)
 os.chdir(plot_dir)
 
-current_mesh = np.random.rand(10, 10) * 20
-T_mesh = calc_mesh(current_mesh)
-print(T_mesh)
+
 # Example usage
 total_size = 20
 clique_size = 14
 erdos_renyi_prob = 0.2
-adj_matrix, clique_vector = generate_adjacency_matrix_with_clique(total_size, clique_size, erdos_renyi_prob)
-print("Adjacency Matrix:\n", adj_matrix)
-print("Clique Vector:\n", clique_vector)
+# adj_matrix, clique_vector = generate_adjacency_matrix_with_clique(total_size, clique_size, erdos_renyi_prob)
+# print("Adjacency Matrix:\n", adj_matrix)
+# print("Clique Vector:\n", clique_vector)
 hbar=2
-# Adj=np.array([
-#   [0, 1, 1, 1, 0, 0],
-#   [1, 0, 1, 1, 0, 1],
-#   [1, 1, 0, 1, 0, 0],
-#   [1, 1, 1, 0, 1, 0],
-#   [0, 0, 0, 1, 0, 1],
-#   [0, 1, 0, 0, 1, 0]
-# ])
-# subgraph_1=np.array([1,1,1,1,0,0])
-Adj=adj_matrix
-subgraph_1=np.array(clique_vector)
-Adj_clique=general_reduction(Adj,subgraph_1)
+Adj=np.array([
+  [0, 1, 1, 1, 0, 0],
+  [1, 0, 1, 1, 0, 1],
+  [1, 1, 0, 1, 0, 0],
+  [1, 1, 1, 0, 1, 0],
+  [0, 0, 0, 1, 0, 1],
+  [0, 1, 0, 0, 1, 0]
+])
+subgraph_1=np.array([1,1,1,1,0,0])
+# Adj=adj_matrix
+# subgraph_1=np.array(clique_vector)
+print("Adjacency Matrix:\n", Adj)
+print("Clique Vector:\n", subgraph_1)
 n_subspace=Adj.shape[0]
 Id = np.eye(n_subspace)
-c_array=np.linspace(0,0.075,200)
-gamma_array=np.linspace(0,0.5,200)
+c_array=np.linspace(0,0.3,100)
+gamma_array=np.linspace(0,1.5,100)
 MaxCliqueProb_array=np.zeros((len(gamma_array),len(c_array)))
 Norm_array=np.zeros((len(gamma_array),len(c_array)))
 Loop_hafnian_array=np.zeros((len(gamma_array),len(c_array)))
 for i in range(len(gamma_array)):
     for j in range(len(c_array)):
-        MaxCliqueProb_array[i,j]=probability_DGBS_subgraph(c_array[j],gamma_array[i],Adj,Adj_clique)
+        MaxCliqueProb_array[i,j]=probability_DGBS_subgraph(c_array[j],gamma_array[i],Adj,subgraph_1)
 
 #  Plot the adjacency matrix
 plt.imshow(Adj, cmap='Greys', interpolation='none')

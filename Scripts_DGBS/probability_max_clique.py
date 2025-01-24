@@ -64,6 +64,7 @@ def general_reduction(matrix, subgraph):
     
     reduced_matrix = matrix[np.ix_(repeated_indices, repeated_indices)]
     return reduced_matrix
+
 # def probability_max_clique_DGBS(c, gamma_val, Adj, Adj_clique):
 #     """
 #     Calculates the probability of finding the maximum clique.
@@ -91,6 +92,41 @@ def general_reduction(matrix, subgraph):
 #     loop_hafnian_squared=np.abs(thw.loop_hafnian(rescaled_clique,reduced_diag))**2
 #     MaxCliqueProb=norm*loop_hafnian_squared
 #     return MaxCliqueProb
+
+def find_max_c(Adj):
+    """
+    Finds the maximal value of c such that all the eigenvalues of c * Adj are between 0 and 1.
+
+    Parameters:
+    Adj (np.ndarray): The adjacency matrix.
+
+    Returns:
+    float: The maximal value of c.
+    """
+    # Compute the eigenvalues of the adjacency matrix
+    eigenvalues = np.linalg.eigvals(Adj)
+    
+    # Find the maximum absolute eigenvalue
+    max_eigenvalue = np.max(np.abs(eigenvalues))
+    
+    # The maximal value of c
+    max_c = 1 / max_eigenvalue
+    
+    return max_c
+
+def find_max_indices(A):
+    """
+    Finds the x and y indices of the maximal element in a 2D array A.
+
+    Parameters:
+    A (np.ndarray): The input 2D array.
+
+    Returns:
+    tuple: The (x, y) indices of the maximal element.
+    """
+    max_index = np.argmax(A)
+    max_indices = np.unravel_index(max_index, A.shape)
+    return max_indices
 
 def probability_DGBS_subgraph(c, gamma_val, Adj, subgraph):
     """
@@ -221,6 +257,42 @@ def probability_lossy_DGBS(c,gamma_val,loss,Adj,prob_array,subgraph,cutoff=5):
         total_prob+=weigth*prob_array[indices_list]
     return total_prob,prob_array
   
+def sqz_photon_number(c,Adj):
+    """
+    Returns the squeezed photon number for the DGBS model.
+
+    Parameters:
+    c (float): The constant c.
+    Adj (np.ndarray): The adjacency matrix.
+
+    Returns:
+    float: The squeezed photon number.
+    """
+    eigs=np.linalg.eigvals(c*Adj)
+    return np.sum(np.abs(np.sinh(np.arctanh(eigs)))**2)
+
+def disp_photon_number(c,gamma_val,Adj):
+    """
+    Returns the displaced photon number for the DGBS model.
+
+    Parameters:
+    c (float): The constant c.
+    gamma_val (float): The loop strength.
+    Adj (np.ndarray): The adjacency matrix.
+
+    Returns:
+    float: The displaced photon number.
+    """
+    m=Adj.shape[0]
+    Id = np.eye(Adj.shape[0])
+    rescaled_Adj = c * Adj
+    gamma = gamma_val * np.ones(2*Adj.shape[0])
+    Sigma_Qinv = np.block([[Id, -np.conj(rescaled_Adj)], [-rescaled_Adj, Id]])
+    Sigma_Q_tot = inv(Sigma_Qinv)
+    gamma = gamma_val * np.ones(2 * Adj.shape[0])
+    d_alpha = (Sigma_Q_tot @ gamma)
+    alpha = d_alpha[:m]
+    return np.sum(np.abs(alpha)**2)
 
 if __name__=="__main__":
     matrix=np.array([[0,1,2,3,4],[5,6,7,8,9],[10,11,12,13,14],[15,16,17,18,19],[20,21,22,23,24]])
@@ -233,10 +305,15 @@ if __name__=="__main__":
     all_lists = generate_lists(m, n_cutoff)
     print(all_lists)
     matrix=np.array([[0,1,1,1],[1,0,1,1],[1,1,0,1],[1,1,1,0]])
+    print(disp_photon_number(0.01,0.2,matrix))
     prob=probability_array_DGBS(0.01, 0.2,matrix, cutoff=5)
     print(prob)
     print(prob.shape)
     print(prob[tuple([1,1,1])])
     lossy_prob,_=probability_lossy_DGBS(c=0.1, gamma_val=0.5, loss=0.1, Adj=matrix,prob_array=None,subgraph=np.array([0,0,0,0]), cutoff=5)
     print(f"{lossy_prob:.2e}")
+    # Example usage
+    A = np.array([[1, 2, 3], [4, 5, 6], [7, 9, 8]])
+    x, y = find_max_indices(A)
+    print(f"The maximal element is at indices: ({x}, {y})")
 
