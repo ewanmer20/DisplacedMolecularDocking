@@ -7,6 +7,7 @@ from scipy.special import factorial
 import itertools
 import strawberryfields as sf
 from strawberryfields.ops import Interferometer, Sgate, Dgate, LossChannel
+from strawberryfields.decompositions import takagi
 
 
 
@@ -103,14 +104,15 @@ def find_max_c(Adj):
     Returns:
     float: The maximal value of c.
     """
-    # Compute the eigenvalues of the adjacency matrix
-    eigenvalues = np.linalg.eigvals(Adj)
+    # Compute the takagi of the adjacency matrix
+    (rl,_)=takagi(Adj)
+
     
-    # Find the maximum absolute eigenvalue
-    max_eigenvalue = np.max(np.abs(eigenvalues))
+    # Find the maximum takagi eigenvalue
+    max_rl = np.max(np.abs(rl))
     
     # The maximal value of c
-    max_c = 1 / max_eigenvalue
+    max_c = 1 / max_rl
     
     return max_c
 
@@ -268,8 +270,8 @@ def sqz_photon_number(c,Adj):
     Returns:
     float: The squeezed photon number.
     """
-    eigs=np.linalg.eigvals(c*Adj)
-    return np.sum(np.abs(np.sinh(np.arctanh(eigs)))**2)
+    rl=takagi(c*Adj)[0]
+    return np.sum(np.abs(np.sinh(np.arctanh(rl)))**2)
 
 def disp_photon_number(c,gamma_val,Adj):
     """
