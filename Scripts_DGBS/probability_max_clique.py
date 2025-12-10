@@ -159,7 +159,7 @@ def probability_DGBS_subgraph(c, gamma_val, Adj, subgraph):
     subgraph_prob = norm * loop_hafnian_squared
     return subgraph_prob
 
-def probability_array_DGBS(c,gamma_val,Adj,loss,cutoff=5):
+def probability_array_DGBS(c,gamma_val,Adj,loss,cutoff=5,fock_prob=True):
     """Return the tensor of the probabilities for DGBSwith strawberryfields.
 
     Parameters:
@@ -209,7 +209,11 @@ def probability_array_DGBS(c,gamma_val,Adj,loss,cutoff=5):
     eng = sf.Engine(backend="gaussian")
     results = eng.run(gbs)
     state = results.state
-    return state.all_fock_probs(cutoff=cutoff)
+    if fock_prob==True:
+        return state.all_fock_probs(cutoff=cutoff)
+    else:
+        return state
+
 
 def generate_lists(m, n_cutoff):
     """

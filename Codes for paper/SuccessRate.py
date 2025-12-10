@@ -1,4 +1,11 @@
-from DGBS_ArbitraryGraph_class import *
+
+import sys
+import os
+# sys.path.append(r'C:\Users\em1120\DisplacedMolecularDocking')
+sys.path.append(r'C:\Users\em1120\DisplacedMolecularDocking')
+
+from Scripts_DGBS.DGBS_ArbitraryGraph_class import *
+
 
 # Define the simulation parameters
 sim_params = {
@@ -18,9 +25,9 @@ fixed_args_postprocessing = {
     "niterations": 7,
 }
 
-nsamples=20000
-loss_mode=[0,0.3,0.5,0.9,0.99]
-mean_disp=[0,0,0,0,0]
+nsamples=5000
+loss_mode=[0,0.3,0.5,0.9]
+mean_disp=[5,5,5,5]
 result=[]
 sampler_check=DGBS_Sampler(**sim_params)
 for i in range(len(loss_mode)):
@@ -52,7 +59,7 @@ os.chdir(current_dir)
 plt.rcParams.update({'font.size': 22})
 fig, ax = plt.subplots(nrows=1, ncols=1, figsize=(16, 16))
 for i in range (len(result)):
-    ax.plot(np.array(result[i]), label=f'Mean displacement={mean_disp[i]}Loss mode={loss_mode[i]}')
+    ax.plot(np.array(result[i]), label=fr'$\mu$={mean_disp[i]},$\eta$={loss_mode[i]}')
 # ax.plot(np.array(succ_gbs), label='Displaced GBS samples', color='g')
 # ax.plot(np.array(succ_uni), label='Uniform samples', color='r')
 # ax.plot(np.array(succ_oh), label='Oh samples', color='b')

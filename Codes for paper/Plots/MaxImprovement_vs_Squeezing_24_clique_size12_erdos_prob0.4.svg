@@ -1,0 +1,1791 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_1" xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 720 432">
+  <!-- Generator: Adobe Illustrator 29.0.0, SVG Export Plug-In . SVG Version: 2.1.0 Build 186)  -->
+  <defs>
+    <style>
+      .st0 {
+        clip-path: url(#clippath-76);
+      }
+
+      .st1 {
+        clip-path: url(#clippath-51);
+      }
+
+      .st2 {
+        clip-path: url(#clippath-34);
+      }
+
+      .st3 {
+        clip-path: url(#clippath-38);
+      }
+
+      .st4 {
+        clip-path: url(#clippath-21);
+      }
+
+      .st5 {
+        clip-path: url(#clippath-6);
+      }
+
+      .st6 {
+        clip-path: url(#clippath-7);
+      }
+
+      .st7 {
+        clip-path: url(#clippath-17);
+      }
+
+      .st8 {
+        clip-path: url(#clippath-80);
+      }
+
+      .st9 {
+        clip-path: url(#clippath-31);
+      }
+
+      .st10 {
+        clip-path: url(#clippath-79);
+      }
+
+      .st11 {
+        clip-path: url(#clippath-75);
+      }
+
+      .st12 {
+        clip-path: url(#clippath-15);
+      }
+
+      .st13 {
+        clip-path: url(#clippath-33);
+      }
+
+      .st14 {
+        clip-path: url(#clippath-61);
+      }
+
+      .st15 {
+        clip-path: url(#clippath-18);
+      }
+
+      .st16 {
+        clip-path: url(#clippath-47);
+      }
+
+      .st17 {
+        clip-path: url(#clippath-4);
+      }
+
+      .st18 {
+        clip-path: url(#clippath-71);
+      }
+
+      .st19 {
+        clip-path: url(#clippath-22);
+      }
+
+      .st20 {
+        clip-path: url(#clippath-23);
+      }
+
+      .st21 {
+        clip-path: url(#clippath-54);
+      }
+
+      .st22 {
+        clip-path: url(#clippath-66);
+      }
+
+      .st23 {
+        isolation: isolate;
+        opacity: .8;
+        stroke: #ccc;
+      }
+
+      .st23, .st24 {
+        fill: #fff;
+      }
+
+      .st25 {
+        clip-path: url(#clippath-9);
+      }
+
+      .st26 {
+        clip-path: url(#clippath-70);
+      }
+
+      .st27 {
+        clip-path: url(#clippath-10);
+      }
+
+      .st28 {
+        clip-path: url(#clippath-42);
+      }
+
+      .st29 {
+        clip-path: url(#clippath-59);
+      }
+
+      .st30 {
+        clip-path: url(#clippath-43);
+      }
+
+      .st31 {
+        clip-path: url(#clippath-64);
+      }
+
+      .st32 {
+        clip-path: url(#clippath-25);
+      }
+
+      .st33 {
+        clip-path: url(#clippath-27);
+      }
+
+      .st34 {
+        clip-path: url(#clippath-60);
+      }
+
+      .st35 {
+        clip-path: url(#clippath-11);
+      }
+
+      .st36 {
+        clip-path: url(#clippath-57);
+      }
+
+      .st37, .st38, .st39, .st40 {
+        fill: none;
+      }
+
+      .st41 {
+        clip-path: url(#clippath-36);
+      }
+
+      .st42 {
+        clip-path: url(#clippath-35);
+      }
+
+      .st43 {
+        clip-path: url(#clippath-48);
+      }
+
+      .st44 {
+        clip-path: url(#clippath-28);
+      }
+
+      .st45 {
+        clip-path: url(#clippath-1);
+      }
+
+      .st46 {
+        clip-path: url(#clippath-56);
+      }
+
+      .st47 {
+        clip-path: url(#clippath-45);
+      }
+
+      .st48 {
+        clip-path: url(#clippath-46);
+      }
+
+      .st49 {
+        clip-path: url(#clippath-40);
+      }
+
+      .st50 {
+        clip-path: url(#clippath-5);
+      }
+
+      .st51 {
+        clip-path: url(#clippath-20);
+      }
+
+      .st52 {
+        clip-path: url(#clippath-8);
+      }
+
+      .st53 {
+        clip-path: url(#clippath-52);
+      }
+
+      .st54 {
+        fill: blue;
+      }
+
+      .st54, .st55, .st39, .st56, .st40 {
+        stroke-linejoin: round;
+      }
+
+      .st54, .st39 {
+        stroke: blue;
+      }
+
+      .st57 {
+        clip-path: url(#clippath-41);
+      }
+
+      .st58 {
+        clip-path: url(#clippath-67);
+      }
+
+      .st59 {
+        clip-path: url(#clippath-74);
+      }
+
+      .st38, .st55, .st56 {
+        stroke: #000;
+      }
+
+      .st38, .st39 {
+        stroke-linecap: square;
+      }
+
+      .st38, .st56 {
+        stroke-width: .8px;
+      }
+
+      .st60 {
+        clip-path: url(#clippath-3);
+      }
+
+      .st61 {
+        clip-path: url(#clippath-26);
+      }
+
+      .st62 {
+        clip-path: url(#clippath-12);
+      }
+
+      .st63 {
+        clip-path: url(#clippath-50);
+      }
+
+      .st64 {
+        clip-path: url(#clippath-14);
+      }
+
+      .st65 {
+        clip-path: url(#clippath-30);
+      }
+
+      .st66 {
+        clip-path: url(#clippath-77);
+      }
+
+      .st67 {
+        clip-path: url(#clippath-19);
+      }
+
+      .st68 {
+        clip-path: url(#clippath-78);
+      }
+
+      .st69 {
+        clip-path: url(#clippath-72);
+      }
+
+      .st70 {
+        clip-path: url(#clippath-32);
+      }
+
+      .st55 {
+        stroke-width: .6px;
+      }
+
+      .st39 {
+        stroke-width: 1.5px;
+      }
+
+      .st71 {
+        clip-path: url(#clippath-55);
+      }
+
+      .st72 {
+        clip-path: url(#clippath-73);
+      }
+
+      .st73 {
+        clip-path: url(#clippath-53);
+      }
+
+      .st74 {
+        clip-path: url(#clippath-39);
+      }
+
+      .st75 {
+        clip-path: url(#clippath-16);
+      }
+
+      .st76 {
+        clip-path: url(#clippath-2);
+      }
+
+      .st77 {
+        clip-path: url(#clippath-29);
+      }
+
+      .st78 {
+        clip-path: url(#clippath-49);
+      }
+
+      .st79 {
+        clip-path: url(#clippath-37);
+      }
+
+      .st80 {
+        clip-path: url(#clippath-58);
+      }
+
+      .st81 {
+        clip-path: url(#clippath-13);
+      }
+
+      .st82 {
+        clip-path: url(#clippath-63);
+      }
+
+      .st40 {
+        stroke: #b0b0b0;
+        stroke-dasharray: 1.9 .8;
+        stroke-width: .5px;
+      }
+
+      .st83 {
+        clip-path: url(#clippath-24);
+      }
+
+      .st84 {
+        clip-path: url(#clippath);
+      }
+
+      .st85 {
+        clip-path: url(#clippath-68);
+      }
+
+      .st86 {
+        clip-path: url(#clippath-65);
+      }
+
+      .st87 {
+        clip-path: url(#clippath-44);
+      }
+
+      .st88 {
+        clip-path: url(#clippath-62);
+      }
+
+      .st89 {
+        clip-path: url(#clippath-69);
+      }
+    </style>
+    <clipPath id="clippath">
+      <rect class="st37" x="115.1" y="27.3" width="558" height="332.6"/>
+    </clipPath>
+    <clipPath id="clippath-1">
+      <rect class="st37" x="115.1" y="27.3" width="558" height="332.6"/>
+    </clipPath>
+    <clipPath id="clippath-2">
+      <rect class="st37" x="115.1" y="27.3" width="558" height="332.6"/>
+    </clipPath>
+    <clipPath id="clippath-3">
+      <rect class="st37" x="115.1" y="27.3" width="558" height="332.6"/>
+    </clipPath>
+    <clipPath id="clippath-4">
+      <rect class="st37" x="115.1" y="27.3" width="558" height="332.6"/>
+    </clipPath>
+    <clipPath id="clippath-5">
+      <rect class="st37" x="115.1" y="27.3" width="558" height="332.6"/>
+    </clipPath>
+    <clipPath id="clippath-6">
+      <rect class="st37" x="115.1" y="27.3" width="558" height="332.6"/>
+    </clipPath>
+    <clipPath id="clippath-7">
+      <rect class="st37" x="115.1" y="27.3" width="558" height="332.6"/>
+    </clipPath>
+    <clipPath id="clippath-8">
+      <rect class="st37" x="115.1" y="27.3" width="558" height="332.6"/>
+    </clipPath>
+    <clipPath id="clippath-9">
+      <rect class="st37" x="115.1" y="27.3" width="558" height="332.6"/>
+    </clipPath>
+    <clipPath id="clippath-10">
+      <rect class="st37" x="115.1" y="27.3" width="558" height="332.6"/>
+    </clipPath>
+    <clipPath id="clippath-11">
+      <rect class="st37" x="115.1" y="27.3" width="558" height="332.6"/>
+    </clipPath>
+    <clipPath id="clippath-12">
+      <rect class="st37" x="115.1" y="27.3" width="558" height="332.6"/>
+    </clipPath>
+    <clipPath id="clippath-13">
+      <rect class="st37" x="115.1" y="27.3" width="558" height="332.6"/>
+    </clipPath>
+    <clipPath id="clippath-14">
+      <rect class="st37" x="115.1" y="27.3" width="558" height="332.6"/>
+    </clipPath>
+    <clipPath id="clippath-15">
+      <rect class="st37" x="115.1" y="27.3" width="558" height="332.6"/>
+    </clipPath>
+    <clipPath id="clippath-16">
+      <rect class="st37" x="115.1" y="27.3" width="558" height="332.6"/>
+    </clipPath>
+    <clipPath id="clippath-17">
+      <rect class="st37" x="115.1" y="27.3" width="558" height="332.6"/>
+    </clipPath>
+    <clipPath id="clippath-18">
+      <rect class="st37" x="115.1" y="27.3" width="558" height="332.6"/>
+    </clipPath>
+    <clipPath id="clippath-19">
+      <rect class="st37" x="115.1" y="27.3" width="558" height="332.6"/>
+    </clipPath>
+    <clipPath id="clippath-20">
+      <rect class="st37" x="115.1" y="27.3" width="558" height="332.6"/>
+    </clipPath>
+    <clipPath id="clippath-21">
+      <rect class="st37" x="115.1" y="27.3" width="558" height="332.6"/>
+    </clipPath>
+    <clipPath id="clippath-22">
+      <rect class="st37" x="115.1" y="27.3" width="558" height="332.6"/>
+    </clipPath>
+    <clipPath id="clippath-23">
+      <rect class="st37" x="115.1" y="27.3" width="558" height="332.6"/>
+    </clipPath>
+    <clipPath id="clippath-24">
+      <rect class="st37" x="115.1" y="27.3" width="558" height="332.6"/>
+    </clipPath>
+    <clipPath id="clippath-25">
+      <rect class="st37" x="115.1" y="27.3" width="558" height="332.6"/>
+    </clipPath>
+    <clipPath id="clippath-26">
+      <rect class="st37" x="115.1" y="27.3" width="558" height="332.6"/>
+    </clipPath>
+    <clipPath id="clippath-27">
+      <rect class="st37" x="115.1" y="27.3" width="558" height="332.6"/>
+    </clipPath>
+    <clipPath id="clippath-28">
+      <rect class="st37" x="115.1" y="27.3" width="558" height="332.6"/>
+    </clipPath>
+    <clipPath id="clippath-29">
+      <rect class="st37" x="115.1" y="27.3" width="558" height="332.6"/>
+    </clipPath>
+    <clipPath id="clippath-30">
+      <rect class="st37" x="115.1" y="27.3" width="558" height="332.6"/>
+    </clipPath>
+    <clipPath id="clippath-31">
+      <rect class="st37" x="115.1" y="27.3" width="558" height="332.6"/>
+    </clipPath>
+    <clipPath id="clippath-32">
+      <rect class="st37" x="115.1" y="27.3" width="558" height="332.6"/>
+    </clipPath>
+    <clipPath id="clippath-33">
+      <rect class="st37" x="115.1" y="27.3" width="558" height="332.6"/>
+    </clipPath>
+    <clipPath id="clippath-34">
+      <rect class="st37" x="115.1" y="27.3" width="558" height="332.6"/>
+    </clipPath>
+    <clipPath id="clippath-35">
+      <rect class="st37" x="115.1" y="27.3" width="558" height="332.6"/>
+    </clipPath>
+    <clipPath id="clippath-36">
+      <rect class="st37" x="115.1" y="27.3" width="558" height="332.6"/>
+    </clipPath>
+    <clipPath id="clippath-37">
+      <rect class="st37" x="115.1" y="27.3" width="558" height="332.6"/>
+    </clipPath>
+    <clipPath id="clippath-38">
+      <rect class="st37" x="115.1" y="27.3" width="558" height="332.6"/>
+    </clipPath>
+    <clipPath id="clippath-39">
+      <rect class="st37" x="115.1" y="27.3" width="558" height="332.6"/>
+    </clipPath>
+    <clipPath id="clippath-40">
+      <rect class="st37" x="115.1" y="27.3" width="558" height="332.6"/>
+    </clipPath>
+    <clipPath id="clippath-41">
+      <rect class="st37" x="115.1" y="27.3" width="558" height="332.6"/>
+    </clipPath>
+    <clipPath id="clippath-42">
+      <rect class="st37" x="115.1" y="27.3" width="558" height="332.6"/>
+    </clipPath>
+    <clipPath id="clippath-43">
+      <rect class="st37" x="115.1" y="27.3" width="558" height="332.6"/>
+    </clipPath>
+    <clipPath id="clippath-44">
+      <rect class="st37" x="115.1" y="27.3" width="558" height="332.6"/>
+    </clipPath>
+    <clipPath id="clippath-45">
+      <rect class="st37" x="115.1" y="27.3" width="558" height="332.6"/>
+    </clipPath>
+    <clipPath id="clippath-46">
+      <rect class="st37" x="115.1" y="27.3" width="558" height="332.6"/>
+    </clipPath>
+    <clipPath id="clippath-47">
+      <rect class="st37" x="115.1" y="27.3" width="558" height="332.6"/>
+    </clipPath>
+    <clipPath id="clippath-48">
+      <rect class="st37" x="115.1" y="27.3" width="558" height="332.6"/>
+    </clipPath>
+    <clipPath id="clippath-49">
+      <rect class="st37" x="115.1" y="27.3" width="558" height="332.6"/>
+    </clipPath>
+    <clipPath id="clippath-50">
+      <rect class="st37" x="115.1" y="27.3" width="558" height="332.6"/>
+    </clipPath>
+    <clipPath id="clippath-51">
+      <rect class="st37" x="115.1" y="27.3" width="558" height="332.6"/>
+    </clipPath>
+    <clipPath id="clippath-52">
+      <rect class="st37" x="115.1" y="27.3" width="558" height="332.6"/>
+    </clipPath>
+    <clipPath id="clippath-53">
+      <rect class="st37" x="115.1" y="27.3" width="558" height="332.6"/>
+    </clipPath>
+    <clipPath id="clippath-54">
+      <rect class="st37" x="115.1" y="27.3" width="558" height="332.6"/>
+    </clipPath>
+    <clipPath id="clippath-55">
+      <rect class="st37" x="115.1" y="27.3" width="558" height="332.6"/>
+    </clipPath>
+    <clipPath id="clippath-56">
+      <rect class="st37" x="115.1" y="27.3" width="558" height="332.6"/>
+    </clipPath>
+    <clipPath id="clippath-57">
+      <rect class="st37" x="115.1" y="27.3" width="558" height="332.6"/>
+    </clipPath>
+    <clipPath id="clippath-58">
+      <rect class="st37" x="115.1" y="27.3" width="558" height="332.6"/>
+    </clipPath>
+    <clipPath id="clippath-59">
+      <rect class="st37" x="115.1" y="27.3" width="558" height="332.6"/>
+    </clipPath>
+    <clipPath id="clippath-60">
+      <rect class="st37" x="115.1" y="27.3" width="558" height="332.6"/>
+    </clipPath>
+    <clipPath id="clippath-61">
+      <rect class="st37" x="115.1" y="27.3" width="558" height="332.6"/>
+    </clipPath>
+    <clipPath id="clippath-62">
+      <rect class="st37" x="115.1" y="27.3" width="558" height="332.6"/>
+    </clipPath>
+    <clipPath id="clippath-63">
+      <rect class="st37" x="115.1" y="27.3" width="558" height="332.6"/>
+    </clipPath>
+    <clipPath id="clippath-64">
+      <rect class="st37" x="115.1" y="27.3" width="558" height="332.6"/>
+    </clipPath>
+    <clipPath id="clippath-65">
+      <rect class="st37" x="115.1" y="27.3" width="558" height="332.6"/>
+    </clipPath>
+    <clipPath id="clippath-66">
+      <rect class="st37" x="115.1" y="27.3" width="558" height="332.6"/>
+    </clipPath>
+    <clipPath id="clippath-67">
+      <rect class="st37" x="115.1" y="27.3" width="558" height="332.6"/>
+    </clipPath>
+    <clipPath id="clippath-68">
+      <rect class="st37" x="115.1" y="27.3" width="558" height="332.6"/>
+    </clipPath>
+    <clipPath id="clippath-69">
+      <rect class="st37" x="115.1" y="27.3" width="558" height="332.6"/>
+    </clipPath>
+    <clipPath id="clippath-70">
+      <rect class="st37" x="115.1" y="27.3" width="558" height="332.6"/>
+    </clipPath>
+    <clipPath id="clippath-71">
+      <rect class="st37" x="115.1" y="27.3" width="558" height="332.6"/>
+    </clipPath>
+    <clipPath id="clippath-72">
+      <rect class="st37" x="115.1" y="27.3" width="558" height="332.6"/>
+    </clipPath>
+    <clipPath id="clippath-73">
+      <rect class="st37" x="115.1" y="27.3" width="558" height="332.6"/>
+    </clipPath>
+    <clipPath id="clippath-74">
+      <rect class="st37" x="115.1" y="27.3" width="558" height="332.6"/>
+    </clipPath>
+    <clipPath id="clippath-75">
+      <rect class="st37" x="115.1" y="27.3" width="558" height="332.6"/>
+    </clipPath>
+    <clipPath id="clippath-76">
+      <rect class="st37" x="115.1" y="27.3" width="558" height="332.6"/>
+    </clipPath>
+    <clipPath id="clippath-77">
+      <rect class="st37" x="115.1" y="27.3" width="558" height="332.6"/>
+    </clipPath>
+    <clipPath id="clippath-78">
+      <rect class="st37" x="115.1" y="27.3" width="558" height="332.6"/>
+    </clipPath>
+    <clipPath id="clippath-79">
+      <rect class="st37" x="115.1" y="27.3" width="558" height="332.6"/>
+    </clipPath>
+    <clipPath id="clippath-80">
+      <rect class="st37" x="115.1" y="27.3" width="558" height="332.6"/>
+    </clipPath>
+  </defs>
+  <g id="figure_1">
+    <g id="axes_1">
+      <g id="patch_2">
+        <path class="st24" d="M115.1,359.9h558V27.3H115.1v332.6Z"/>
+      </g>
+      <g id="matplotlib.axis_1">
+        <g id="xtick_1">
+          <g id="line2d_1">
+            <g class="st84">
+              <path class="st40" d="M177,359.9V27.3"/>
+            </g>
+          </g>
+          <g id="line2d_2">
+            <path id="m0927292153" class="st56" d="M177,359.9v3.5"/>
+          </g>
+          <g id="text_1">
+            <g>
+              <path id="DejaVuSans-30" d="M166.1,372c-1.1,0-2,.6-2.6,1.7-.6,1.1-.9,2.8-.9,5.1s.3,3.9.9,5.1c.6,1.1,1.4,1.7,2.6,1.7s2-.6,2.6-1.7c.6-1.1.9-2.8.9-5.1s-.3-3.9-.9-5.1c-.6-1.1-1.4-1.7-2.6-1.7ZM166.1,370.3c1.8,0,3.2.7,4.2,2.2,1,1.5,1.5,3.6,1.5,6.3s-.5,4.9-1.5,6.3c-1,1.5-2.4,2.2-4.2,2.2s-3.2-.7-4.2-2.2c-1-1.5-1.5-3.6-1.5-6.3s.5-4.9,1.5-6.3c1-1.5,2.4-2.2,4.2-2.2Z"/>
+              <path id="DejaVuSans-2e" d="M175.7,384.2h2.3v2.8h-2.3v-2.8Z"/>
+              <path id="DejaVuSans-32" d="M184.7,385.1h7.7v1.9h-10.4v-1.9c.8-.9,2-2,3.4-3.5,1.5-1.5,2.4-2.4,2.7-2.8.7-.8,1.2-1.5,1.5-2,.3-.6.4-1.1.4-1.6,0-.9-.3-1.6-.9-2.1-.6-.6-1.4-.8-2.4-.8s-1.4.1-2.2.4c-.8.2-1.6.6-2.5,1.1v-2.2c.9-.4,1.7-.6,2.5-.8.8-.2,1.5-.3,2.1-.3,1.7,0,3.1.4,4.1,1.3,1,.8,1.5,2,1.5,3.4s-.1,1.3-.4,1.9c-.3.6-.7,1.3-1.4,2.1-.2.2-.8.8-1.7,1.8-1,1-2.4,2.4-4.2,4.3Z"/>
+            </g>
+          </g>
+        </g>
+        <g id="xtick_2">
+          <g id="line2d_3">
+            <g class="st45">
+              <path class="st40" d="M302.5,359.9V27.3"/>
+            </g>
+          </g>
+          <g id="line2d_4">
+            <path id="m09272921531" data-name="m0927292153" class="st56" d="M302.5,359.9v3.5"/>
+          </g>
+          <g id="text_2">
+            <g>
+              <path id="DejaVuSans-301" data-name="DejaVuSans-30" d="M291.8,372c-1.1,0-2,.6-2.6,1.7-.6,1.1-.9,2.8-.9,5.1s.3,3.9.9,5.1c.6,1.1,1.4,1.7,2.6,1.7s2-.6,2.6-1.7c.6-1.1.9-2.8.9-5.1s-.3-3.9-.9-5.1c-.6-1.1-1.4-1.7-2.6-1.7ZM291.8,370.3c1.8,0,3.2.7,4.2,2.2,1,1.5,1.5,3.6,1.5,6.3s-.5,4.9-1.5,6.3c-1,1.5-2.4,2.2-4.2,2.2s-3.2-.7-4.2-2.2c-1-1.5-1.5-3.6-1.5-6.3s.5-4.9,1.5-6.3c1-1.5,2.4-2.2,4.2-2.2Z"/>
+              <path id="DejaVuSans-2e1" data-name="DejaVuSans-2e" d="M301.4,384.2h2.3v2.8h-2.3v-2.8Z"/>
+              <path id="DejaVuSans-34" d="M314.6,372.5l-5.6,8.8h5.6v-8.8ZM314,370.6h2.8v10.7h2.3v1.8h-2.3v3.9h-2.2v-3.9h-7.4v-2.1l6.8-10.4Z"/>
+            </g>
+          </g>
+        </g>
+        <g id="xtick_3">
+          <g id="line2d_5">
+            <g class="st76">
+              <path class="st40" d="M428,359.9V27.3"/>
+            </g>
+          </g>
+          <g id="line2d_6">
+            <path id="m09272921532" data-name="m0927292153" class="st56" d="M428,359.9v3.5"/>
+          </g>
+          <g id="text_3">
+            <g>
+              <path id="DejaVuSans-302" data-name="DejaVuSans-30" d="M417.3,372c-1.1,0-2,.6-2.6,1.7-.6,1.1-.9,2.8-.9,5.1s.3,3.9.9,5.1c.6,1.1,1.4,1.7,2.6,1.7s2-.6,2.6-1.7c.6-1.1.9-2.8.9-5.1s-.3-3.9-.9-5.1c-.6-1.1-1.4-1.7-2.6-1.7ZM417.3,370.3c1.8,0,3.2.7,4.2,2.2,1,1.5,1.5,3.6,1.5,6.3s-.5,4.9-1.5,6.3c-1,1.5-2.4,2.2-4.2,2.2s-3.2-.7-4.2-2.2c-1-1.5-1.5-3.6-1.5-6.3s.5-4.9,1.5-6.3c1-1.5,2.4-2.2,4.2-2.2Z"/>
+              <path id="DejaVuSans-2e2" data-name="DejaVuSans-2e" d="M426.9,384.2h2.3v2.8h-2.3v-2.8Z"/>
+              <path id="DejaVuSans-36" d="M439.1,377.9c-1,0-1.8.3-2.4,1-.6.7-.9,1.6-.9,2.8s.3,2.1.9,2.8c.6.7,1.4,1,2.4,1s1.8-.3,2.4-1c.6-.7.9-1.6.9-2.8s-.3-2.1-.9-2.8c-.6-.7-1.4-1-2.4-1ZM443.5,370.9v2c-.6-.3-1.1-.5-1.7-.6-.6-.1-1.1-.2-1.7-.2-1.5,0-2.6.5-3.4,1.5-.8,1-1.2,2.5-1.3,4.5.4-.6,1-1.1,1.6-1.5.7-.3,1.4-.5,2.2-.5,1.6,0,3,.5,3.9,1.5,1,1,1.4,2.4,1.4,4.1s-.5,3-1.5,4.1c-1,1-2.3,1.5-4,1.5s-3.3-.7-4.4-2.2c-1-1.5-1.5-3.6-1.5-6.3s.6-4.7,1.8-6.2c1.2-1.5,2.9-2.3,5-2.3s1.1,0,1.7.2,1.2.3,1.8.5Z"/>
+            </g>
+          </g>
+        </g>
+        <g id="xtick_4">
+          <g id="line2d_7">
+            <g class="st60">
+              <path class="st40" d="M553.6,359.9V27.3"/>
+            </g>
+          </g>
+          <g id="line2d_8">
+            <path id="m09272921533" data-name="m0927292153" class="st56" d="M553.6,359.9v3.5"/>
+          </g>
+          <g id="text_4">
+            <g>
+              <path id="DejaVuSans-303" data-name="DejaVuSans-30" d="M542.8,372c-1.1,0-2,.6-2.6,1.7-.6,1.1-.9,2.8-.9,5.1s.3,3.9.9,5.1c.6,1.1,1.4,1.7,2.6,1.7s2-.6,2.6-1.7c.6-1.1.9-2.8.9-5.1s-.3-3.9-.9-5.1c-.6-1.1-1.4-1.7-2.6-1.7ZM542.8,370.3c1.8,0,3.2.7,4.2,2.2,1,1.5,1.5,3.6,1.5,6.3s-.5,4.9-1.5,6.3c-1,1.5-2.4,2.2-4.2,2.2s-3.2-.7-4.2-2.2c-1-1.5-1.5-3.6-1.5-6.3s.5-4.9,1.5-6.3c1-1.5,2.4-2.2,4.2-2.2Z"/>
+              <path id="DejaVuSans-2e3" data-name="DejaVuSans-2e" d="M552.4,384.2h2.3v2.8h-2.3v-2.8Z"/>
+              <path id="DejaVuSans-38" d="M564.3,379.2c-1.1,0-1.9.3-2.5.8-.6.6-.9,1.3-.9,2.3s.3,1.8.9,2.3c.6.6,1.4.8,2.5.8s1.9-.3,2.5-.9c.6-.6.9-1.3.9-2.3s-.3-1.8-.9-2.3c-.6-.6-1.4-.8-2.5-.8ZM562.1,378.3c-1-.2-1.7-.7-2.2-1.3-.5-.7-.8-1.4-.8-2.4s.5-2.3,1.4-3.1c.9-.8,2.2-1.1,3.8-1.1s2.9.4,3.8,1.1,1.4,1.8,1.4,3.1-.3,1.7-.8,2.4c-.5.7-1.3,1.1-2.2,1.3,1.1.2,1.9.7,2.5,1.5.6.7.9,1.6.9,2.7,0,1.6-.5,2.8-1.5,3.7-1,.8-2.4,1.3-4.2,1.3s-3.2-.4-4.2-1.3c-1-.9-1.5-2.1-1.5-3.7s.3-1.9.9-2.7c.6-.7,1.4-1.2,2.5-1.5ZM561.3,374.7c0,.8.3,1.5.8,2,.5.5,1.3.7,2.2.7s1.7-.2,2.2-.7c.5-.5.8-1.1.8-2s-.3-1.5-.8-2c-.5-.5-1.3-.7-2.2-.7s-1.7.2-2.2.7c-.5.5-.8,1.1-.8,2Z"/>
+            </g>
+          </g>
+        </g>
+        <g id="text_5">
+          <g>
+            <path id="DejaVuSans-53" d="M204.7,394.2v2.8c-1.1-.5-2.1-.9-3.1-1.2-1-.3-1.9-.4-2.8-.4-1.6,0-2.8.3-3.6.9-.9.6-1.3,1.5-1.3,2.6s.3,1.7.9,2.1c.6.5,1.6.9,3.2,1.2l1.7.4c2.2.4,3.7,1.1,4.8,2.2s1.5,2.4,1.5,4.2-.7,3.6-2.1,4.7c-1.4,1.1-3.4,1.6-6.1,1.6s-2.1-.1-3.2-.3c-1.1-.2-2.3-.6-3.5-1v-3c1.2.7,2.3,1.2,3.4,1.5,1.1.3,2.2.5,3.3.5,1.6,0,2.9-.3,3.8-1,.9-.6,1.3-1.6,1.3-2.8s-.3-1.9-1-2.5-1.7-1-3.2-1.3l-1.8-.3c-2.2-.4-3.7-1.1-4.7-2-1-.9-1.4-2.2-1.4-3.8s.7-3.4,2-4.5c1.3-1.1,3.2-1.6,5.5-1.6s2,0,3.1.3c1,.2,2.1.5,3.2.8Z"/>
+            <path id="DejaVuSans-71" d="M211.9,406.8c0,1.9.4,3.5,1.2,4.6.8,1.1,1.9,1.7,3.3,1.7s2.5-.6,3.3-1.7c.8-1.1,1.2-2.6,1.2-4.6s-.4-3.5-1.2-4.6c-.8-1.1-1.9-1.7-3.3-1.7s-2.5.6-3.3,1.7-1.2,2.6-1.2,4.6ZM220.9,412.4c-.6,1-1.3,1.7-2.1,2.1-.8.5-1.9.7-3,.7-1.9,0-3.5-.8-4.7-2.3-1.2-1.5-1.8-3.6-1.8-6.1s.6-4.5,1.8-6.1c1.2-1.5,2.8-2.3,4.7-2.3s2.2.2,3,.7c.8.5,1.5,1.2,2.1,2.1v-2.4h2.6v22.1h-2.6v-8.5Z"/>
+            <path id="DejaVuSans-75" d="M228.7,408.5v-9.7h2.6v9.6c0,1.5.3,2.7.9,3.4.6.8,1.5,1.1,2.7,1.1s2.5-.5,3.4-1.4c.8-.9,1.2-2.1,1.2-3.7v-9.1h2.6v16h-2.6v-2.5c-.6,1-1.4,1.7-2.2,2.2-.8.5-1.8.7-2.9.7-1.8,0-3.2-.6-4.2-1.7-1-1.1-1.4-2.8-1.4-5ZM235.3,398.4h0Z"/>
+            <path id="DejaVuSans-65" d="M261.2,406.1v1.3h-12.1c.1,1.8.7,3.2,1.6,4.1,1,.9,2.3,1.4,4.1,1.4s2-.1,2.9-.4,1.9-.6,2.8-1.1v2.5c-.9.4-1.9.7-2.9.9s-2,.3-3,.3c-2.6,0-4.6-.7-6.1-2.2-1.5-1.5-2.2-3.5-2.2-6s.7-4.7,2.1-6.2c1.4-1.5,3.3-2.3,5.7-2.3s3.9.7,5.1,2.1c1.3,1.4,1.9,3.3,1.9,5.7ZM258.6,405.4c0-1.4-.4-2.6-1.2-3.4-.8-.9-1.8-1.3-3.1-1.3s-2.6.4-3.5,1.2-1.4,2-1.5,3.5h9.4Z"/>
+            <path id="DejaVuSans-651" data-name="DejaVuSans-65" d="M279.2,406.1v1.3h-12.1c.1,1.8.7,3.2,1.6,4.1,1,.9,2.3,1.4,4.1,1.4s2-.1,2.9-.4c.9-.2,1.9-.6,2.8-1.1v2.5c-.9.4-1.9.7-2.9.9s-2,.3-3,.3c-2.6,0-4.6-.7-6.1-2.2-1.5-1.5-2.2-3.5-2.2-6s.7-4.7,2.1-6.2c1.4-1.5,3.3-2.3,5.7-2.3s3.9.7,5.1,2.1c1.3,1.4,1.9,3.3,1.9,5.7ZM276.6,405.4c0-1.4-.4-2.6-1.2-3.4-.8-.9-1.8-1.3-3.1-1.3s-2.6.4-3.5,1.2-1.4,2-1.5,3.5h9.4Z"/>
+            <path id="DejaVuSans-7a" d="M282.4,398.8h12.5v2.1l-9.9,10h9.9v1.8h-12.9v-2.1l9.9-10h-9.5v-1.8Z"/>
+            <path id="DejaVuSans-69" d="M298.9,398.8h2.6v16h-2.6v-16ZM298.9,392.6h2.6v3.3h-2.6v-3.3Z"/>
+            <path id="DejaVuSans-6e" d="M320.4,405.1v9.7h-2.6v-9.6c0-1.5-.3-2.6-.9-3.4-.6-.8-1.5-1.1-2.7-1.1s-2.5.5-3.4,1.4c-.8.9-1.2,2.1-1.2,3.7v9.1h-2.6v-16h2.6v2.5c.6-1,1.4-1.7,2.2-2.2.9-.5,1.8-.7,3-.7,1.8,0,3.2.6,4.2,1.7.9,1.1,1.4,2.8,1.4,5Z"/>
+            <path id="DejaVuSans-67" d="M336.2,406.6c0-1.9-.4-3.4-1.2-4.4-.8-1-1.9-1.6-3.3-1.6s-2.5.5-3.3,1.6c-.8,1-1.2,2.5-1.2,4.4s.4,3.4,1.2,4.4c.8,1,1.9,1.6,3.3,1.6s2.5-.5,3.3-1.6c.8-1,1.2-2.5,1.2-4.4ZM338.8,412.8c0,2.7-.6,4.8-1.8,6.1-1.2,1.3-3.1,2-5.6,2s-1.8,0-2.6-.2-1.6-.3-2.4-.6v-2.6c.8.4,1.5.7,2.3.9.8.2,1.5.3,2.3.3,1.7,0,3-.5,3.9-1.4.9-.9,1.3-2.3,1.3-4.1v-1.3c-.5.9-1.2,1.7-2.1,2.1s-1.9.7-3,.7c-2,0-3.5-.7-4.7-2.2-1.2-1.5-1.8-3.5-1.8-6s.6-4.5,1.8-6c1.2-1.5,2.8-2.2,4.7-2.2s2.2.2,3,.7,1.5,1.2,2.1,2.1v-2.4h2.6v14Z"/>
+            <path id="DejaVuSans-20" d="M341.4,414.8"/>
+            <path id="DejaVuSans-50" d="M356.5,395.8v8h3.6c1.3,0,2.4-.3,3.1-1,.7-.7,1.1-1.7,1.1-3s-.4-2.3-1.1-3c-.7-.7-1.8-1-3.1-1h-3.6ZM353.6,393.5h6.5c2.4,0,4.2.5,5.4,1.6,1.2,1.1,1.8,2.7,1.8,4.8s-.6,3.7-1.8,4.8c-1.2,1.1-3,1.6-5.4,1.6h-3.6v8.6h-2.9v-21.4Z"/>
+            <path id="DejaVuSans-61" d="M378.5,406.8c-2.1,0-3.6.2-4.4.7s-1.2,1.3-1.2,2.5.3,1.7.9,2.2c.6.5,1.5.8,2.5.8s2.6-.5,3.5-1.6,1.3-2.4,1.3-4.1v-.6h-2.6ZM383.7,405.7v9.1h-2.6v-2.4c-.6,1-1.4,1.7-2.2,2.2-.9.5-2,.7-3.3.7s-2.9-.5-3.9-1.4c-1-.9-1.5-2.2-1.5-3.7s.6-3.2,1.8-4.1c1.2-.9,3-1.4,5.4-1.4h3.7v-.3c0-1.2-.4-2.1-1.2-2.8s-1.9-1-3.4-1-1.8.1-2.7.3c-.9.2-1.7.5-2.5,1v-2.4c1-.4,1.9-.6,2.8-.8.9-.2,1.8-.3,2.6-.3,2.3,0,4.1.6,5.2,1.8,1.1,1.2,1.7,3,1.7,5.5Z"/>
+            <path id="DejaVuSans-72" d="M398.4,401.2c-.3-.2-.6-.3-1-.4-.3,0-.7-.1-1.1-.1-1.5,0-2.6.5-3.4,1.5s-1.2,2.4-1.2,4.2v8.4h-2.6v-16h2.6v2.5c.6-1,1.3-1.7,2.2-2.2.9-.5,2-.7,3.2-.7s.4,0,.6,0c.2,0,.5,0,.7.1v2.7Z"/>
+            <path id="DejaVuSans-611" data-name="DejaVuSans-61" d="M408.4,406.8c-2.1,0-3.6.2-4.4.7s-1.2,1.3-1.2,2.5.3,1.7.9,2.2c.6.5,1.5.8,2.5.8s2.6-.5,3.5-1.6,1.3-2.4,1.3-4.1v-.6h-2.6ZM413.7,405.7v9.1h-2.6v-2.4c-.6,1-1.4,1.7-2.2,2.2-.9.5-2,.7-3.3.7s-2.9-.5-3.9-1.4c-1-.9-1.5-2.2-1.5-3.7s.6-3.2,1.8-4.1c1.2-.9,3-1.4,5.4-1.4h3.7v-.3c0-1.2-.4-2.1-1.2-2.8s-1.9-1-3.4-1-1.8.1-2.7.3c-.9.2-1.7.5-2.5,1v-2.4c1-.4,1.9-.6,2.8-.8.9-.2,1.8-.3,2.6-.3,2.3,0,4.1.6,5.2,1.8,1.1,1.2,1.7,3,1.7,5.5Z"/>
+            <path id="DejaVuSans-6d" d="M431.6,401.9c.7-1.2,1.4-2.1,2.4-2.6s2-.8,3.2-.8,3,.6,3.9,1.8c.9,1.2,1.4,2.8,1.4,5v9.7h-2.6v-9.6c0-1.5-.3-2.7-.8-3.4-.5-.7-1.4-1.1-2.5-1.1s-2.4.5-3.2,1.4c-.8.9-1.2,2.1-1.2,3.7v9.1h-2.6v-9.6c0-1.5-.3-2.7-.8-3.4s-1.4-1.1-2.5-1.1-2.4.5-3.2,1.4c-.8.9-1.2,2.1-1.2,3.7v9.1h-2.6v-16h2.6v2.5c.6-1,1.3-1.7,2.2-2.2s1.8-.7,3-.7,2.2.3,3,.9c.8.6,1.4,1.4,1.8,2.6Z"/>
+            <path id="DejaVuSans-652" data-name="DejaVuSans-65" d="M461.4,406.1v1.3h-12.1c.1,1.8.7,3.2,1.6,4.1,1,.9,2.3,1.4,4.1,1.4s2-.1,2.9-.4c.9-.2,1.9-.6,2.8-1.1v2.5c-.9.4-1.9.7-2.9.9s-2,.3-3,.3c-2.6,0-4.6-.7-6.1-2.2-1.5-1.5-2.2-3.5-2.2-6s.7-4.7,2.1-6.2c1.4-1.5,3.3-2.3,5.7-2.3s3.9.7,5.1,2.1c1.3,1.4,1.9,3.3,1.9,5.7ZM458.7,405.4c0-1.4-.4-2.6-1.2-3.4-.8-.9-1.8-1.3-3.1-1.3s-2.6.4-3.5,1.2-1.4,2-1.5,3.5h9.4Z"/>
+            <path id="DejaVuSans-74" d="M468.3,394.2v4.5h5.4v2h-5.4v8.7c0,1.3.2,2.1.5,2.5s1.1.6,2.2.6h2.7v2.2h-2.7c-2,0-3.4-.4-4.2-1.1-.8-.8-1.2-2.1-1.2-4.1v-8.7h-1.9v-2h1.9v-4.5h2.6Z"/>
+            <path id="DejaVuSans-653" data-name="DejaVuSans-65" d="M490.9,406.1v1.3h-12.1c.1,1.8.7,3.2,1.6,4.1,1,.9,2.3,1.4,4.1,1.4s2-.1,2.9-.4c.9-.2,1.9-.6,2.8-1.1v2.5c-.9.4-1.9.7-2.9.9s-2,.3-3,.3c-2.6,0-4.6-.7-6.1-2.2-1.5-1.5-2.2-3.5-2.2-6s.7-4.7,2.1-6.2c1.4-1.5,3.3-2.3,5.7-2.3s3.9.7,5.1,2.1c1.3,1.4,1.9,3.3,1.9,5.7ZM488.2,405.4c0-1.4-.4-2.6-1.2-3.4-.8-.9-1.8-1.3-3.1-1.3s-2.6.4-3.5,1.2-1.4,2-1.5,3.5h9.4Z"/>
+            <path id="DejaVuSans-721" data-name="DejaVuSans-72" d="M504.5,401.2c-.3-.2-.6-.3-1-.4-.3,0-.7-.1-1.1-.1-1.5,0-2.6.5-3.4,1.5s-1.2,2.4-1.2,4.2v8.4h-2.6v-16h2.6v2.5c.6-1,1.3-1.7,2.2-2.2.9-.5,2-.7,3.2-.7s.4,0,.6,0c.2,0,.5,0,.7.1v2.7Z"/>
+            <path id="DejaVuSans-201" data-name="DejaVuSans-20" d="M504.5,414.8"/>
+            <path id="DejaVuSans-28" d="M522.8,392.6c-1.3,2.2-2.2,4.4-2.8,6.5-.6,2.1-.9,4.3-.9,6.5s.3,4.4.9,6.5,1.6,4.3,2.8,6.5h-2.3c-1.4-2.2-2.5-4.4-3.2-6.6-.7-2.2-1.1-4.3-1.1-6.4s.4-4.3,1.1-6.4c.7-2.2,1.8-4.4,3.2-6.6h2.3Z"/>
+            <path id="DejaVuSans-Oblique-3bb" d="M535.9,395.1l3.5,19.8h-2.8l-2.2-11.8-7.8,11.8h-2.8l10-15.4-.5-2.8c-.2-1.2-.8-1.8-1.8-1.8h-1.4l.4-2.3h1.7c2.1,0,3.4.9,3.7,2.5Z"/>
+            <path id="DejaVuSans-Oblique-6d" d="M560.9,412.8l-1.3,6.8h-1.8l1.3-6.7c0-.3,0-.5.1-.7,0-.2,0-.4,0-.5,0-.6-.2-1.1-.5-1.4-.3-.3-.8-.5-1.4-.5-.9,0-1.7.3-2.4,1s-1.2,1.5-1.4,2.6l-1.2,6.3h-1.8l1.3-6.7c0-.2,0-.5.1-.7,0-.2,0-.4,0-.6,0-.6-.2-1.1-.5-1.4-.3-.3-.8-.5-1.4-.5-.9,0-1.7.3-2.4,1-.7.7-1.2,1.5-1.4,2.6l-1.2,6.3h-1.8l2.2-11.2h1.8l-.3,1.7c.5-.7,1.1-1.2,1.8-1.5.7-.3,1.4-.5,2.2-.5s1.5.2,2,.6c.5.4.8,1,.9,1.8.6-.8,1.2-1.4,1.9-1.8.7-.4,1.5-.6,2.3-.6s1.7.3,2.2.8c.5.6.8,1.3.8,2.4s0,.5,0,.7c0,.3,0,.5-.1.8Z"/>
+            <path id="DejaVuSans-Oblique-61" d="M573.5,413.2l-1.3,6.4h-1.8l.3-1.7c-.5.7-1.2,1.2-1.8,1.5-.7.3-1.5.5-2.3.5s-1.7-.3-2.3-.9c-.6-.6-.9-1.3-.9-2.2,0-1.3.5-2.3,1.6-3.1,1-.8,2.5-1.1,4.3-1.1h2.6v-.5c.1,0,.1-.1.1-.2,0,0,0-.2,0-.3,0-.6-.2-1.1-.7-1.4-.5-.3-1.2-.5-2-.5s-1.2,0-1.8.2c-.6.2-1.3.4-1.9.7l.3-1.7c.7-.3,1.4-.5,2-.6.7-.1,1.3-.2,1.9-.2,1.3,0,2.3.3,3,.9.7.6,1,1.4,1,2.5s0,.5,0,.8c0,.3,0,.6-.1.9ZM571.5,414h-1.8c-1.5,0-2.6.2-3.4.6s-1.1,1-1.1,1.9.2,1,.6,1.4c.4.3.9.5,1.5.5,1,0,1.9-.4,2.6-1.1s1.2-1.7,1.5-2.9v-.4Z"/>
+            <path id="DejaVuSans-Oblique-78" d="M587.4,408.4l-5.1,5.5,3.2,5.7h-2.1l-2.4-4.4-4.1,4.4h-2.2l5.5-5.9-2.9-5.3h2.1l2.2,4.1,3.8-4.1h2.2Z"/>
+            <path id="DejaVuSans-29" d="M590.3,392.6h2.3c1.4,2.2,2.5,4.5,3.2,6.6.7,2.2,1.1,4.3,1.1,6.4s-.4,4.3-1.1,6.4c-.7,2.2-1.8,4.4-3.2,6.6h-2.3c1.3-2.2,2.2-4.4,2.8-6.5.6-2.2.9-4.3.9-6.5s-.3-4.4-.9-6.5c-.6-2.1-1.6-4.3-2.8-6.5Z"/>
+          </g>
+        </g>
+      </g>
+      <g id="matplotlib.axis_2">
+        <g id="ytick_1">
+          <g id="line2d_9">
+            <g class="st17">
+              <path class="st40" d="M115.1,304.4h558"/>
+            </g>
+          </g>
+          <g id="line2d_10">
+            <path id="m0f72f3314a" class="st56" d="M115.1,304.4h-3.5"/>
+          </g>
+          <g id="text_6">
+            <g>
+              <path id="DejaVuSans-31" d="M76.5,310.1h3v-10.4l-3.3.7v-1.7l3.3-.7h1.8v12.1h3v1.6h-7.9v-1.6Z"/>
+              <path id="DejaVuSans-304" data-name="DejaVuSans-30" d="M92,299.2c-1,0-1.7.5-2.1,1.4-.5.9-.7,2.3-.7,4.2s.2,3.3.7,4.2c.5.9,1.2,1.4,2.1,1.4s1.7-.5,2.2-1.4c.5-.9.7-2.3.7-4.2s-.2-3.3-.7-4.2c-.5-.9-1.2-1.4-2.2-1.4ZM92,297.8c1.5,0,2.7.6,3.5,1.8.8,1.2,1.2,3,1.2,5.3s-.4,4.1-1.2,5.3c-.8,1.2-2,1.8-3.5,1.8s-2.7-.6-3.5-1.8c-.8-1.2-1.2-3-1.2-5.3s.4-4.1,1.2-5.3c.8-1.2,2-1.8,3.5-1.8Z"/>
+              <path id="DejaVuSans-311" data-name="DejaVuSans-31" d="M99.8,303.4h2.1v-7.3l-2.3.5v-1.2l2.3-.5h1.3v8.5h2.1v1.1h-5.5v-1.1Z"/>
+            </g>
+          </g>
+        </g>
+        <g id="ytick_2">
+          <g id="line2d_11">
+            <g class="st50">
+              <path class="st40" d="M115.1,223.5h558"/>
+            </g>
+          </g>
+          <g id="line2d_12">
+            <path id="m0f72f3314a1" data-name="m0f72f3314a" class="st56" d="M115.1,223.5h-3.5"/>
+          </g>
+          <g id="text_7">
+            <g>
+              <path id="DejaVuSans-312" data-name="DejaVuSans-31" d="M67.8,228h3v-10.3l-3.3.7v-1.7l3.2-.7h1.8v12h3v1.5h-7.8v-1.5Z"/>
+              <path id="DejaVuSans-305" data-name="DejaVuSans-30" d="M83.2,217.2c-.9,0-1.6.5-2.1,1.4-.5.9-.7,2.3-.7,4.2s.2,3.2.7,4.2c.5.9,1.2,1.4,2.1,1.4s1.7-.5,2.1-1.4c.5-.9.7-2.3.7-4.2s-.2-3.3-.7-4.2c-.5-.9-1.2-1.4-2.1-1.4ZM83.2,215.8c1.5,0,2.7.6,3.5,1.8.8,1.2,1.2,2.9,1.2,5.2s-.4,4-1.2,5.2c-.8,1.2-2,1.8-3.5,1.8s-2.7-.6-3.5-1.8c-.8-1.2-1.2-2.9-1.2-5.2s.4-4,1.2-5.2c.8-1.2,2-1.8,3.5-1.8Z"/>
+              <path id="DejaVuSans-33" d="M94.6,217.4c.6.1,1.1.4,1.4.8.3.4.5.9.5,1.5,0,.9-.3,1.7-1,2.2-.6.5-1.6.8-2.7.8s-.8,0-1.2-.1c-.4,0-.9-.2-1.3-.4v-1.2c.4.2.7.4,1.2.5.4.1.9.2,1.3.2.8,0,1.4-.2,1.8-.5s.6-.8.6-1.4-.2-1-.6-1.3c-.4-.3-.9-.5-1.6-.5h-1.1v-1.1h1.2c.6,0,1.1-.1,1.4-.4s.5-.6.5-1.1-.2-.9-.5-1.1c-.3-.3-.8-.4-1.5-.4s-.7,0-1.1.1c-.4,0-.8.2-1.3.4v-1.1c.5-.1.9-.2,1.4-.3s.8-.1,1.2-.1c1,0,1.7.2,2.3.7.6.4.9,1,.9,1.8s-.2,1-.5,1.3-.7.6-1.3.8Z"/>
+            </g>
+          </g>
+        </g>
+        <g id="ytick_3">
+          <g id="line2d_13">
+            <g class="st5">
+              <path class="st40" d="M115.1,142.6h558"/>
+            </g>
+          </g>
+          <g id="line2d_14">
+            <path id="m0f72f3314a2" data-name="m0f72f3314a" class="st56" d="M115.1,142.6h-3.5"/>
+          </g>
+          <g id="text_8">
+            <g>
+              <path id="DejaVuSans-313" data-name="DejaVuSans-31" d="M67.6,147.3h3v-10.4l-3.3.7v-1.7l3.3-.7h1.8v12.1h3v1.6h-7.9v-1.6Z"/>
+              <path id="DejaVuSans-306" data-name="DejaVuSans-30" d="M83.2,136.4c-1,0-1.7.5-2.1,1.4-.5.9-.7,2.3-.7,4.2s.2,3.3.7,4.2c.5.9,1.2,1.4,2.1,1.4s1.7-.5,2.2-1.4c.5-.9.7-2.3.7-4.2s-.2-3.3-.7-4.2c-.5-.9-1.2-1.4-2.2-1.4ZM83.2,134.9c1.5,0,2.7.6,3.5,1.8.8,1.2,1.2,3,1.2,5.3s-.4,4.1-1.2,5.3c-.8,1.2-2,1.8-3.5,1.8s-2.7-.6-3.5-1.8c-.8-1.2-1.2-3-1.2-5.3s.4-4.1,1.2-5.3c.8-1.2,2-1.8,3.5-1.8Z"/>
+              <path id="DejaVuSans-35" d="M90.7,132.1h5.1v1.1h-3.9v2.3c.2,0,.4-.1.6-.1.2,0,.4,0,.6,0,1.1,0,1.9.3,2.5.9.6.6.9,1.4.9,2.4s-.3,1.8-1,2.4c-.6.6-1.5.9-2.7.9s-.8,0-1.2-.1c-.4,0-.8-.2-1.3-.3v-1.3c.4.2.8.4,1.2.5s.8.2,1.3.2c.7,0,1.3-.2,1.8-.6.4-.4.6-.9.6-1.6s-.2-1.2-.6-1.6c-.4-.4-1-.6-1.8-.6s-.7,0-1,.1c-.3,0-.7.2-1.1.4v-4.8Z"/>
+            </g>
+          </g>
+        </g>
+        <g id="ytick_4">
+          <g id="line2d_15">
+            <g class="st6">
+              <path class="st40" d="M115.1,61.7h558"/>
+            </g>
+          </g>
+          <g id="line2d_16">
+            <path id="m0f72f3314a3" data-name="m0f72f3314a" class="st56" d="M115.1,61.7h-3.5"/>
+          </g>
+          <g id="text_9">
+            <g>
+              <path id="DejaVuSans-314" data-name="DejaVuSans-31" d="M67.6,66.4h3v-10.4l-3.3.7v-1.7l3.3-.7h1.8v12.1h3v1.6h-7.9v-1.6Z"/>
+              <path id="DejaVuSans-307" data-name="DejaVuSans-30" d="M83.2,55.5c-1,0-1.7.5-2.1,1.4-.5.9-.7,2.3-.7,4.2s.2,3.3.7,4.2c.5.9,1.2,1.4,2.1,1.4s1.7-.5,2.2-1.4c.5-.9.7-2.3.7-4.2s-.2-3.3-.7-4.2c-.5-.9-1.2-1.4-2.2-1.4ZM83.2,54.1c1.5,0,2.7.6,3.5,1.8.8,1.2,1.2,3,1.2,5.3s-.4,4.1-1.2,5.3c-.8,1.2-2,1.8-3.5,1.8s-2.7-.6-3.5-1.8c-.8-1.2-1.2-3-1.2-5.3s.4-4.1,1.2-5.3c.8-1.2,2-1.8,3.5-1.8Z"/>
+              <path id="DejaVuSans-37" d="M90.4,51.2h6.2v.6l-3.5,9h-1.4l3.3-8.5h-4.6v-1.1Z"/>
+            </g>
+          </g>
+        </g>
+        <g id="ytick_5">
+          <g id="line2d_17">
+            <g class="st52">
+              <path class="st40" d="M115.1,357h558"/>
+            </g>
+          </g>
+          <g id="line2d_18">
+            <path id="mc41a882445" class="st55" d="M115.1,357h-2"/>
+          </g>
+        </g>
+        <g id="ytick_6">
+          <g id="line2d_19">
+            <g class="st25">
+              <path class="st40" d="M115.1,353.8h558"/>
+            </g>
+          </g>
+          <g id="line2d_20">
+            <path id="mc41a8824451" data-name="mc41a882445" class="st55" d="M115.1,353.8h-2"/>
+          </g>
+        </g>
+        <g id="ytick_7">
+          <g id="line2d_21">
+            <g class="st27">
+              <path class="st40" d="M115.1,351.1h558"/>
+            </g>
+          </g>
+          <g id="line2d_22">
+            <path id="mc41a8824452" data-name="mc41a882445" class="st55" d="M115.1,351.1h-2"/>
+          </g>
+        </g>
+        <g id="ytick_8">
+          <g id="line2d_23">
+            <g class="st35">
+              <path class="st40" d="M115.1,348.7h558"/>
+            </g>
+          </g>
+          <g id="line2d_24">
+            <path id="mc41a8824453" data-name="mc41a882445" class="st55" d="M115.1,348.7h-2"/>
+          </g>
+        </g>
+        <g id="ytick_9">
+          <g id="line2d_25">
+            <g class="st62">
+              <path class="st40" d="M115.1,346.6h558"/>
+            </g>
+          </g>
+          <g id="line2d_26">
+            <path id="mc41a8824454" data-name="mc41a882445" class="st55" d="M115.1,346.6h-2"/>
+          </g>
+        </g>
+        <g id="ytick_10">
+          <g id="line2d_27">
+            <g class="st81">
+              <path class="st40" d="M115.1,344.8h558"/>
+            </g>
+          </g>
+          <g id="line2d_28">
+            <path id="mc41a8824455" data-name="mc41a882445" class="st55" d="M115.1,344.8h-2"/>
+          </g>
+        </g>
+        <g id="ytick_11">
+          <g id="line2d_29">
+            <g class="st64">
+              <path class="st40" d="M115.1,332.6h558"/>
+            </g>
+          </g>
+          <g id="line2d_30">
+            <path id="mc41a8824456" data-name="mc41a882445" class="st55" d="M115.1,332.6h-2"/>
+          </g>
+        </g>
+        <g id="ytick_12">
+          <g id="line2d_31">
+            <g class="st12">
+              <path class="st40" d="M115.1,325.5h558"/>
+            </g>
+          </g>
+          <g id="line2d_32">
+            <path id="mc41a8824457" data-name="mc41a882445" class="st55" d="M115.1,325.5h-2"/>
+          </g>
+        </g>
+        <g id="ytick_13">
+          <g id="line2d_33">
+            <g class="st75">
+              <path class="st40" d="M115.1,320.5h558"/>
+            </g>
+          </g>
+          <g id="line2d_34">
+            <path id="mc41a8824458" data-name="mc41a882445" class="st55" d="M115.1,320.5h-2"/>
+          </g>
+        </g>
+        <g id="ytick_14">
+          <g id="line2d_35">
+            <g class="st7">
+              <path class="st40" d="M115.1,316.5h558"/>
+            </g>
+          </g>
+          <g id="line2d_36">
+            <path id="mc41a8824459" data-name="mc41a882445" class="st55" d="M115.1,316.5h-2"/>
+          </g>
+        </g>
+        <g id="ytick_15">
+          <g id="line2d_37">
+            <g class="st15">
+              <path class="st40" d="M115.1,313.3h558"/>
+            </g>
+          </g>
+          <g id="line2d_38">
+            <path id="mc41a88244510" data-name="mc41a882445" class="st55" d="M115.1,313.3h-2"/>
+          </g>
+        </g>
+        <g id="ytick_16">
+          <g id="line2d_39">
+            <g class="st67">
+              <path class="st40" d="M115.1,310.6h558"/>
+            </g>
+          </g>
+          <g id="line2d_40">
+            <path id="mc41a88244511" data-name="mc41a882445" class="st55" d="M115.1,310.6h-2"/>
+          </g>
+        </g>
+        <g id="ytick_17">
+          <g id="line2d_41">
+            <g class="st51">
+              <path class="st40" d="M115.1,308.3h558"/>
+            </g>
+          </g>
+          <g id="line2d_42">
+            <path id="mc41a88244512" data-name="mc41a882445" class="st55" d="M115.1,308.3h-2"/>
+          </g>
+        </g>
+        <g id="ytick_18">
+          <g id="line2d_43">
+            <g class="st4">
+              <path class="st40" d="M115.1,306.2h558"/>
+            </g>
+          </g>
+          <g id="line2d_44">
+            <path id="mc41a88244513" data-name="mc41a882445" class="st55" d="M115.1,306.2h-2"/>
+          </g>
+        </g>
+        <g id="ytick_19">
+          <g id="line2d_45">
+            <g class="st19">
+              <path class="st40" d="M115.1,292.2h558"/>
+            </g>
+          </g>
+          <g id="line2d_46">
+            <path id="mc41a88244514" data-name="mc41a882445" class="st55" d="M115.1,292.2h-2"/>
+          </g>
+        </g>
+        <g id="ytick_20">
+          <g id="line2d_47">
+            <g class="st20">
+              <path class="st40" d="M115.1,285.1h558"/>
+            </g>
+          </g>
+          <g id="line2d_48">
+            <path id="mc41a88244515" data-name="mc41a882445" class="st55" d="M115.1,285.1h-2"/>
+          </g>
+        </g>
+        <g id="ytick_21">
+          <g id="line2d_49">
+            <g class="st83">
+              <path class="st40" d="M115.1,280h558"/>
+            </g>
+          </g>
+          <g id="line2d_50">
+            <path id="mc41a88244516" data-name="mc41a882445" class="st55" d="M115.1,280h-2"/>
+          </g>
+        </g>
+        <g id="ytick_22">
+          <g id="line2d_51">
+            <g class="st32">
+              <path class="st40" d="M115.1,276.1h558"/>
+            </g>
+          </g>
+          <g id="line2d_52">
+            <path id="mc41a88244517" data-name="mc41a882445" class="st55" d="M115.1,276.1h-2"/>
+          </g>
+        </g>
+        <g id="ytick_23">
+          <g id="line2d_53">
+            <g class="st61">
+              <path class="st40" d="M115.1,272.9h558"/>
+            </g>
+          </g>
+          <g id="line2d_54">
+            <path id="mc41a88244518" data-name="mc41a882445" class="st55" d="M115.1,272.9h-2"/>
+          </g>
+        </g>
+        <g id="ytick_24">
+          <g id="line2d_55">
+            <g class="st33">
+              <path class="st40" d="M115.1,270.2h558"/>
+            </g>
+          </g>
+          <g id="line2d_56">
+            <path id="mc41a88244519" data-name="mc41a882445" class="st55" d="M115.1,270.2h-2"/>
+          </g>
+        </g>
+        <g id="ytick_25">
+          <g id="line2d_57">
+            <g class="st44">
+              <path class="st40" d="M115.1,267.8h558"/>
+            </g>
+          </g>
+          <g id="line2d_58">
+            <path id="mc41a88244520" data-name="mc41a882445" class="st55" d="M115.1,267.8h-2"/>
+          </g>
+        </g>
+        <g id="ytick_26">
+          <g id="line2d_59">
+            <g class="st77">
+              <path class="st40" d="M115.1,265.8h558"/>
+            </g>
+          </g>
+          <g id="line2d_60">
+            <path id="mc41a88244521" data-name="mc41a882445" class="st55" d="M115.1,265.8h-2"/>
+          </g>
+        </g>
+        <g id="ytick_27">
+          <g id="line2d_61">
+            <g class="st65">
+              <path class="st40" d="M115.1,263.9h558"/>
+            </g>
+          </g>
+          <g id="line2d_62">
+            <path id="mc41a88244522" data-name="mc41a882445" class="st55" d="M115.1,263.9h-2"/>
+          </g>
+        </g>
+        <g id="ytick_28">
+          <g id="line2d_63">
+            <g class="st9">
+              <path class="st40" d="M115.1,251.7h558"/>
+            </g>
+          </g>
+          <g id="line2d_64">
+            <path id="mc41a88244523" data-name="mc41a882445" class="st55" d="M115.1,251.7h-2"/>
+          </g>
+        </g>
+        <g id="ytick_29">
+          <g id="line2d_65">
+            <g class="st70">
+              <path class="st40" d="M115.1,244.6h558"/>
+            </g>
+          </g>
+          <g id="line2d_66">
+            <path id="mc41a88244524" data-name="mc41a882445" class="st55" d="M115.1,244.6h-2"/>
+          </g>
+        </g>
+        <g id="ytick_30">
+          <g id="line2d_67">
+            <g class="st13">
+              <path class="st40" d="M115.1,239.6h558"/>
+            </g>
+          </g>
+          <g id="line2d_68">
+            <path id="mc41a88244525" data-name="mc41a882445" class="st55" d="M115.1,239.6h-2"/>
+          </g>
+        </g>
+        <g id="ytick_31">
+          <g id="line2d_69">
+            <g class="st2">
+              <path class="st40" d="M115.1,235.7h558"/>
+            </g>
+          </g>
+          <g id="line2d_70">
+            <path id="mc41a88244526" data-name="mc41a882445" class="st55" d="M115.1,235.7h-2"/>
+          </g>
+        </g>
+        <g id="ytick_32">
+          <g id="line2d_71">
+            <g class="st42">
+              <path class="st40" d="M115.1,232.5h558"/>
+            </g>
+          </g>
+          <g id="line2d_72">
+            <path id="mc41a88244527" data-name="mc41a882445" class="st55" d="M115.1,232.5h-2"/>
+          </g>
+        </g>
+        <g id="ytick_33">
+          <g id="line2d_73">
+            <g class="st41">
+              <path class="st40" d="M115.1,229.7h558"/>
+            </g>
+          </g>
+          <g id="line2d_74">
+            <path id="mc41a88244528" data-name="mc41a882445" class="st55" d="M115.1,229.7h-2"/>
+          </g>
+        </g>
+        <g id="ytick_34">
+          <g id="line2d_75">
+            <g class="st79">
+              <path class="st40" d="M115.1,227.4h558"/>
+            </g>
+          </g>
+          <g id="line2d_76">
+            <path id="mc41a88244529" data-name="mc41a882445" class="st55" d="M115.1,227.4h-2"/>
+          </g>
+        </g>
+        <g id="ytick_35">
+          <g id="line2d_77">
+            <g class="st3">
+              <path class="st40" d="M115.1,225.3h558"/>
+            </g>
+          </g>
+          <g id="line2d_78">
+            <path id="mc41a88244530" data-name="mc41a882445" class="st55" d="M115.1,225.3h-2"/>
+          </g>
+        </g>
+        <g id="ytick_36">
+          <g id="line2d_79">
+            <g class="st74">
+              <path class="st40" d="M115.1,211.3h558"/>
+            </g>
+          </g>
+          <g id="line2d_80">
+            <path id="mc41a88244531" data-name="mc41a882445" class="st55" d="M115.1,211.3h-2"/>
+          </g>
+        </g>
+        <g id="ytick_37">
+          <g id="line2d_81">
+            <g class="st49">
+              <path class="st40" d="M115.1,204.2h558"/>
+            </g>
+          </g>
+          <g id="line2d_82">
+            <path id="mc41a88244532" data-name="mc41a882445" class="st55" d="M115.1,204.2h-2"/>
+          </g>
+        </g>
+        <g id="ytick_38">
+          <g id="line2d_83">
+            <g class="st57">
+              <path class="st40" d="M115.1,199.1h558"/>
+            </g>
+          </g>
+          <g id="line2d_84">
+            <path id="mc41a88244533" data-name="mc41a882445" class="st55" d="M115.1,199.1h-2"/>
+          </g>
+        </g>
+        <g id="ytick_39">
+          <g id="line2d_85">
+            <g class="st28">
+              <path class="st40" d="M115.1,195.2h558"/>
+            </g>
+          </g>
+          <g id="line2d_86">
+            <path id="mc41a88244534" data-name="mc41a882445" class="st55" d="M115.1,195.2h-2"/>
+          </g>
+        </g>
+        <g id="ytick_40">
+          <g id="line2d_87">
+            <g class="st30">
+              <path class="st40" d="M115.1,192h558"/>
+            </g>
+          </g>
+          <g id="line2d_88">
+            <path id="mc41a88244535" data-name="mc41a882445" class="st55" d="M115.1,192h-2"/>
+          </g>
+        </g>
+        <g id="ytick_41">
+          <g id="line2d_89">
+            <g class="st87">
+              <path class="st40" d="M115.1,189.3h558"/>
+            </g>
+          </g>
+          <g id="line2d_90">
+            <path id="mc41a88244536" data-name="mc41a882445" class="st55" d="M115.1,189.3h-2"/>
+          </g>
+        </g>
+        <g id="ytick_42">
+          <g id="line2d_91">
+            <g class="st47">
+              <path class="st40" d="M115.1,187h558"/>
+            </g>
+          </g>
+          <g id="line2d_92">
+            <path id="mc41a88244537" data-name="mc41a882445" class="st55" d="M115.1,187h-2"/>
+          </g>
+        </g>
+        <g id="ytick_43">
+          <g id="line2d_93">
+            <g class="st48">
+              <path class="st40" d="M115.1,184.9h558"/>
+            </g>
+          </g>
+          <g id="line2d_94">
+            <path id="mc41a88244538" data-name="mc41a882445" class="st55" d="M115.1,184.9h-2"/>
+          </g>
+        </g>
+        <g id="ytick_44">
+          <g id="line2d_95">
+            <g class="st16">
+              <path class="st40" d="M115.1,183h558"/>
+            </g>
+          </g>
+          <g id="line2d_96">
+            <path id="mc41a88244539" data-name="mc41a882445" class="st55" d="M115.1,183h-2"/>
+          </g>
+        </g>
+        <g id="ytick_45">
+          <g id="line2d_97">
+            <g class="st43">
+              <path class="st40" d="M115.1,170.9h558"/>
+            </g>
+          </g>
+          <g id="line2d_98">
+            <path id="mc41a88244540" data-name="mc41a882445" class="st55" d="M115.1,170.9h-2"/>
+          </g>
+        </g>
+        <g id="ytick_46">
+          <g id="line2d_99">
+            <g class="st78">
+              <path class="st40" d="M115.1,163.7h558"/>
+            </g>
+          </g>
+          <g id="line2d_100">
+            <path id="mc41a88244541" data-name="mc41a882445" class="st55" d="M115.1,163.7h-2"/>
+          </g>
+        </g>
+        <g id="ytick_47">
+          <g id="line2d_101">
+            <g class="st63">
+              <path class="st40" d="M115.1,158.7h558"/>
+            </g>
+          </g>
+          <g id="line2d_102">
+            <path id="mc41a88244542" data-name="mc41a882445" class="st55" d="M115.1,158.7h-2"/>
+          </g>
+        </g>
+        <g id="ytick_48">
+          <g id="line2d_103">
+            <g class="st1">
+              <path class="st40" d="M115.1,154.8h558"/>
+            </g>
+          </g>
+          <g id="line2d_104">
+            <path id="mc41a88244543" data-name="mc41a882445" class="st55" d="M115.1,154.8h-2"/>
+          </g>
+        </g>
+        <g id="ytick_49">
+          <g id="line2d_105">
+            <g class="st53">
+              <path class="st40" d="M115.1,151.6h558"/>
+            </g>
+          </g>
+          <g id="line2d_106">
+            <path id="mc41a88244544" data-name="mc41a882445" class="st55" d="M115.1,151.6h-2"/>
+          </g>
+        </g>
+        <g id="ytick_50">
+          <g id="line2d_107">
+            <g class="st73">
+              <path class="st40" d="M115.1,148.9h558"/>
+            </g>
+          </g>
+          <g id="line2d_108">
+            <path id="mc41a88244545" data-name="mc41a882445" class="st55" d="M115.1,148.9h-2"/>
+          </g>
+        </g>
+        <g id="ytick_51">
+          <g id="line2d_109">
+            <g class="st21">
+              <path class="st40" d="M115.1,146.5h558"/>
+            </g>
+          </g>
+          <g id="line2d_110">
+            <path id="mc41a88244546" data-name="mc41a882445" class="st55" d="M115.1,146.5h-2"/>
+          </g>
+        </g>
+        <g id="ytick_52">
+          <g id="line2d_111">
+            <g class="st71">
+              <path class="st40" d="M115.1,144.5h558"/>
+            </g>
+          </g>
+          <g id="line2d_112">
+            <path id="mc41a88244547" data-name="mc41a882445" class="st55" d="M115.1,144.5h-2"/>
+          </g>
+        </g>
+        <g id="ytick_53">
+          <g id="line2d_113">
+            <g class="st46">
+              <path class="st40" d="M115.1,130.4h558"/>
+            </g>
+          </g>
+          <g id="line2d_114">
+            <path id="mc41a88244548" data-name="mc41a882445" class="st55" d="M115.1,130.4h-2"/>
+          </g>
+        </g>
+        <g id="ytick_54">
+          <g id="line2d_115">
+            <g class="st36">
+              <path class="st40" d="M115.1,123.3h558"/>
+            </g>
+          </g>
+          <g id="line2d_116">
+            <path id="mc41a88244549" data-name="mc41a882445" class="st55" d="M115.1,123.3h-2"/>
+          </g>
+        </g>
+        <g id="ytick_55">
+          <g id="line2d_117">
+            <g class="st80">
+              <path class="st40" d="M115.1,118.3h558"/>
+            </g>
+          </g>
+          <g id="line2d_118">
+            <path id="mc41a88244550" data-name="mc41a882445" class="st55" d="M115.1,118.3h-2"/>
+          </g>
+        </g>
+        <g id="ytick_56">
+          <g id="line2d_119">
+            <g class="st29">
+              <path class="st40" d="M115.1,114.3h558"/>
+            </g>
+          </g>
+          <g id="line2d_120">
+            <path id="mc41a88244551" data-name="mc41a882445" class="st55" d="M115.1,114.3h-2"/>
+          </g>
+        </g>
+        <g id="ytick_57">
+          <g id="line2d_121">
+            <g class="st34">
+              <path class="st40" d="M115.1,111.1h558"/>
+            </g>
+          </g>
+          <g id="line2d_122">
+            <path id="mc41a88244552" data-name="mc41a882445" class="st55" d="M115.1,111.1h-2"/>
+          </g>
+        </g>
+        <g id="ytick_58">
+          <g id="line2d_123">
+            <g class="st14">
+              <path class="st40" d="M115.1,108.4h558"/>
+            </g>
+          </g>
+          <g id="line2d_124">
+            <path id="mc41a88244553" data-name="mc41a882445" class="st55" d="M115.1,108.4h-2"/>
+          </g>
+        </g>
+        <g id="ytick_59">
+          <g id="line2d_125">
+            <g class="st88">
+              <path class="st40" d="M115.1,106.1h558"/>
+            </g>
+          </g>
+          <g id="line2d_126">
+            <path id="mc41a88244554" data-name="mc41a882445" class="st55" d="M115.1,106.1h-2"/>
+          </g>
+        </g>
+        <g id="ytick_60">
+          <g id="line2d_127">
+            <g class="st82">
+              <path class="st40" d="M115.1,104h558"/>
+            </g>
+          </g>
+          <g id="line2d_128">
+            <path id="mc41a88244555" data-name="mc41a882445" class="st55" d="M115.1,104h-2"/>
+          </g>
+        </g>
+        <g id="ytick_61">
+          <g id="line2d_129">
+            <g class="st31">
+              <path class="st40" d="M115.1,102.2h558"/>
+            </g>
+          </g>
+          <g id="line2d_130">
+            <path id="mc41a88244556" data-name="mc41a882445" class="st55" d="M115.1,102.2h-2"/>
+          </g>
+        </g>
+        <g id="ytick_62">
+          <g id="line2d_131">
+            <g class="st86">
+              <path class="st40" d="M115.1,90h558"/>
+            </g>
+          </g>
+          <g id="line2d_132">
+            <path id="mc41a88244557" data-name="mc41a882445" class="st55" d="M115.1,90h-2"/>
+          </g>
+        </g>
+        <g id="ytick_63">
+          <g id="line2d_133">
+            <g class="st22">
+              <path class="st40" d="M115.1,82.9h558"/>
+            </g>
+          </g>
+          <g id="line2d_134">
+            <path id="mc41a88244558" data-name="mc41a882445" class="st55" d="M115.1,82.9h-2"/>
+          </g>
+        </g>
+        <g id="ytick_64">
+          <g id="line2d_135">
+            <g class="st58">
+              <path class="st40" d="M115.1,77.8h558"/>
+            </g>
+          </g>
+          <g id="line2d_136">
+            <path id="mc41a88244559" data-name="mc41a882445" class="st55" d="M115.1,77.8h-2"/>
+          </g>
+        </g>
+        <g id="ytick_65">
+          <g id="line2d_137">
+            <g class="st85">
+              <path class="st40" d="M115.1,73.9h558"/>
+            </g>
+          </g>
+          <g id="line2d_138">
+            <path id="mc41a88244560" data-name="mc41a882445" class="st55" d="M115.1,73.9h-2"/>
+          </g>
+        </g>
+        <g id="ytick_66">
+          <g id="line2d_139">
+            <g class="st89">
+              <path class="st40" d="M115.1,70.7h558"/>
+            </g>
+          </g>
+          <g id="line2d_140">
+            <path id="mc41a88244561" data-name="mc41a882445" class="st55" d="M115.1,70.7h-2"/>
+          </g>
+        </g>
+        <g id="ytick_67">
+          <g id="line2d_141">
+            <g class="st26">
+              <path class="st40" d="M115.1,68h558"/>
+            </g>
+          </g>
+          <g id="line2d_142">
+            <path id="mc41a88244562" data-name="mc41a882445" class="st55" d="M115.1,68h-2"/>
+          </g>
+        </g>
+        <g id="ytick_68">
+          <g id="line2d_143">
+            <g class="st18">
+              <path class="st40" d="M115.1,65.6h558"/>
+            </g>
+          </g>
+          <g id="line2d_144">
+            <path id="mc41a88244563" data-name="mc41a882445" class="st55" d="M115.1,65.6h-2"/>
+          </g>
+        </g>
+        <g id="ytick_69">
+          <g id="line2d_145">
+            <g class="st69">
+              <path class="st40" d="M115.1,63.6h558"/>
+            </g>
+          </g>
+          <g id="line2d_146">
+            <path id="mc41a88244564" data-name="mc41a882445" class="st55" d="M115.1,63.6h-2"/>
+          </g>
+        </g>
+        <g id="ytick_70">
+          <g id="line2d_147">
+            <g class="st72">
+              <path class="st40" d="M115.1,49.6h558"/>
+            </g>
+          </g>
+          <g id="line2d_148">
+            <path id="mc41a88244565" data-name="mc41a882445" class="st55" d="M115.1,49.6h-2"/>
+          </g>
+        </g>
+        <g id="ytick_71">
+          <g id="line2d_149">
+            <g class="st59">
+              <path class="st40" d="M115.1,42.4h558"/>
+            </g>
+          </g>
+          <g id="line2d_150">
+            <path id="mc41a88244566" data-name="mc41a882445" class="st55" d="M115.1,42.4h-2"/>
+          </g>
+        </g>
+        <g id="ytick_72">
+          <g id="line2d_151">
+            <g class="st11">
+              <path class="st40" d="M115.1,37.4h558"/>
+            </g>
+          </g>
+          <g id="line2d_152">
+            <path id="mc41a88244567" data-name="mc41a882445" class="st55" d="M115.1,37.4h-2"/>
+          </g>
+        </g>
+        <g id="ytick_73">
+          <g id="line2d_153">
+            <g class="st0">
+              <path class="st40" d="M115.1,33.5h558"/>
+            </g>
+          </g>
+          <g id="line2d_154">
+            <path id="mc41a88244568" data-name="mc41a882445" class="st55" d="M115.1,33.5h-2"/>
+          </g>
+        </g>
+        <g id="ytick_74">
+          <g id="line2d_155">
+            <g class="st66">
+              <path class="st40" d="M115.1,30.3h558"/>
+            </g>
+          </g>
+          <g id="line2d_156">
+            <path id="mc41a88244569" data-name="mc41a882445" class="st55" d="M115.1,30.3h-2"/>
+          </g>
+        </g>
+        <g id="ytick_75">
+          <g id="line2d_157">
+            <g class="st68">
+              <path class="st40" d="M115.1,27.6h558"/>
+            </g>
+          </g>
+          <g id="line2d_158">
+            <path id="mc41a88244570" data-name="mc41a882445" class="st55" d="M115.1,27.6h-2"/>
+          </g>
+        </g>
+        <g id="text_10">
+          <g>
+            <path id="DejaVuSans-4d" d="M30.6,329.1v-4.4l15-5.6-15-5.7v-4.4h22.1v2.9h-19.4l15.1,5.7v3l-15.1,5.7h19.4v2.9h-22.1Z"/>
+            <path id="DejaVuSans-612" data-name="DejaVuSans-61" d="M44.3,295.6c0,2.2.3,3.7.8,4.6s1.4,1.3,2.6,1.3,1.7-.3,2.3-1c.6-.6.8-1.5.8-2.6s-.5-2.7-1.6-3.6-2.5-1.4-4.3-1.4h-.6v2.7ZM43.2,290.1h9.4v2.7h-2.5c1,.6,1.7,1.4,2.2,2.3.5.9.7,2.1.7,3.4s-.5,3-1.4,4c-1,1-2.2,1.5-3.8,1.5s-3.3-.6-4.2-1.9c-.9-1.2-1.4-3.1-1.4-5.6v-3.8h-.3c-1.3,0-2.2.4-2.9,1.2s-1,2-1,3.5.1,1.9.3,2.8c.2.9.6,1.8,1,2.6h-2.5c-.4-1-.7-2-.9-2.9-.2-.9-.3-1.8-.3-2.7,0-2.4.6-4.2,1.9-5.4,1.2-1.2,3.1-1.8,5.6-1.8Z"/>
+            <path id="DejaVuSans-78" d="M36.1,270.8l8,6,8.5-6.3v3.2l-6.5,4.8,6.5,4.8v3.2l-8.7-6.4-7.9,5.9v-3.2l5.9-4.4-5.9-4.4v-3.2Z"/>
+            <path id="DejaVuSans-202" data-name="DejaVuSans-20" d="M52.6,269.5"/>
+            <path id="DejaVuSans-49" d="M30.6,256.9v-3h22.1v3h-22.1Z"/>
+            <path id="DejaVuSans-6d1" data-name="DejaVuSans-6d" d="M39.3,235.2c-1.2-.7-2.1-1.5-2.7-2.4s-.9-2.1-.9-3.3.6-3.1,1.8-4c1.2-.9,2.9-1.4,5.1-1.4h10v2.7h-9.9c-1.6,0-2.8.3-3.5.8-.8.6-1.2,1.4-1.2,2.6s.5,2.5,1.4,3.3c.9.8,2.2,1.2,3.8,1.2h9.3v2.7h-9.9c-1.6,0-2.8.3-3.5.8s-1.1,1.4-1.1,2.6.5,2.5,1.4,3.3c.9.8,2.2,1.2,3.8,1.2h9.3v2.7h-16.5v-2.7h2.6c-1-.6-1.8-1.4-2.2-2.2s-.7-1.9-.7-3.1.3-2.2.9-3.1c.6-.8,1.5-1.5,2.7-1.9Z"/>
+            <path id="DejaVuSans-70" d="M50.1,216h8.8v2.7h-22.8v-2.7h2.5c-1-.6-1.7-1.3-2.2-2.2-.5-.9-.7-1.9-.7-3.1,0-2,.8-3.6,2.4-4.9,1.6-1.3,3.7-1.9,6.3-1.9s4.7.6,6.3,1.9c1.6,1.3,2.4,2.9,2.4,4.9s-.2,2.3-.7,3.1c-.5.9-1.2,1.6-2.2,2.2ZM44.4,206.7c-2,0-3.6.4-4.7,1.2s-1.7,2-1.7,3.4.6,2.6,1.7,3.4,2.7,1.2,4.7,1.2,3.6-.4,4.7-1.2c1.1-.8,1.7-2,1.7-3.4s-.6-2.6-1.7-3.4c-1.1-.8-2.7-1.2-4.7-1.2Z"/>
+            <path id="DejaVuSans-722" data-name="DejaVuSans-72" d="M38.6,189.8c-.2.3-.3.6-.4,1,0,.4-.1.8-.1,1.2,0,1.5.5,2.7,1.5,3.5s2.4,1.2,4.3,1.2h8.7v2.7h-16.5v-2.7h2.6c-1-.6-1.8-1.3-2.2-2.2-.5-.9-.7-2-.7-3.3s0-.4,0-.6c0-.2,0-.5.1-.8h2.8Z"/>
+            <path id="DejaVuSans-6f" d="M38,181.3c0,1.5.6,2.6,1.7,3.5s2.7,1.3,4.7,1.3,3.5-.4,4.7-1.3c1.1-.8,1.7-2,1.7-3.5s-.6-2.6-1.7-3.4c-1.1-.8-2.7-1.3-4.7-1.3s-3.5.4-4.7,1.3c-1.1.8-1.7,2-1.7,3.4ZM35.7,181.3c0-2.4.8-4.2,2.3-5.6,1.5-1.4,3.7-2,6.4-2s4.8.7,6.4,2c1.5,1.3,2.3,3.2,2.3,5.6s-.8,4.2-2.3,5.6c-1.5,1.3-3.7,2-6.4,2s-4.8-.7-6.4-2c-1.5-1.3-2.3-3.2-2.3-5.6Z"/>
+            <path id="DejaVuSans-76" d="M36.1,171.1v-2.9l13.9-5.2-13.9-5.2v-2.9l16.5,6.2v3.7l-16.5,6.2Z"/>
+            <path id="DejaVuSans-654" data-name="DejaVuSans-65" d="M43.7,137.1h1.3v12.5c1.9-.1,3.3-.7,4.3-1.7,1-1,1.5-2.4,1.5-4.2s-.1-2.1-.4-3-.6-2-1.2-2.9h2.6c.4,1,.7,2,.9,3s.3,2.1.3,3.1c0,2.6-.8,4.7-2.3,6.3-1.5,1.5-3.6,2.3-6.2,2.3s-4.9-.7-6.4-2.2c-1.6-1.5-2.4-3.4-2.4-5.9s.7-4,2.2-5.3c1.4-1.3,3.4-1.9,5.8-1.9ZM42.9,139.8c-1.5,0-2.7.4-3.6,1.2-.9.8-1.3,1.9-1.3,3.2s.4,2.7,1.3,3.6,2.1,1.4,3.6,1.6v-9.7Z"/>
+            <path id="DejaVuSans-6d2" data-name="DejaVuSans-6d" d="M39.3,119.8c-1.2-.7-2.1-1.5-2.7-2.4s-.9-2.1-.9-3.3.6-3.1,1.8-4c1.2-.9,2.9-1.4,5.1-1.4h10v2.7h-9.9c-1.6,0-2.8.3-3.5.8-.8.6-1.2,1.4-1.2,2.6s.5,2.5,1.4,3.3c.9.8,2.2,1.2,3.8,1.2h9.3v2.7h-9.9c-1.6,0-2.8.3-3.5.8s-1.1,1.4-1.1,2.6.5,2.5,1.4,3.3c.9.8,2.2,1.2,3.8,1.2h9.3v2.7h-16.5v-2.7h2.6c-1-.6-1.8-1.4-2.2-2.2s-.7-1.9-.7-3.1.3-2.2.9-3.1c.6-.8,1.5-1.5,2.7-1.9Z"/>
+            <path id="DejaVuSans-655" data-name="DejaVuSans-65" d="M43.7,89h1.3v12.5c1.9-.1,3.3-.7,4.3-1.7,1-1,1.5-2.4,1.5-4.2s-.1-2.1-.4-3-.6-2-1.2-2.9h2.6c.4,1,.7,2,.9,3s.3,2.1.3,3.1c0,2.6-.8,4.7-2.3,6.3-1.5,1.5-3.6,2.3-6.2,2.3s-4.9-.7-6.4-2.2c-1.6-1.5-2.4-3.4-2.4-5.9s.7-4,2.2-5.3c1.4-1.3,3.4-1.9,5.8-1.9ZM42.9,91.7c-1.5,0-2.7.4-3.6,1.2-.9.8-1.3,1.9-1.3,3.2s.4,2.7,1.3,3.6,2.1,1.4,3.6,1.6v-9.7Z"/>
+            <path id="DejaVuSans-6e1" data-name="DejaVuSans-6e" d="M42.6,70.8h10v2.7h-9.9c-1.6,0-2.7.3-3.5.9-.8.6-1.2,1.5-1.2,2.7s.5,2.6,1.4,3.5c.9.8,2.2,1.3,3.8,1.3h9.3v2.7h-16.5v-2.7h2.6c-1-.7-1.7-1.4-2.2-2.3-.5-.9-.7-1.9-.7-3.1,0-1.9.6-3.3,1.8-4.3,1.2-1,2.9-1.5,5.2-1.5Z"/>
+            <path id="DejaVuSans-741" data-name="DejaVuSans-74" d="M31.4,62.7h4.7v-5.6h2.1v5.6h9c1.3,0,2.2-.2,2.6-.6s.6-1.1.6-2.3v-2.8h2.3v2.8c0,2.1-.4,3.5-1.2,4.3-.8.8-2.2,1.2-4.3,1.2h-9v2h-2.1v-2h-4.7v-2.7Z"/>
+          </g>
+        </g>
+      </g>
+      <g id="line2d_159">
+        <g class="st10">
+          <path class="st39" d="M140.5,42.4l5.1,10.7,5.1,10.1,5.1,9.5,5.1,9,5.1,8.6,5.1,8.2,5.1,7.8,5.1,7.4,5.1,7.1,5.1,6.8,5.1,6.5,7.7,9.3,7.7,8.8,7.7,8.3,7.7,7.9,7.7,7.5,7.7,7.2,7.7,6.9,7.7,6.5,7.7,6.3,7.7,6,7.7,5.8,7.7,5.6,10.2,7.1,10.2,6.7,10.2,6.4,10.2,6.1,10.2,5.9,10.2,5.6,10.2,5.4,12.8,6.5,12.8,6.2,10.2,4.7,12.8,5.7,10.2,4.4,12.8,5.3,12.8,5,17.9,6.7,15.4,5.5,17.9,6.1,15.4,4.9,17.9,5.4,15.4,4.3,10.2,2.7,10.2,2.4,10.2,2.1,7.7,1.4,7.7,1.1,5.1.5,5.1.3h5.1c0,0,41,0,41,0h0"/>
+        </g>
+        <g class="st8">
+          <g>
+            <path id="m178caa18b3" class="st54" d="M140.5,45.4c.8,0,1.6-.3,2.1-.9.6-.6.9-1.3.9-2.1s-.3-1.6-.9-2.1c-.6-.6-1.3-.9-2.1-.9s-1.6.3-2.1.9c-.6.6-.9,1.3-.9,2.1s.3,1.6.9,2.1c.6.6,1.3.9,2.1.9Z"/>
+            <path id="m178caa18b31" data-name="m178caa18b3" class="st54" d="M143,50.8c.8,0,1.6-.3,2.1-.9.6-.6.9-1.3.9-2.1s-.3-1.6-.9-2.1c-.6-.6-1.3-.9-2.1-.9s-1.6.3-2.1.9c-.6.6-.9,1.3-.9,2.1s.3,1.6.9,2.1c.6.6,1.3.9,2.1.9Z"/>
+            <path id="m178caa18b32" data-name="m178caa18b3" class="st54" d="M145.6,56.1c.8,0,1.6-.3,2.1-.9.6-.6.9-1.3.9-2.1s-.3-1.6-.9-2.1c-.6-.6-1.3-.9-2.1-.9s-1.6.3-2.1.9c-.6.6-.9,1.3-.9,2.1s.3,1.6.9,2.1c.6.6,1.3.9,2.1.9Z"/>
+            <path id="m178caa18b33" data-name="m178caa18b3" class="st54" d="M148.2,61.2c.8,0,1.6-.3,2.1-.9.6-.6.9-1.3.9-2.1s-.3-1.6-.9-2.1c-.6-.6-1.3-.9-2.1-.9s-1.6.3-2.1.9c-.6.6-.9,1.3-.9,2.1s.3,1.6.9,2.1c.6.6,1.3.9,2.1.9Z"/>
+            <path id="m178caa18b34" data-name="m178caa18b3" class="st54" d="M150.7,66.2c.8,0,1.6-.3,2.1-.9.6-.6.9-1.3.9-2.1s-.3-1.6-.9-2.1c-.6-.6-1.3-.9-2.1-.9s-1.6.3-2.1.9c-.6.6-.9,1.3-.9,2.1s.3,1.6.9,2.1c.6.6,1.3.9,2.1.9Z"/>
+            <path id="m178caa18b35" data-name="m178caa18b3" class="st54" d="M153.3,71c.8,0,1.6-.3,2.1-.9.6-.6.9-1.3.9-2.1s-.3-1.6-.9-2.1c-.6-.6-1.3-.9-2.1-.9s-1.6.3-2.1.9c-.6.6-.9,1.3-.9,2.1s.3,1.6.9,2.1c.6.6,1.3.9,2.1.9Z"/>
+            <path id="m178caa18b36" data-name="m178caa18b3" class="st54" d="M155.8,75.7c.8,0,1.6-.3,2.1-.9.6-.6.9-1.3.9-2.1s-.3-1.6-.9-2.1c-.6-.6-1.3-.9-2.1-.9s-1.6.3-2.1.9c-.6.6-.9,1.3-.9,2.1s.3,1.6.9,2.1c.6.6,1.3.9,2.1.9Z"/>
+            <path id="m178caa18b37" data-name="m178caa18b3" class="st54" d="M158.4,80.3c.8,0,1.6-.3,2.1-.9.6-.6.9-1.3.9-2.1s-.3-1.6-.9-2.1c-.6-.6-1.3-.9-2.1-.9s-1.6.3-2.1.9c-.6.6-.9,1.3-.9,2.1s.3,1.6.9,2.1c.6.6,1.3.9,2.1.9Z"/>
+            <path id="m178caa18b38" data-name="m178caa18b3" class="st54" d="M161,84.8c.8,0,1.6-.3,2.1-.9.6-.6.9-1.3.9-2.1s-.3-1.6-.9-2.1c-.6-.6-1.3-.9-2.1-.9s-1.6.3-2.1.9c-.6.6-.9,1.3-.9,2.1s.3,1.6.9,2.1c.6.6,1.3.9,2.1.9Z"/>
+            <path id="m178caa18b39" data-name="m178caa18b3" class="st54" d="M163.5,89.1c.8,0,1.6-.3,2.1-.9.6-.6.9-1.3.9-2.1s-.3-1.6-.9-2.1c-.6-.6-1.3-.9-2.1-.9s-1.6.3-2.1.9c-.6.6-.9,1.3-.9,2.1s.3,1.6.9,2.1c.6.6,1.3.9,2.1.9Z"/>
+            <path id="m178caa18b310" data-name="m178caa18b3" class="st54" d="M166.1,93.3c.8,0,1.6-.3,2.1-.9.6-.6.9-1.3.9-2.1s-.3-1.6-.9-2.1c-.6-.6-1.3-.9-2.1-.9s-1.6.3-2.1.9c-.6.6-.9,1.3-.9,2.1s.3,1.6.9,2.1c.6.6,1.3.9,2.1.9Z"/>
+            <path id="m178caa18b311" data-name="m178caa18b3" class="st54" d="M168.7,97.5c.8,0,1.6-.3,2.1-.9.6-.6.9-1.3.9-2.1s-.3-1.6-.9-2.1c-.6-.6-1.3-.9-2.1-.9s-1.6.3-2.1.9c-.6.6-.9,1.3-.9,2.1s.3,1.6.9,2.1c.6.6,1.3.9,2.1.9Z"/>
+            <path id="m178caa18b312" data-name="m178caa18b3" class="st54" d="M171.2,101.5c.8,0,1.6-.3,2.1-.9.6-.6.9-1.3.9-2.1s-.3-1.6-.9-2.1c-.6-.6-1.3-.9-2.1-.9s-1.6.3-2.1.9c-.6.6-.9,1.3-.9,2.1s.3,1.6.9,2.1c.6.6,1.3.9,2.1.9Z"/>
+            <path id="m178caa18b313" data-name="m178caa18b3" class="st54" d="M173.8,105.4c.8,0,1.6-.3,2.1-.9.6-.6.9-1.3.9-2.1s-.3-1.6-.9-2.1c-.6-.6-1.3-.9-2.1-.9s-1.6.3-2.1.9c-.6.6-.9,1.3-.9,2.1s.3,1.6.9,2.1c.6.6,1.3.9,2.1.9Z"/>
+            <path id="m178caa18b314" data-name="m178caa18b3" class="st54" d="M176.3,109.3c.8,0,1.6-.3,2.1-.9.6-.6.9-1.3.9-2.1s-.3-1.6-.9-2.1c-.6-.6-1.3-.9-2.1-.9s-1.6.3-2.1.9c-.6.6-.9,1.3-.9,2.1s.3,1.6.9,2.1c.6.6,1.3.9,2.1.9Z"/>
+            <path id="m178caa18b315" data-name="m178caa18b3" class="st54" d="M178.9,113.1c.8,0,1.6-.3,2.1-.9.6-.6.9-1.3.9-2.1s-.3-1.6-.9-2.1c-.6-.6-1.3-.9-2.1-.9s-1.6.3-2.1.9c-.6.6-.9,1.3-.9,2.1s.3,1.6.9,2.1c.6.6,1.3.9,2.1.9Z"/>
+            <path id="m178caa18b316" data-name="m178caa18b3" class="st54" d="M181.5,116.7c.8,0,1.6-.3,2.1-.9.6-.6.9-1.3.9-2.1s-.3-1.6-.9-2.1c-.6-.6-1.3-.9-2.1-.9s-1.6.3-2.1.9c-.6.6-.9,1.3-.9,2.1s.3,1.6.9,2.1c.6.6,1.3.9,2.1.9Z"/>
+            <path id="m178caa18b317" data-name="m178caa18b3" class="st54" d="M184,120.3c.8,0,1.6-.3,2.1-.9.6-.6.9-1.3.9-2.1s-.3-1.6-.9-2.1c-.6-.6-1.3-.9-2.1-.9s-1.6.3-2.1.9c-.6.6-.9,1.3-.9,2.1s.3,1.6.9,2.1c.6.6,1.3.9,2.1.9Z"/>
+            <path id="m178caa18b318" data-name="m178caa18b3" class="st54" d="M186.6,123.8c.8,0,1.6-.3,2.1-.9.6-.6.9-1.3.9-2.1s-.3-1.6-.9-2.1c-.6-.6-1.3-.9-2.1-.9s-1.6.3-2.1.9c-.6.6-.9,1.3-.9,2.1s.3,1.6.9,2.1c.6.6,1.3.9,2.1.9Z"/>
+            <path id="m178caa18b319" data-name="m178caa18b3" class="st54" d="M189.1,127.3c.8,0,1.6-.3,2.1-.9.6-.6.9-1.3.9-2.1s-.3-1.6-.9-2.1c-.6-.6-1.3-.9-2.1-.9s-1.6.3-2.1.9c-.6.6-.9,1.3-.9,2.1s.3,1.6.9,2.1c.6.6,1.3.9,2.1.9Z"/>
+            <path id="m178caa18b320" data-name="m178caa18b3" class="st54" d="M191.7,130.7c.8,0,1.6-.3,2.1-.9.6-.6.9-1.3.9-2.1s-.3-1.6-.9-2.1c-.6-.6-1.3-.9-2.1-.9s-1.6.3-2.1.9c-.6.6-.9,1.3-.9,2.1s.3,1.6.9,2.1c.6.6,1.3.9,2.1.9Z"/>
+            <path id="m178caa18b321" data-name="m178caa18b3" class="st54" d="M194.3,134c.8,0,1.6-.3,2.1-.9.6-.6.9-1.3.9-2.1s-.3-1.6-.9-2.1c-.6-.6-1.3-.9-2.1-.9s-1.6.3-2.1.9c-.6.6-.9,1.3-.9,2.1s.3,1.6.9,2.1c.6.6,1.3.9,2.1.9Z"/>
+            <path id="m178caa18b322" data-name="m178caa18b3" class="st54" d="M196.8,137.2c.8,0,1.6-.3,2.1-.9.6-.6.9-1.3.9-2.1s-.3-1.6-.9-2.1c-.6-.6-1.3-.9-2.1-.9s-1.6.3-2.1.9c-.6.6-.9,1.3-.9,2.1s.3,1.6.9,2.1c.6.6,1.3.9,2.1.9Z"/>
+            <path id="m178caa18b323" data-name="m178caa18b3" class="st54" d="M199.4,140.4c.8,0,1.6-.3,2.1-.9.6-.6.9-1.3.9-2.1s-.3-1.6-.9-2.1c-.6-.6-1.3-.9-2.1-.9s-1.6.3-2.1.9c-.6.6-.9,1.3-.9,2.1s.3,1.6.9,2.1c.6.6,1.3.9,2.1.9Z"/>
+            <path id="m178caa18b324" data-name="m178caa18b3" class="st54" d="M202,143.5c.8,0,1.6-.3,2.1-.9.6-.6.9-1.3.9-2.1s-.3-1.6-.9-2.1c-.6-.6-1.3-.9-2.1-.9s-1.6.3-2.1.9c-.6.6-.9,1.3-.9,2.1s.3,1.6.9,2.1c.6.6,1.3.9,2.1.9Z"/>
+            <path id="m178caa18b325" data-name="m178caa18b3" class="st54" d="M204.5,146.5c.8,0,1.6-.3,2.1-.9.6-.6.9-1.3.9-2.1s-.3-1.6-.9-2.1c-.6-.6-1.3-.9-2.1-.9s-1.6.3-2.1.9c-.6.6-.9,1.3-.9,2.1s.3,1.6.9,2.1c.6.6,1.3.9,2.1.9Z"/>
+            <path id="m178caa18b326" data-name="m178caa18b3" class="st54" d="M207.1,149.5c.8,0,1.6-.3,2.1-.9.6-.6.9-1.3.9-2.1s-.3-1.6-.9-2.1c-.6-.6-1.3-.9-2.1-.9s-1.6.3-2.1.9c-.6.6-.9,1.3-.9,2.1s.3,1.6.9,2.1c.6.6,1.3.9,2.1.9Z"/>
+            <path id="m178caa18b327" data-name="m178caa18b3" class="st54" d="M209.6,152.5c.8,0,1.6-.3,2.1-.9.6-.6.9-1.3.9-2.1s-.3-1.6-.9-2.1c-.6-.6-1.3-.9-2.1-.9s-1.6.3-2.1.9c-.6.6-.9,1.3-.9,2.1s.3,1.6.9,2.1c.6.6,1.3.9,2.1.9Z"/>
+            <path id="m178caa18b328" data-name="m178caa18b3" class="st54" d="M212.2,155.4c.8,0,1.6-.3,2.1-.9.6-.6.9-1.3.9-2.1s-.3-1.6-.9-2.1c-.6-.6-1.3-.9-2.1-.9s-1.6.3-2.1.9c-.6.6-.9,1.3-.9,2.1s.3,1.6.9,2.1c.6.6,1.3.9,2.1.9Z"/>
+            <path id="m178caa18b329" data-name="m178caa18b3" class="st54" d="M214.8,158.2c.8,0,1.6-.3,2.1-.9.6-.6.9-1.3.9-2.1s-.3-1.6-.9-2.1c-.6-.6-1.3-.9-2.1-.9s-1.6.3-2.1.9c-.6.6-.9,1.3-.9,2.1s.3,1.6.9,2.1c.6.6,1.3.9,2.1.9Z"/>
+            <path id="m178caa18b330" data-name="m178caa18b3" class="st54" d="M217.3,161c.8,0,1.6-.3,2.1-.9.6-.6.9-1.3.9-2.1s-.3-1.6-.9-2.1c-.6-.6-1.3-.9-2.1-.9s-1.6.3-2.1.9c-.6.6-.9,1.3-.9,2.1s.3,1.6.9,2.1c.6.6,1.3.9,2.1.9Z"/>
+            <path id="m178caa18b331" data-name="m178caa18b3" class="st54" d="M219.9,163.7c.8,0,1.6-.3,2.1-.9.6-.6.9-1.3.9-2.1s-.3-1.6-.9-2.1c-.6-.6-1.3-.9-2.1-.9s-1.6.3-2.1.9c-.6.6-.9,1.3-.9,2.1s.3,1.6.9,2.1c.6.6,1.3.9,2.1.9Z"/>
+            <path id="m178caa18b332" data-name="m178caa18b3" class="st54" d="M222.5,166.4c.8,0,1.6-.3,2.1-.9.6-.6.9-1.3.9-2.1s-.3-1.6-.9-2.1c-.6-.6-1.3-.9-2.1-.9s-1.6.3-2.1.9c-.6.6-.9,1.3-.9,2.1s.3,1.6.9,2.1c.6.6,1.3.9,2.1.9Z"/>
+            <path id="m178caa18b333" data-name="m178caa18b3" class="st54" d="M225,169c.8,0,1.6-.3,2.1-.9.6-.6.9-1.3.9-2.1s-.3-1.6-.9-2.1c-.6-.6-1.3-.9-2.1-.9s-1.6.3-2.1.9c-.6.6-.9,1.3-.9,2.1s.3,1.6.9,2.1c.6.6,1.3.9,2.1.9Z"/>
+            <path id="m178caa18b334" data-name="m178caa18b3" class="st54" d="M227.6,171.6c.8,0,1.6-.3,2.1-.9.6-.6.9-1.3.9-2.1s-.3-1.6-.9-2.1c-.6-.6-1.3-.9-2.1-.9s-1.6.3-2.1.9c-.6.6-.9,1.3-.9,2.1s.3,1.6.9,2.1c.6.6,1.3.9,2.1.9Z"/>
+            <path id="m178caa18b335" data-name="m178caa18b3" class="st54" d="M230.1,174.2c.8,0,1.6-.3,2.1-.9.6-.6.9-1.3.9-2.1s-.3-1.6-.9-2.1c-.6-.6-1.3-.9-2.1-.9s-1.6.3-2.1.9c-.6.6-.9,1.3-.9,2.1s.3,1.6.9,2.1c.6.6,1.3.9,2.1.9Z"/>
+            <path id="m178caa18b336" data-name="m178caa18b3" class="st54" d="M232.7,176.7c.8,0,1.6-.3,2.1-.9.6-.6.9-1.3.9-2.1s-.3-1.6-.9-2.1c-.6-.6-1.3-.9-2.1-.9s-1.6.3-2.1.9c-.6.6-.9,1.3-.9,2.1s.3,1.6.9,2.1c.6.6,1.3.9,2.1.9Z"/>
+            <path id="m178caa18b337" data-name="m178caa18b3" class="st54" d="M235.3,179.2c.8,0,1.6-.3,2.1-.9.6-.6.9-1.3.9-2.1s-.3-1.6-.9-2.1c-.6-.6-1.3-.9-2.1-.9s-1.6.3-2.1.9c-.6.6-.9,1.3-.9,2.1s.3,1.6.9,2.1c.6.6,1.3.9,2.1.9Z"/>
+            <path id="m178caa18b338" data-name="m178caa18b3" class="st54" d="M237.8,181.6c.8,0,1.6-.3,2.1-.9.6-.6.9-1.3.9-2.1s-.3-1.6-.9-2.1c-.6-.6-1.3-.9-2.1-.9s-1.6.3-2.1.9c-.6.6-.9,1.3-.9,2.1s.3,1.6.9,2.1c.6.6,1.3.9,2.1.9Z"/>
+            <path id="m178caa18b339" data-name="m178caa18b3" class="st54" d="M240.4,184c.8,0,1.6-.3,2.1-.9.6-.6.9-1.3.9-2.1s-.3-1.6-.9-2.1c-.6-.6-1.3-.9-2.1-.9s-1.6.3-2.1.9c-.6.6-.9,1.3-.9,2.1s.3,1.6.9,2.1c.6.6,1.3.9,2.1.9Z"/>
+            <path id="m178caa18b340" data-name="m178caa18b3" class="st54" d="M242.9,186.3c.8,0,1.6-.3,2.1-.9.6-.6.9-1.3.9-2.1s-.3-1.6-.9-2.1c-.6-.6-1.3-.9-2.1-.9s-1.6.3-2.1.9c-.6.6-.9,1.3-.9,2.1s.3,1.6.9,2.1c.6.6,1.3.9,2.1.9Z"/>
+            <path id="m178caa18b341" data-name="m178caa18b3" class="st54" d="M245.5,188.7c.8,0,1.6-.3,2.1-.9.6-.6.9-1.3.9-2.1s-.3-1.6-.9-2.1c-.6-.6-1.3-.9-2.1-.9s-1.6.3-2.1.9c-.6.6-.9,1.3-.9,2.1s.3,1.6.9,2.1c.6.6,1.3.9,2.1.9Z"/>
+            <path id="m178caa18b342" data-name="m178caa18b3" class="st54" d="M248.1,190.9c.8,0,1.6-.3,2.1-.9.6-.6.9-1.3.9-2.1s-.3-1.6-.9-2.1c-.6-.6-1.3-.9-2.1-.9s-1.6.3-2.1.9c-.6.6-.9,1.3-.9,2.1s.3,1.6.9,2.1c.6.6,1.3.9,2.1.9Z"/>
+            <path id="m178caa18b343" data-name="m178caa18b3" class="st54" d="M250.6,193.2c.8,0,1.6-.3,2.1-.9.6-.6.9-1.3.9-2.1s-.3-1.6-.9-2.1c-.6-.6-1.3-.9-2.1-.9s-1.6.3-2.1.9c-.6.6-.9,1.3-.9,2.1s.3,1.6.9,2.1c.6.6,1.3.9,2.1.9Z"/>
+            <path id="m178caa18b344" data-name="m178caa18b3" class="st54" d="M253.2,195.4c.8,0,1.6-.3,2.1-.9.6-.6.9-1.3.9-2.1s-.3-1.6-.9-2.1c-.6-.6-1.3-.9-2.1-.9s-1.6.3-2.1.9c-.6.6-.9,1.3-.9,2.1s.3,1.6.9,2.1c.6.6,1.3.9,2.1.9Z"/>
+            <path id="m178caa18b345" data-name="m178caa18b3" class="st54" d="M255.8,197.6c.8,0,1.6-.3,2.1-.9.6-.6.9-1.3.9-2.1s-.3-1.6-.9-2.1c-.6-.6-1.3-.9-2.1-.9s-1.6.3-2.1.9c-.6.6-.9,1.3-.9,2.1s.3,1.6.9,2.1c.6.6,1.3.9,2.1.9Z"/>
+            <path id="m178caa18b346" data-name="m178caa18b3" class="st54" d="M258.3,199.7c.8,0,1.6-.3,2.1-.9.6-.6.9-1.3.9-2.1s-.3-1.6-.9-2.1c-.6-.6-1.3-.9-2.1-.9s-1.6.3-2.1.9c-.6.6-.9,1.3-.9,2.1s.3,1.6.9,2.1c.6.6,1.3.9,2.1.9Z"/>
+            <path id="m178caa18b347" data-name="m178caa18b3" class="st54" d="M260.9,201.9c.8,0,1.6-.3,2.1-.9.6-.6.9-1.3.9-2.1s-.3-1.6-.9-2.1c-.6-.6-1.3-.9-2.1-.9s-1.6.3-2.1.9c-.6.6-.9,1.3-.9,2.1s.3,1.6.9,2.1c.6.6,1.3.9,2.1.9Z"/>
+            <path id="m178caa18b348" data-name="m178caa18b3" class="st54" d="M263.4,204c.8,0,1.6-.3,2.1-.9.6-.6.9-1.3.9-2.1s-.3-1.6-.9-2.1c-.6-.6-1.3-.9-2.1-.9s-1.6.3-2.1.9c-.6.6-.9,1.3-.9,2.1s.3,1.6.9,2.1c.6.6,1.3.9,2.1.9Z"/>
+            <path id="m178caa18b349" data-name="m178caa18b3" class="st54" d="M266,206c.8,0,1.6-.3,2.1-.9.6-.6.9-1.3.9-2.1s-.3-1.6-.9-2.1c-.6-.6-1.3-.9-2.1-.9s-1.6.3-2.1.9c-.6.6-.9,1.3-.9,2.1s.3,1.6.9,2.1c.6.6,1.3.9,2.1.9Z"/>
+            <path id="m178caa18b350" data-name="m178caa18b3" class="st54" d="M268.6,208c.8,0,1.6-.3,2.1-.9.6-.6.9-1.3.9-2.1s-.3-1.6-.9-2.1c-.6-.6-1.3-.9-2.1-.9s-1.6.3-2.1.9c-.6.6-.9,1.3-.9,2.1s.3,1.6.9,2.1c.6.6,1.3.9,2.1.9Z"/>
+            <path id="m178caa18b351" data-name="m178caa18b3" class="st54" d="M271.1,210.1c.8,0,1.6-.3,2.1-.9.6-.6.9-1.3.9-2.1s-.3-1.6-.9-2.1c-.6-.6-1.3-.9-2.1-.9s-1.6.3-2.1.9c-.6.6-.9,1.3-.9,2.1s.3,1.6.9,2.1c.6.6,1.3.9,2.1.9Z"/>
+            <path id="m178caa18b352" data-name="m178caa18b3" class="st54" d="M273.7,212c.8,0,1.6-.3,2.1-.9.6-.6.9-1.3.9-2.1s-.3-1.6-.9-2.1c-.6-.6-1.3-.9-2.1-.9s-1.6.3-2.1.9c-.6.6-.9,1.3-.9,2.1s.3,1.6.9,2.1c.6.6,1.3.9,2.1.9Z"/>
+            <path id="m178caa18b353" data-name="m178caa18b3" class="st54" d="M276.3,214c.8,0,1.6-.3,2.1-.9.6-.6.9-1.3.9-2.1s-.3-1.6-.9-2.1c-.6-.6-1.3-.9-2.1-.9s-1.6.3-2.1.9c-.6.6-.9,1.3-.9,2.1s.3,1.6.9,2.1c.6.6,1.3.9,2.1.9Z"/>
+            <path id="m178caa18b354" data-name="m178caa18b3" class="st54" d="M278.8,215.9c.8,0,1.6-.3,2.1-.9.6-.6.9-1.3.9-2.1s-.3-1.6-.9-2.1c-.6-.6-1.3-.9-2.1-.9s-1.6.3-2.1.9c-.6.6-.9,1.3-.9,2.1s.3,1.6.9,2.1c.6.6,1.3.9,2.1.9Z"/>
+            <path id="m178caa18b355" data-name="m178caa18b3" class="st54" d="M281.4,217.8c.8,0,1.6-.3,2.1-.9.6-.6.9-1.3.9-2.1s-.3-1.6-.9-2.1c-.6-.6-1.3-.9-2.1-.9s-1.6.3-2.1.9c-.6.6-.9,1.3-.9,2.1s.3,1.6.9,2.1c.6.6,1.3.9,2.1.9Z"/>
+            <path id="m178caa18b356" data-name="m178caa18b3" class="st54" d="M283.9,219.7c.8,0,1.6-.3,2.1-.9.6-.6.9-1.3.9-2.1s-.3-1.6-.9-2.1c-.6-.6-1.3-.9-2.1-.9s-1.6.3-2.1.9c-.6.6-.9,1.3-.9,2.1s.3,1.6.9,2.1c.6.6,1.3.9,2.1.9Z"/>
+            <path id="m178caa18b357" data-name="m178caa18b3" class="st54" d="M286.5,221.5c.8,0,1.6-.3,2.1-.9.6-.6.9-1.3.9-2.1s-.3-1.6-.9-2.1c-.6-.6-1.3-.9-2.1-.9s-1.6.3-2.1.9c-.6.6-.9,1.3-.9,2.1s.3,1.6.9,2.1c.6.6,1.3.9,2.1.9Z"/>
+            <path id="m178caa18b358" data-name="m178caa18b3" class="st54" d="M289.1,223.4c.8,0,1.6-.3,2.1-.9.6-.6.9-1.3.9-2.1s-.3-1.6-.9-2.1c-.6-.6-1.3-.9-2.1-.9s-1.6.3-2.1.9c-.6.6-.9,1.3-.9,2.1s.3,1.6.9,2.1c.6.6,1.3.9,2.1.9Z"/>
+            <path id="m178caa18b359" data-name="m178caa18b3" class="st54" d="M291.6,225.2c.8,0,1.6-.3,2.1-.9.6-.6.9-1.3.9-2.1s-.3-1.6-.9-2.1c-.6-.6-1.3-.9-2.1-.9s-1.6.3-2.1.9c-.6.6-.9,1.3-.9,2.1s.3,1.6.9,2.1c.6.6,1.3.9,2.1.9Z"/>
+            <path id="m178caa18b360" data-name="m178caa18b3" class="st54" d="M294.2,226.9c.8,0,1.6-.3,2.1-.9.6-.6.9-1.3.9-2.1s-.3-1.6-.9-2.1c-.6-.6-1.3-.9-2.1-.9s-1.6.3-2.1.9c-.6.6-.9,1.3-.9,2.1s.3,1.6.9,2.1c.6.6,1.3.9,2.1.9Z"/>
+            <path id="m178caa18b361" data-name="m178caa18b3" class="st54" d="M296.7,228.7c.8,0,1.6-.3,2.1-.9.6-.6.9-1.3.9-2.1s-.3-1.6-.9-2.1c-.6-.6-1.3-.9-2.1-.9s-1.6.3-2.1.9c-.6.6-.9,1.3-.9,2.1s.3,1.6.9,2.1c.6.6,1.3.9,2.1.9Z"/>
+            <path id="m178caa18b362" data-name="m178caa18b3" class="st54" d="M299.3,230.4c.8,0,1.6-.3,2.1-.9.6-.6.9-1.3.9-2.1s-.3-1.6-.9-2.1c-.6-.6-1.3-.9-2.1-.9s-1.6.3-2.1.9c-.6.6-.9,1.3-.9,2.1s.3,1.6.9,2.1c.6.6,1.3.9,2.1.9Z"/>
+            <path id="m178caa18b363" data-name="m178caa18b3" class="st54" d="M301.9,232.1c.8,0,1.6-.3,2.1-.9.6-.6.9-1.3.9-2.1s-.3-1.6-.9-2.1c-.6-.6-1.3-.9-2.1-.9s-1.6.3-2.1.9c-.6.6-.9,1.3-.9,2.1s.3,1.6.9,2.1c.6.6,1.3.9,2.1.9Z"/>
+            <path id="m178caa18b364" data-name="m178caa18b3" class="st54" d="M304.4,233.8c.8,0,1.6-.3,2.1-.9.6-.6.9-1.3.9-2.1s-.3-1.6-.9-2.1c-.6-.6-1.3-.9-2.1-.9s-1.6.3-2.1.9c-.6.6-.9,1.3-.9,2.1s.3,1.6.9,2.1c.6.6,1.3.9,2.1.9Z"/>
+            <path id="m178caa18b365" data-name="m178caa18b3" class="st54" d="M307,235.5c.8,0,1.6-.3,2.1-.9.6-.6.9-1.3.9-2.1s-.3-1.6-.9-2.1c-.6-.6-1.3-.9-2.1-.9s-1.6.3-2.1.9c-.6.6-.9,1.3-.9,2.1s.3,1.6.9,2.1c.6.6,1.3.9,2.1.9Z"/>
+            <path id="m178caa18b366" data-name="m178caa18b3" class="st54" d="M309.6,237.2c.8,0,1.6-.3,2.1-.9.6-.6.9-1.3.9-2.1s-.3-1.6-.9-2.1c-.6-.6-1.3-.9-2.1-.9s-1.6.3-2.1.9c-.6.6-.9,1.3-.9,2.1s.3,1.6.9,2.1c.6.6,1.3.9,2.1.9Z"/>
+            <path id="m178caa18b367" data-name="m178caa18b3" class="st54" d="M312.1,238.8c.8,0,1.6-.3,2.1-.9.6-.6.9-1.3.9-2.1s-.3-1.6-.9-2.1c-.6-.6-1.3-.9-2.1-.9s-1.6.3-2.1.9c-.6.6-.9,1.3-.9,2.1s.3,1.6.9,2.1c.6.6,1.3.9,2.1.9Z"/>
+            <path id="m178caa18b368" data-name="m178caa18b3" class="st54" d="M314.7,240.4c.8,0,1.6-.3,2.1-.9.6-.6.9-1.3.9-2.1s-.3-1.6-.9-2.1c-.6-.6-1.3-.9-2.1-.9s-1.6.3-2.1.9c-.6.6-.9,1.3-.9,2.1s.3,1.6.9,2.1c.6.6,1.3.9,2.1.9Z"/>
+            <path id="m178caa18b369" data-name="m178caa18b3" class="st54" d="M317.2,242c.8,0,1.6-.3,2.1-.9.6-.6.9-1.3.9-2.1s-.3-1.6-.9-2.1c-.6-.6-1.3-.9-2.1-.9s-1.6.3-2.1.9c-.6.6-.9,1.3-.9,2.1s.3,1.6.9,2.1c.6.6,1.3.9,2.1.9Z"/>
+            <path id="m178caa18b370" data-name="m178caa18b3" class="st54" d="M319.8,243.6c.8,0,1.6-.3,2.1-.9.6-.6.9-1.3.9-2.1s-.3-1.6-.9-2.1c-.6-.6-1.3-.9-2.1-.9s-1.6.3-2.1.9c-.6.6-.9,1.3-.9,2.1s.3,1.6.9,2.1c.6.6,1.3.9,2.1.9Z"/>
+            <path id="m178caa18b371" data-name="m178caa18b3" class="st54" d="M322.4,245.2c.8,0,1.6-.3,2.1-.9.6-.6.9-1.3.9-2.1s-.3-1.6-.9-2.1c-.6-.6-1.3-.9-2.1-.9s-1.6.3-2.1.9c-.6.6-.9,1.3-.9,2.1s.3,1.6.9,2.1c.6.6,1.3.9,2.1.9Z"/>
+            <path id="m178caa18b372" data-name="m178caa18b3" class="st54" d="M324.9,246.7c.8,0,1.6-.3,2.1-.9.6-.6.9-1.3.9-2.1s-.3-1.6-.9-2.1c-.6-.6-1.3-.9-2.1-.9s-1.6.3-2.1.9c-.6.6-.9,1.3-.9,2.1s.3,1.6.9,2.1c.6.6,1.3.9,2.1.9Z"/>
+            <path id="m178caa18b373" data-name="m178caa18b3" class="st54" d="M327.5,248.2c.8,0,1.6-.3,2.1-.9.6-.6.9-1.3.9-2.1s-.3-1.6-.9-2.1c-.6-.6-1.3-.9-2.1-.9s-1.6.3-2.1.9c-.6.6-.9,1.3-.9,2.1s.3,1.6.9,2.1c.6.6,1.3.9,2.1.9Z"/>
+            <path id="m178caa18b374" data-name="m178caa18b3" class="st54" d="M330.1,249.7c.8,0,1.6-.3,2.1-.9.6-.6.9-1.3.9-2.1s-.3-1.6-.9-2.1c-.6-.6-1.3-.9-2.1-.9s-1.6.3-2.1.9c-.6.6-.9,1.3-.9,2.1s.3,1.6.9,2.1c.6.6,1.3.9,2.1.9Z"/>
+            <path id="m178caa18b375" data-name="m178caa18b3" class="st54" d="M332.6,251.2c.8,0,1.6-.3,2.1-.9.6-.6.9-1.3.9-2.1s-.3-1.6-.9-2.1c-.6-.6-1.3-.9-2.1-.9s-1.6.3-2.1.9c-.6.6-.9,1.3-.9,2.1s.3,1.6.9,2.1c.6.6,1.3.9,2.1.9Z"/>
+            <path id="m178caa18b376" data-name="m178caa18b3" class="st54" d="M335.2,252.7c.8,0,1.6-.3,2.1-.9.6-.6.9-1.3.9-2.1s-.3-1.6-.9-2.1c-.6-.6-1.3-.9-2.1-.9s-1.6.3-2.1.9c-.6.6-.9,1.3-.9,2.1s.3,1.6.9,2.1c.6.6,1.3.9,2.1.9Z"/>
+            <path id="m178caa18b377" data-name="m178caa18b3" class="st54" d="M337.7,254.2c.8,0,1.6-.3,2.1-.9.6-.6.9-1.3.9-2.1s-.3-1.6-.9-2.1c-.6-.6-1.3-.9-2.1-.9s-1.6.3-2.1.9c-.6.6-.9,1.3-.9,2.1s.3,1.6.9,2.1c.6.6,1.3.9,2.1.9Z"/>
+            <path id="m178caa18b378" data-name="m178caa18b3" class="st54" d="M340.3,255.6c.8,0,1.6-.3,2.1-.9.6-.6.9-1.3.9-2.1s-.3-1.6-.9-2.1c-.6-.6-1.3-.9-2.1-.9s-1.6.3-2.1.9c-.6.6-.9,1.3-.9,2.1s.3,1.6.9,2.1c.6.6,1.3.9,2.1.9Z"/>
+            <path id="m178caa18b379" data-name="m178caa18b3" class="st54" d="M342.9,257.1c.8,0,1.6-.3,2.1-.9.6-.6.9-1.3.9-2.1s-.3-1.6-.9-2.1c-.6-.6-1.3-.9-2.1-.9s-1.6.3-2.1.9c-.6.6-.9,1.3-.9,2.1s.3,1.6.9,2.1c.6.6,1.3.9,2.1.9Z"/>
+            <path id="m178caa18b380" data-name="m178caa18b3" class="st54" d="M345.4,258.5c.8,0,1.6-.3,2.1-.9.6-.6.9-1.3.9-2.1s-.3-1.6-.9-2.1c-.6-.6-1.3-.9-2.1-.9s-1.6.3-2.1.9c-.6.6-.9,1.3-.9,2.1s.3,1.6.9,2.1c.6.6,1.3.9,2.1.9Z"/>
+            <path id="m178caa18b381" data-name="m178caa18b3" class="st54" d="M348,259.9c.8,0,1.6-.3,2.1-.9.6-.6.9-1.3.9-2.1s-.3-1.6-.9-2.1c-.6-.6-1.3-.9-2.1-.9s-1.6.3-2.1.9c-.6.6-.9,1.3-.9,2.1s.3,1.6.9,2.1c.6.6,1.3.9,2.1.9Z"/>
+            <path id="m178caa18b382" data-name="m178caa18b3" class="st54" d="M350.6,261.3c.8,0,1.6-.3,2.1-.9.6-.6.9-1.3.9-2.1s-.3-1.6-.9-2.1c-.6-.6-1.3-.9-2.1-.9s-1.6.3-2.1.9c-.6.6-.9,1.3-.9,2.1s.3,1.6.9,2.1c.6.6,1.3.9,2.1.9Z"/>
+            <path id="m178caa18b383" data-name="m178caa18b3" class="st54" d="M353.1,262.6c.8,0,1.6-.3,2.1-.9.6-.6.9-1.3.9-2.1s-.3-1.6-.9-2.1c-.6-.6-1.3-.9-2.1-.9s-1.6.3-2.1.9c-.6.6-.9,1.3-.9,2.1s.3,1.6.9,2.1c.6.6,1.3.9,2.1.9Z"/>
+            <path id="m178caa18b384" data-name="m178caa18b3" class="st54" d="M355.7,264c.8,0,1.6-.3,2.1-.9.6-.6.9-1.3.9-2.1s-.3-1.6-.9-2.1c-.6-.6-1.3-.9-2.1-.9s-1.6.3-2.1.9c-.6.6-.9,1.3-.9,2.1s.3,1.6.9,2.1c.6.6,1.3.9,2.1.9Z"/>
+            <path id="m178caa18b385" data-name="m178caa18b3" class="st54" d="M358.2,265.3c.8,0,1.6-.3,2.1-.9.6-.6.9-1.3.9-2.1s-.3-1.6-.9-2.1c-.6-.6-1.3-.9-2.1-.9s-1.6.3-2.1.9c-.6.6-.9,1.3-.9,2.1s.3,1.6.9,2.1c.6.6,1.3.9,2.1.9Z"/>
+            <path id="m178caa18b386" data-name="m178caa18b3" class="st54" d="M360.8,266.7c.8,0,1.6-.3,2.1-.9.6-.6.9-1.3.9-2.1s-.3-1.6-.9-2.1c-.6-.6-1.3-.9-2.1-.9s-1.6.3-2.1.9c-.6.6-.9,1.3-.9,2.1s.3,1.6.9,2.1c.6.6,1.3.9,2.1.9Z"/>
+            <path id="m178caa18b387" data-name="m178caa18b3" class="st54" d="M363.4,268c.8,0,1.6-.3,2.1-.9.6-.6.9-1.3.9-2.1s-.3-1.6-.9-2.1c-.6-.6-1.3-.9-2.1-.9s-1.6.3-2.1.9c-.6.6-.9,1.3-.9,2.1s.3,1.6.9,2.1c.6.6,1.3.9,2.1.9Z"/>
+            <path id="m178caa18b388" data-name="m178caa18b3" class="st54" d="M365.9,269.3c.8,0,1.6-.3,2.1-.9.6-.6.9-1.3.9-2.1s-.3-1.6-.9-2.1c-.6-.6-1.3-.9-2.1-.9s-1.6.3-2.1.9c-.6.6-.9,1.3-.9,2.1s.3,1.6.9,2.1c.6.6,1.3.9,2.1.9Z"/>
+            <path id="m178caa18b389" data-name="m178caa18b3" class="st54" d="M368.5,270.6c.8,0,1.6-.3,2.1-.9.6-.6.9-1.3.9-2.1s-.3-1.6-.9-2.1c-.6-.6-1.3-.9-2.1-.9s-1.6.3-2.1.9c-.6.6-.9,1.3-.9,2.1s.3,1.6.9,2.1c.6.6,1.3.9,2.1.9Z"/>
+            <path id="m178caa18b390" data-name="m178caa18b3" class="st54" d="M371,271.9c.8,0,1.6-.3,2.1-.9.6-.6.9-1.3.9-2.1s-.3-1.6-.9-2.1c-.6-.6-1.3-.9-2.1-.9s-1.6.3-2.1.9c-.6.6-.9,1.3-.9,2.1s.3,1.6.9,2.1c.6.6,1.3.9,2.1.9Z"/>
+            <path id="m178caa18b391" data-name="m178caa18b3" class="st54" d="M373.6,273.1c.8,0,1.6-.3,2.1-.9.6-.6.9-1.3.9-2.1s-.3-1.6-.9-2.1c-.6-.6-1.3-.9-2.1-.9s-1.6.3-2.1.9c-.6.6-.9,1.3-.9,2.1s.3,1.6.9,2.1c.6.6,1.3.9,2.1.9Z"/>
+            <path id="m178caa18b392" data-name="m178caa18b3" class="st54" d="M376.2,274.4c.8,0,1.6-.3,2.1-.9.6-.6.9-1.3.9-2.1s-.3-1.6-.9-2.1c-.6-.6-1.3-.9-2.1-.9s-1.6.3-2.1.9c-.6.6-.9,1.3-.9,2.1s.3,1.6.9,2.1c.6.6,1.3.9,2.1.9Z"/>
+            <path id="m178caa18b393" data-name="m178caa18b3" class="st54" d="M378.7,275.6c.8,0,1.6-.3,2.1-.9.6-.6.9-1.3.9-2.1s-.3-1.6-.9-2.1c-.6-.6-1.3-.9-2.1-.9s-1.6.3-2.1.9c-.6.6-.9,1.3-.9,2.1s.3,1.6.9,2.1c.6.6,1.3.9,2.1.9Z"/>
+            <path id="m178caa18b394" data-name="m178caa18b3" class="st54" d="M381.3,276.8c.8,0,1.6-.3,2.1-.9.6-.6.9-1.3.9-2.1s-.3-1.6-.9-2.1c-.6-.6-1.3-.9-2.1-.9s-1.6.3-2.1.9c-.6.6-.9,1.3-.9,2.1s.3,1.6.9,2.1c.6.6,1.3.9,2.1.9Z"/>
+            <path id="m178caa18b395" data-name="m178caa18b3" class="st54" d="M383.9,278.1c.8,0,1.6-.3,2.1-.9.6-.6.9-1.3.9-2.1s-.3-1.6-.9-2.1c-.6-.6-1.3-.9-2.1-.9s-1.6.3-2.1.9c-.6.6-.9,1.3-.9,2.1s.3,1.6.9,2.1c.6.6,1.3.9,2.1.9Z"/>
+            <path id="m178caa18b396" data-name="m178caa18b3" class="st54" d="M386.4,279.3c.8,0,1.6-.3,2.1-.9.6-.6.9-1.3.9-2.1s-.3-1.6-.9-2.1c-.6-.6-1.3-.9-2.1-.9s-1.6.3-2.1.9c-.6.6-.9,1.3-.9,2.1s.3,1.6.9,2.1c.6.6,1.3.9,2.1.9Z"/>
+            <path id="m178caa18b397" data-name="m178caa18b3" class="st54" d="M389,280.5c.8,0,1.6-.3,2.1-.9.6-.6.9-1.3.9-2.1s-.3-1.6-.9-2.1c-.6-.6-1.3-.9-2.1-.9s-1.6.3-2.1.9c-.6.6-.9,1.3-.9,2.1s.3,1.6.9,2.1c.6.6,1.3.9,2.1.9Z"/>
+            <path id="m178caa18b398" data-name="m178caa18b3" class="st54" d="M391.5,281.7c.8,0,1.6-.3,2.1-.9.6-.6.9-1.3.9-2.1s-.3-1.6-.9-2.1c-.6-.6-1.3-.9-2.1-.9s-1.6.3-2.1.9c-.6.6-.9,1.3-.9,2.1s.3,1.6.9,2.1c.6.6,1.3.9,2.1.9Z"/>
+            <path id="m178caa18b399" data-name="m178caa18b3" class="st54" d="M394.1,282.8c.8,0,1.6-.3,2.1-.9.6-.6.9-1.3.9-2.1s-.3-1.6-.9-2.1c-.6-.6-1.3-.9-2.1-.9s-1.6.3-2.1.9c-.6.6-.9,1.3-.9,2.1s.3,1.6.9,2.1c.6.6,1.3.9,2.1.9Z"/>
+            <path id="m178caa18b3100" data-name="m178caa18b3" class="st54" d="M396.7,284c.8,0,1.6-.3,2.1-.9.6-.6.9-1.3.9-2.1s-.3-1.6-.9-2.1c-.6-.6-1.3-.9-2.1-.9s-1.6.3-2.1.9c-.6.6-.9,1.3-.9,2.1s.3,1.6.9,2.1c.6.6,1.3.9,2.1.9Z"/>
+            <path id="m178caa18b3101" data-name="m178caa18b3" class="st54" d="M399.2,285.2c.8,0,1.6-.3,2.1-.9.6-.6.9-1.3.9-2.1s-.3-1.6-.9-2.1c-.6-.6-1.3-.9-2.1-.9s-1.6.3-2.1.9c-.6.6-.9,1.3-.9,2.1s.3,1.6.9,2.1c.6.6,1.3.9,2.1.9Z"/>
+            <path id="m178caa18b3102" data-name="m178caa18b3" class="st54" d="M401.8,286.3c.8,0,1.6-.3,2.1-.9.6-.6.9-1.3.9-2.1s-.3-1.6-.9-2.1c-.6-.6-1.3-.9-2.1-.9s-1.6.3-2.1.9c-.6.6-.9,1.3-.9,2.1s.3,1.6.9,2.1c.6.6,1.3.9,2.1.9Z"/>
+            <path id="m178caa18b3103" data-name="m178caa18b3" class="st54" d="M404.4,287.4c.8,0,1.6-.3,2.1-.9.6-.6.9-1.3.9-2.1s-.3-1.6-.9-2.1c-.6-.6-1.3-.9-2.1-.9s-1.6.3-2.1.9c-.6.6-.9,1.3-.9,2.1s.3,1.6.9,2.1c.6.6,1.3.9,2.1.9Z"/>
+            <path id="m178caa18b3104" data-name="m178caa18b3" class="st54" d="M406.9,288.6c.8,0,1.6-.3,2.1-.9.6-.6.9-1.3.9-2.1s-.3-1.6-.9-2.1c-.6-.6-1.3-.9-2.1-.9s-1.6.3-2.1.9c-.6.6-.9,1.3-.9,2.1s.3,1.6.9,2.1c.6.6,1.3.9,2.1.9Z"/>
+            <path id="m178caa18b3105" data-name="m178caa18b3" class="st54" d="M409.5,289.7c.8,0,1.6-.3,2.1-.9.6-.6.9-1.3.9-2.1s-.3-1.6-.9-2.1c-.6-.6-1.3-.9-2.1-.9s-1.6.3-2.1.9c-.6.6-.9,1.3-.9,2.1s.3,1.6.9,2.1c.6.6,1.3.9,2.1.9Z"/>
+            <path id="m178caa18b3106" data-name="m178caa18b3" class="st54" d="M412,290.8c.8,0,1.6-.3,2.1-.9.6-.6.9-1.3.9-2.1s-.3-1.6-.9-2.1c-.6-.6-1.3-.9-2.1-.9s-1.6.3-2.1.9c-.6.6-.9,1.3-.9,2.1s.3,1.6.9,2.1c.6.6,1.3.9,2.1.9Z"/>
+            <path id="m178caa18b3107" data-name="m178caa18b3" class="st54" d="M414.6,291.9c.8,0,1.6-.3,2.1-.9.6-.6.9-1.3.9-2.1s-.3-1.6-.9-2.1c-.6-.6-1.3-.9-2.1-.9s-1.6.3-2.1.9c-.6.6-.9,1.3-.9,2.1s.3,1.6.9,2.1c.6.6,1.3.9,2.1.9Z"/>
+            <path id="m178caa18b3108" data-name="m178caa18b3" class="st54" d="M417.2,293c.8,0,1.6-.3,2.1-.9.6-.6.9-1.3.9-2.1s-.3-1.6-.9-2.1c-.6-.6-1.3-.9-2.1-.9s-1.6.3-2.1.9c-.6.6-.9,1.3-.9,2.1s.3,1.6.9,2.1c.6.6,1.3.9,2.1.9Z"/>
+            <path id="m178caa18b3109" data-name="m178caa18b3" class="st54" d="M419.7,294c.8,0,1.6-.3,2.1-.9.6-.6.9-1.3.9-2.1s-.3-1.6-.9-2.1c-.6-.6-1.3-.9-2.1-.9s-1.6.3-2.1.9c-.6.6-.9,1.3-.9,2.1s.3,1.6.9,2.1c.6.6,1.3.9,2.1.9Z"/>
+            <path id="m178caa18b3110" data-name="m178caa18b3" class="st54" d="M422.3,295.1c.8,0,1.6-.3,2.1-.9.6-.6.9-1.3.9-2.1s-.3-1.6-.9-2.1c-.6-.6-1.3-.9-2.1-.9s-1.6.3-2.1.9c-.6.6-.9,1.3-.9,2.1s.3,1.6.9,2.1c.6.6,1.3.9,2.1.9Z"/>
+            <path id="m178caa18b3111" data-name="m178caa18b3" class="st54" d="M424.8,296.2c.8,0,1.6-.3,2.1-.9.6-.6.9-1.3.9-2.1s-.3-1.6-.9-2.1c-.6-.6-1.3-.9-2.1-.9s-1.6.3-2.1.9c-.6.6-.9,1.3-.9,2.1s.3,1.6.9,2.1c.6.6,1.3.9,2.1.9Z"/>
+            <path id="m178caa18b3112" data-name="m178caa18b3" class="st54" d="M427.4,297.2c.8,0,1.6-.3,2.1-.9.6-.6.9-1.3.9-2.1s-.3-1.6-.9-2.1c-.6-.6-1.3-.9-2.1-.9s-1.6.3-2.1.9c-.6.6-.9,1.3-.9,2.1s.3,1.6.9,2.1c.6.6,1.3.9,2.1.9Z"/>
+            <path id="m178caa18b3113" data-name="m178caa18b3" class="st54" d="M430,298.3c.8,0,1.6-.3,2.1-.9.6-.6.9-1.3.9-2.1s-.3-1.6-.9-2.1c-.6-.6-1.3-.9-2.1-.9s-1.6.3-2.1.9c-.6.6-.9,1.3-.9,2.1s.3,1.6.9,2.1c.6.6,1.3.9,2.1.9Z"/>
+            <path id="m178caa18b3114" data-name="m178caa18b3" class="st54" d="M432.5,299.3c.8,0,1.6-.3,2.1-.9.6-.6.9-1.3.9-2.1s-.3-1.6-.9-2.1c-.6-.6-1.3-.9-2.1-.9s-1.6.3-2.1.9c-.6.6-.9,1.3-.9,2.1s.3,1.6.9,2.1c.6.6,1.3.9,2.1.9Z"/>
+            <path id="m178caa18b3115" data-name="m178caa18b3" class="st54" d="M435.1,300.3c.8,0,1.6-.3,2.1-.9.6-.6.9-1.3.9-2.1s-.3-1.6-.9-2.1c-.6-.6-1.3-.9-2.1-.9s-1.6.3-2.1.9c-.6.6-.9,1.3-.9,2.1s.3,1.6.9,2.1c.6.6,1.3.9,2.1.9Z"/>
+            <path id="m178caa18b3116" data-name="m178caa18b3" class="st54" d="M437.7,301.3c.8,0,1.6-.3,2.1-.9.6-.6.9-1.3.9-2.1s-.3-1.6-.9-2.1c-.6-.6-1.3-.9-2.1-.9s-1.6.3-2.1.9c-.6.6-.9,1.3-.9,2.1s.3,1.6.9,2.1c.6.6,1.3.9,2.1.9Z"/>
+            <path id="m178caa18b3117" data-name="m178caa18b3" class="st54" d="M440.2,302.3c.8,0,1.6-.3,2.1-.9.6-.6.9-1.3.9-2.1s-.3-1.6-.9-2.1c-.6-.6-1.3-.9-2.1-.9s-1.6.3-2.1.9c-.6.6-.9,1.3-.9,2.1s.3,1.6.9,2.1c.6.6,1.3.9,2.1.9Z"/>
+            <path id="m178caa18b3118" data-name="m178caa18b3" class="st54" d="M442.8,303.3c.8,0,1.6-.3,2.1-.9.6-.6.9-1.3.9-2.1s-.3-1.6-.9-2.1c-.6-.6-1.3-.9-2.1-.9s-1.6.3-2.1.9c-.6.6-.9,1.3-.9,2.1s.3,1.6.9,2.1c.6.6,1.3.9,2.1.9Z"/>
+            <path id="m178caa18b3119" data-name="m178caa18b3" class="st54" d="M445.3,304.3c.8,0,1.6-.3,2.1-.9.6-.6.9-1.3.9-2.1s-.3-1.6-.9-2.1c-.6-.6-1.3-.9-2.1-.9s-1.6.3-2.1.9c-.6.6-.9,1.3-.9,2.1s.3,1.6.9,2.1c.6.6,1.3.9,2.1.9Z"/>
+            <path id="m178caa18b3120" data-name="m178caa18b3" class="st54" d="M447.9,305.3c.8,0,1.6-.3,2.1-.9.6-.6.9-1.3.9-2.1s-.3-1.6-.9-2.1c-.6-.6-1.3-.9-2.1-.9s-1.6.3-2.1.9c-.6.6-.9,1.3-.9,2.1s.3,1.6.9,2.1c.6.6,1.3.9,2.1.9Z"/>
+            <path id="m178caa18b3121" data-name="m178caa18b3" class="st54" d="M450.5,306.3c.8,0,1.6-.3,2.1-.9.6-.6.9-1.3.9-2.1s-.3-1.6-.9-2.1c-.6-.6-1.3-.9-2.1-.9s-1.6.3-2.1.9c-.6.6-.9,1.3-.9,2.1s.3,1.6.9,2.1c.6.6,1.3.9,2.1.9Z"/>
+            <path id="m178caa18b3122" data-name="m178caa18b3" class="st54" d="M453,307.3c.8,0,1.6-.3,2.1-.9.6-.6.9-1.3.9-2.1s-.3-1.6-.9-2.1c-.6-.6-1.3-.9-2.1-.9s-1.6.3-2.1.9c-.6.6-.9,1.3-.9,2.1s.3,1.6.9,2.1c.6.6,1.3.9,2.1.9Z"/>
+            <path id="m178caa18b3123" data-name="m178caa18b3" class="st54" d="M455.6,308.2c.8,0,1.6-.3,2.1-.9.6-.6.9-1.3.9-2.1s-.3-1.6-.9-2.1c-.6-.6-1.3-.9-2.1-.9s-1.6.3-2.1.9c-.6.6-.9,1.3-.9,2.1s.3,1.6.9,2.1c.6.6,1.3.9,2.1.9Z"/>
+            <path id="m178caa18b3124" data-name="m178caa18b3" class="st54" d="M458.2,309.2c.8,0,1.6-.3,2.1-.9.6-.6.9-1.3.9-2.1s-.3-1.6-.9-2.1c-.6-.6-1.3-.9-2.1-.9s-1.6.3-2.1.9c-.6.6-.9,1.3-.9,2.1s.3,1.6.9,2.1c.6.6,1.3.9,2.1.9Z"/>
+            <path id="m178caa18b3125" data-name="m178caa18b3" class="st54" d="M460.7,310.1c.8,0,1.6-.3,2.1-.9.6-.6.9-1.3.9-2.1s-.3-1.6-.9-2.1c-.6-.6-1.3-.9-2.1-.9s-1.6.3-2.1.9c-.6.6-.9,1.3-.9,2.1s.3,1.6.9,2.1c.6.6,1.3.9,2.1.9Z"/>
+            <path id="m178caa18b3126" data-name="m178caa18b3" class="st54" d="M463.3,311.1c.8,0,1.6-.3,2.1-.9.6-.6.9-1.3.9-2.1s-.3-1.6-.9-2.1c-.6-.6-1.3-.9-2.1-.9s-1.6.3-2.1.9c-.6.6-.9,1.3-.9,2.1s.3,1.6.9,2.1c.6.6,1.3.9,2.1.9Z"/>
+            <path id="m178caa18b3127" data-name="m178caa18b3" class="st54" d="M465.8,312c.8,0,1.6-.3,2.1-.9.6-.6.9-1.3.9-2.1s-.3-1.6-.9-2.1c-.6-.6-1.3-.9-2.1-.9s-1.6.3-2.1.9c-.6.6-.9,1.3-.9,2.1s.3,1.6.9,2.1c.6.6,1.3.9,2.1.9Z"/>
+            <path id="m178caa18b3128" data-name="m178caa18b3" class="st54" d="M468.4,312.9c.8,0,1.6-.3,2.1-.9.6-.6.9-1.3.9-2.1s-.3-1.6-.9-2.1c-.6-.6-1.3-.9-2.1-.9s-1.6.3-2.1.9c-.6.6-.9,1.3-.9,2.1s.3,1.6.9,2.1c.6.6,1.3.9,2.1.9Z"/>
+            <path id="m178caa18b3129" data-name="m178caa18b3" class="st54" d="M471,313.8c.8,0,1.6-.3,2.1-.9.6-.6.9-1.3.9-2.1s-.3-1.6-.9-2.1c-.6-.6-1.3-.9-2.1-.9s-1.6.3-2.1.9c-.6.6-.9,1.3-.9,2.1s.3,1.6.9,2.1c.6.6,1.3.9,2.1.9Z"/>
+            <path id="m178caa18b3130" data-name="m178caa18b3" class="st54" d="M473.5,314.7c.8,0,1.6-.3,2.1-.9.6-.6.9-1.3.9-2.1s-.3-1.6-.9-2.1c-.6-.6-1.3-.9-2.1-.9s-1.6.3-2.1.9c-.6.6-.9,1.3-.9,2.1s.3,1.6.9,2.1c.6.6,1.3.9,2.1.9Z"/>
+            <path id="m178caa18b3131" data-name="m178caa18b3" class="st54" d="M476.1,315.6c.8,0,1.6-.3,2.1-.9.6-.6.9-1.3.9-2.1s-.3-1.6-.9-2.1c-.6-.6-1.3-.9-2.1-.9s-1.6.3-2.1.9c-.6.6-.9,1.3-.9,2.1s.3,1.6.9,2.1c.6.6,1.3.9,2.1.9Z"/>
+            <path id="m178caa18b3132" data-name="m178caa18b3" class="st54" d="M478.7,316.5c.8,0,1.6-.3,2.1-.9.6-.6.9-1.3.9-2.1s-.3-1.6-.9-2.1c-.6-.6-1.3-.9-2.1-.9s-1.6.3-2.1.9c-.6.6-.9,1.3-.9,2.1s.3,1.6.9,2.1c.6.6,1.3.9,2.1.9Z"/>
+            <path id="m178caa18b3133" data-name="m178caa18b3" class="st54" d="M481.2,317.4c.8,0,1.6-.3,2.1-.9.6-.6.9-1.3.9-2.1s-.3-1.6-.9-2.1c-.6-.6-1.3-.9-2.1-.9s-1.6.3-2.1.9c-.6.6-.9,1.3-.9,2.1s.3,1.6.9,2.1c.6.6,1.3.9,2.1.9Z"/>
+            <path id="m178caa18b3134" data-name="m178caa18b3" class="st54" d="M483.8,318.3c.8,0,1.6-.3,2.1-.9.6-.6.9-1.3.9-2.1s-.3-1.6-.9-2.1c-.6-.6-1.3-.9-2.1-.9s-1.6.3-2.1.9c-.6.6-.9,1.3-.9,2.1s.3,1.6.9,2.1c.6.6,1.3.9,2.1.9Z"/>
+            <path id="m178caa18b3135" data-name="m178caa18b3" class="st54" d="M486.3,319.2c.8,0,1.6-.3,2.1-.9.6-.6.9-1.3.9-2.1s-.3-1.6-.9-2.1c-.6-.6-1.3-.9-2.1-.9s-1.6.3-2.1.9c-.6.6-.9,1.3-.9,2.1s.3,1.6.9,2.1c.6.6,1.3.9,2.1.9Z"/>
+            <path id="m178caa18b3136" data-name="m178caa18b3" class="st54" d="M488.9,320c.8,0,1.6-.3,2.1-.9.6-.6.9-1.3.9-2.1s-.3-1.6-.9-2.1c-.6-.6-1.3-.9-2.1-.9s-1.6.3-2.1.9c-.6.6-.9,1.3-.9,2.1s.3,1.6.9,2.1c.6.6,1.3.9,2.1.9Z"/>
+            <path id="m178caa18b3137" data-name="m178caa18b3" class="st54" d="M491.5,320.9c.8,0,1.6-.3,2.1-.9.6-.6.9-1.3.9-2.1s-.3-1.6-.9-2.1c-.6-.6-1.3-.9-2.1-.9s-1.6.3-2.1.9c-.6.6-.9,1.3-.9,2.1s.3,1.6.9,2.1c.6.6,1.3.9,2.1.9Z"/>
+            <path id="m178caa18b3138" data-name="m178caa18b3" class="st54" d="M494,321.7c.8,0,1.6-.3,2.1-.9.6-.6.9-1.3.9-2.1s-.3-1.6-.9-2.1c-.6-.6-1.3-.9-2.1-.9s-1.6.3-2.1.9c-.6.6-.9,1.3-.9,2.1s.3,1.6.9,2.1c.6.6,1.3.9,2.1.9Z"/>
+            <path id="m178caa18b3139" data-name="m178caa18b3" class="st54" d="M496.6,322.6c.8,0,1.6-.3,2.1-.9.6-.6.9-1.3.9-2.1s-.3-1.6-.9-2.1c-.6-.6-1.3-.9-2.1-.9s-1.6.3-2.1.9c-.6.6-.9,1.3-.9,2.1s.3,1.6.9,2.1c.6.6,1.3.9,2.1.9Z"/>
+            <path id="m178caa18b3140" data-name="m178caa18b3" class="st54" d="M499.1,323.4c.8,0,1.6-.3,2.1-.9.6-.6.9-1.3.9-2.1s-.3-1.6-.9-2.1c-.6-.6-1.3-.9-2.1-.9s-1.6.3-2.1.9c-.6.6-.9,1.3-.9,2.1s.3,1.6.9,2.1c.6.6,1.3.9,2.1.9Z"/>
+            <path id="m178caa18b3141" data-name="m178caa18b3" class="st54" d="M501.7,324.3c.8,0,1.6-.3,2.1-.9.6-.6.9-1.3.9-2.1s-.3-1.6-.9-2.1c-.6-.6-1.3-.9-2.1-.9s-1.6.3-2.1.9c-.6.6-.9,1.3-.9,2.1s.3,1.6.9,2.1c.6.6,1.3.9,2.1.9Z"/>
+            <path id="m178caa18b3142" data-name="m178caa18b3" class="st54" d="M504.3,325.1c.8,0,1.6-.3,2.1-.9.6-.6.9-1.3.9-2.1s-.3-1.6-.9-2.1c-.6-.6-1.3-.9-2.1-.9s-1.6.3-2.1.9c-.6.6-.9,1.3-.9,2.1s.3,1.6.9,2.1c.6.6,1.3.9,2.1.9Z"/>
+            <path id="m178caa18b3143" data-name="m178caa18b3" class="st54" d="M506.8,325.9c.8,0,1.6-.3,2.1-.9.6-.6.9-1.3.9-2.1s-.3-1.6-.9-2.1c-.6-.6-1.3-.9-2.1-.9s-1.6.3-2.1.9c-.6.6-.9,1.3-.9,2.1s.3,1.6.9,2.1c.6.6,1.3.9,2.1.9Z"/>
+            <path id="m178caa18b3144" data-name="m178caa18b3" class="st54" d="M509.4,326.7c.8,0,1.6-.3,2.1-.9.6-.6.9-1.3.9-2.1s-.3-1.6-.9-2.1c-.6-.6-1.3-.9-2.1-.9s-1.6.3-2.1.9c-.6.6-.9,1.3-.9,2.1s.3,1.6.9,2.1c.6.6,1.3.9,2.1.9Z"/>
+            <path id="m178caa18b3145" data-name="m178caa18b3" class="st54" d="M512,327.5c.8,0,1.6-.3,2.1-.9.6-.6.9-1.3.9-2.1s-.3-1.6-.9-2.1c-.6-.6-1.3-.9-2.1-.9s-1.6.3-2.1.9c-.6.6-.9,1.3-.9,2.1s.3,1.6.9,2.1c.6.6,1.3.9,2.1.9Z"/>
+            <path id="m178caa18b3146" data-name="m178caa18b3" class="st54" d="M514.5,328.3c.8,0,1.6-.3,2.1-.9.6-.6.9-1.3.9-2.1s-.3-1.6-.9-2.1c-.6-.6-1.3-.9-2.1-.9s-1.6.3-2.1.9c-.6.6-.9,1.3-.9,2.1s.3,1.6.9,2.1c.6.6,1.3.9,2.1.9Z"/>
+            <path id="m178caa18b3147" data-name="m178caa18b3" class="st54" d="M517.1,329.1c.8,0,1.6-.3,2.1-.9.6-.6.9-1.3.9-2.1s-.3-1.6-.9-2.1c-.6-.6-1.3-.9-2.1-.9s-1.6.3-2.1.9c-.6.6-.9,1.3-.9,2.1s.3,1.6.9,2.1c.6.6,1.3.9,2.1.9Z"/>
+            <path id="m178caa18b3148" data-name="m178caa18b3" class="st54" d="M519.6,329.9c.8,0,1.6-.3,2.1-.9.6-.6.9-1.3.9-2.1s-.3-1.6-.9-2.1c-.6-.6-1.3-.9-2.1-.9s-1.6.3-2.1.9c-.6.6-.9,1.3-.9,2.1s.3,1.6.9,2.1c.6.6,1.3.9,2.1.9Z"/>
+            <path id="m178caa18b3149" data-name="m178caa18b3" class="st54" d="M522.2,330.6c.8,0,1.6-.3,2.1-.9.6-.6.9-1.3.9-2.1s-.3-1.6-.9-2.1c-.6-.6-1.3-.9-2.1-.9s-1.6.3-2.1.9c-.6.6-.9,1.3-.9,2.1s.3,1.6.9,2.1c.6.6,1.3.9,2.1.9Z"/>
+            <path id="m178caa18b3150" data-name="m178caa18b3" class="st54" d="M524.8,331.4c.8,0,1.6-.3,2.1-.9.6-.6.9-1.3.9-2.1s-.3-1.6-.9-2.1c-.6-.6-1.3-.9-2.1-.9s-1.6.3-2.1.9c-.6.6-.9,1.3-.9,2.1s.3,1.6.9,2.1c.6.6,1.3.9,2.1.9Z"/>
+            <path id="m178caa18b3151" data-name="m178caa18b3" class="st54" d="M527.3,332.1c.8,0,1.6-.3,2.1-.9.6-.6.9-1.3.9-2.1s-.3-1.6-.9-2.1c-.6-.6-1.3-.9-2.1-.9s-1.6.3-2.1.9c-.6.6-.9,1.3-.9,2.1s.3,1.6.9,2.1c.6.6,1.3.9,2.1.9Z"/>
+            <path id="m178caa18b3152" data-name="m178caa18b3" class="st54" d="M529.9,332.9c.8,0,1.6-.3,2.1-.9.6-.6.9-1.3.9-2.1s-.3-1.6-.9-2.1c-.6-.6-1.3-.9-2.1-.9s-1.6.3-2.1.9c-.6.6-.9,1.3-.9,2.1s.3,1.6.9,2.1c.6.6,1.3.9,2.1.9Z"/>
+            <path id="m178caa18b3153" data-name="m178caa18b3" class="st54" d="M532.5,333.6c.8,0,1.6-.3,2.1-.9.6-.6.9-1.3.9-2.1s-.3-1.6-.9-2.1c-.6-.6-1.3-.9-2.1-.9s-1.6.3-2.1.9c-.6.6-.9,1.3-.9,2.1s.3,1.6.9,2.1c.6.6,1.3.9,2.1.9Z"/>
+            <path id="m178caa18b3154" data-name="m178caa18b3" class="st54" d="M535,334.4c.8,0,1.6-.3,2.1-.9.6-.6.9-1.3.9-2.1s-.3-1.6-.9-2.1c-.6-.6-1.3-.9-2.1-.9s-1.6.3-2.1.9c-.6.6-.9,1.3-.9,2.1s.3,1.6.9,2.1c.6.6,1.3.9,2.1.9Z"/>
+            <path id="m178caa18b3155" data-name="m178caa18b3" class="st54" d="M537.6,335.1c.8,0,1.6-.3,2.1-.9.6-.6.9-1.3.9-2.1s-.3-1.6-.9-2.1c-.6-.6-1.3-.9-2.1-.9s-1.6.3-2.1.9c-.6.6-.9,1.3-.9,2.1s.3,1.6.9,2.1c.6.6,1.3.9,2.1.9Z"/>
+            <path id="m178caa18b3156" data-name="m178caa18b3" class="st54" d="M540.1,335.8c.8,0,1.6-.3,2.1-.9.6-.6.9-1.3.9-2.1s-.3-1.6-.9-2.1c-.6-.6-1.3-.9-2.1-.9s-1.6.3-2.1.9c-.6.6-.9,1.3-.9,2.1s.3,1.6.9,2.1c.6.6,1.3.9,2.1.9Z"/>
+            <path id="m178caa18b3157" data-name="m178caa18b3" class="st54" d="M542.7,336.5c.8,0,1.6-.3,2.1-.9.6-.6.9-1.3.9-2.1s-.3-1.6-.9-2.1c-.6-.6-1.3-.9-2.1-.9s-1.6.3-2.1.9c-.6.6-.9,1.3-.9,2.1s.3,1.6.9,2.1c.6.6,1.3.9,2.1.9Z"/>
+            <path id="m178caa18b3158" data-name="m178caa18b3" class="st54" d="M545.3,337.2c.8,0,1.6-.3,2.1-.9.6-.6.9-1.3.9-2.1s-.3-1.6-.9-2.1c-.6-.6-1.3-.9-2.1-.9s-1.6.3-2.1.9c-.6.6-.9,1.3-.9,2.1s.3,1.6.9,2.1c.6.6,1.3.9,2.1.9Z"/>
+            <path id="m178caa18b3159" data-name="m178caa18b3" class="st54" d="M547.8,337.9c.8,0,1.6-.3,2.1-.9.6-.6.9-1.3.9-2.1s-.3-1.6-.9-2.1c-.6-.6-1.3-.9-2.1-.9s-1.6.3-2.1.9c-.6.6-.9,1.3-.9,2.1s.3,1.6.9,2.1c.6.6,1.3.9,2.1.9Z"/>
+            <path id="m178caa18b3160" data-name="m178caa18b3" class="st54" d="M550.4,338.5c.8,0,1.6-.3,2.1-.9.6-.6.9-1.3.9-2.1s-.3-1.6-.9-2.1c-.6-.6-1.3-.9-2.1-.9s-1.6.3-2.1.9c-.6.6-.9,1.3-.9,2.1s.3,1.6.9,2.1c.6.6,1.3.9,2.1.9Z"/>
+            <path id="m178caa18b3161" data-name="m178caa18b3" class="st54" d="M552.9,339.2c.8,0,1.6-.3,2.1-.9.6-.6.9-1.3.9-2.1s-.3-1.6-.9-2.1c-.6-.6-1.3-.9-2.1-.9s-1.6.3-2.1.9c-.6.6-.9,1.3-.9,2.1s.3,1.6.9,2.1c.6.6,1.3.9,2.1.9Z"/>
+            <path id="m178caa18b3162" data-name="m178caa18b3" class="st54" d="M555.5,339.8c.8,0,1.6-.3,2.1-.9.6-.6.9-1.3.9-2.1s-.3-1.6-.9-2.1c-.6-.6-1.3-.9-2.1-.9s-1.6.3-2.1.9c-.6.6-.9,1.3-.9,2.1s.3,1.6.9,2.1c.6.6,1.3.9,2.1.9Z"/>
+            <path id="m178caa18b3163" data-name="m178caa18b3" class="st54" d="M558.1,340.4c.8,0,1.6-.3,2.1-.9.6-.6.9-1.3.9-2.1s-.3-1.6-.9-2.1c-.6-.6-1.3-.9-2.1-.9s-1.6.3-2.1.9c-.6.6-.9,1.3-.9,2.1s.3,1.6.9,2.1c.6.6,1.3.9,2.1.9Z"/>
+            <path id="m178caa18b3164" data-name="m178caa18b3" class="st54" d="M560.6,341.1c.8,0,1.6-.3,2.1-.9.6-.6.9-1.3.9-2.1s-.3-1.6-.9-2.1c-.6-.6-1.3-.9-2.1-.9s-1.6.3-2.1.9c-.6.6-.9,1.3-.9,2.1s.3,1.6.9,2.1c.6.6,1.3.9,2.1.9Z"/>
+            <path id="m178caa18b3165" data-name="m178caa18b3" class="st54" d="M563.2,341.7c.8,0,1.6-.3,2.1-.9.6-.6.9-1.3.9-2.1s-.3-1.6-.9-2.1c-.6-.6-1.3-.9-2.1-.9s-1.6.3-2.1.9c-.6.6-.9,1.3-.9,2.1s.3,1.6.9,2.1c.6.6,1.3.9,2.1.9Z"/>
+            <path id="m178caa18b3166" data-name="m178caa18b3" class="st54" d="M565.8,342.2c.8,0,1.6-.3,2.1-.9.6-.6.9-1.3.9-2.1s-.3-1.6-.9-2.1c-.6-.6-1.3-.9-2.1-.9s-1.6.3-2.1.9c-.6.6-.9,1.3-.9,2.1s.3,1.6.9,2.1c.6.6,1.3.9,2.1.9Z"/>
+            <path id="m178caa18b3167" data-name="m178caa18b3" class="st54" d="M568.3,342.8c.8,0,1.6-.3,2.1-.9.6-.6.9-1.3.9-2.1s-.3-1.6-.9-2.1c-.6-.6-1.3-.9-2.1-.9s-1.6.3-2.1.9c-.6.6-.9,1.3-.9,2.1s.3,1.6.9,2.1c.6.6,1.3.9,2.1.9Z"/>
+            <path id="m178caa18b3168" data-name="m178caa18b3" class="st54" d="M570.9,343.4c.8,0,1.6-.3,2.1-.9.6-.6.9-1.3.9-2.1s-.3-1.6-.9-2.1c-.6-.6-1.3-.9-2.1-.9s-1.6.3-2.1.9c-.6.6-.9,1.3-.9,2.1s.3,1.6.9,2.1c.6.6,1.3.9,2.1.9Z"/>
+            <path id="m178caa18b3169" data-name="m178caa18b3" class="st54" d="M573.4,343.9c.8,0,1.6-.3,2.1-.9.6-.6.9-1.3.9-2.1s-.3-1.6-.9-2.1c-.6-.6-1.3-.9-2.1-.9s-1.6.3-2.1.9c-.6.6-.9,1.3-.9,2.1s.3,1.6.9,2.1c.6.6,1.3.9,2.1.9Z"/>
+            <path id="m178caa18b3170" data-name="m178caa18b3" class="st54" d="M576,344.4c.8,0,1.6-.3,2.1-.9.6-.6.9-1.3.9-2.1s-.3-1.6-.9-2.1c-.6-.6-1.3-.9-2.1-.9s-1.6.3-2.1.9c-.6.6-.9,1.3-.9,2.1s.3,1.6.9,2.1c.6.6,1.3.9,2.1.9Z"/>
+            <path id="m178caa18b3171" data-name="m178caa18b3" class="st54" d="M578.6,344.9c.8,0,1.6-.3,2.1-.9.6-.6.9-1.3.9-2.1s-.3-1.6-.9-2.1c-.6-.6-1.3-.9-2.1-.9s-1.6.3-2.1.9c-.6.6-.9,1.3-.9,2.1s.3,1.6.9,2.1c.6.6,1.3.9,2.1.9Z"/>
+            <path id="m178caa18b3172" data-name="m178caa18b3" class="st54" d="M581.1,345.3c.8,0,1.6-.3,2.1-.9.6-.6.9-1.3.9-2.1s-.3-1.6-.9-2.1c-.6-.6-1.3-.9-2.1-.9s-1.6.3-2.1.9c-.6.6-.9,1.3-.9,2.1s.3,1.6.9,2.1c.6.6,1.3.9,2.1.9Z"/>
+            <path id="m178caa18b3173" data-name="m178caa18b3" class="st54" d="M583.7,345.8c.8,0,1.6-.3,2.1-.9.6-.6.9-1.3.9-2.1s-.3-1.6-.9-2.1c-.6-.6-1.3-.9-2.1-.9s-1.6.3-2.1.9c-.6.6-.9,1.3-.9,2.1s.3,1.6.9,2.1c.6.6,1.3.9,2.1.9Z"/>
+            <path id="m178caa18b3174" data-name="m178caa18b3" class="st54" d="M586.3,346.2c.8,0,1.6-.3,2.1-.9.6-.6.9-1.3.9-2.1s-.3-1.6-.9-2.1c-.6-.6-1.3-.9-2.1-.9s-1.6.3-2.1.9c-.6.6-.9,1.3-.9,2.1s.3,1.6.9,2.1c.6.6,1.3.9,2.1.9Z"/>
+            <path id="m178caa18b3175" data-name="m178caa18b3" class="st54" d="M588.8,346.5c.8,0,1.6-.3,2.1-.9.6-.6.9-1.3.9-2.1s-.3-1.6-.9-2.1c-.6-.6-1.3-.9-2.1-.9s-1.6.3-2.1.9c-.6.6-.9,1.3-.9,2.1s.3,1.6.9,2.1c.6.6,1.3.9,2.1.9Z"/>
+            <path id="m178caa18b3176" data-name="m178caa18b3" class="st54" d="M591.4,346.8c.8,0,1.6-.3,2.1-.9.6-.6.9-1.3.9-2.1s-.3-1.6-.9-2.1c-.6-.6-1.3-.9-2.1-.9s-1.6.3-2.1.9c-.6.6-.9,1.3-.9,2.1s.3,1.6.9,2.1c.6.6,1.3.9,2.1.9Z"/>
+            <path id="m178caa18b3177" data-name="m178caa18b3" class="st54" d="M593.9,347.1c.8,0,1.6-.3,2.1-.9.6-.6.9-1.3.9-2.1s-.3-1.6-.9-2.1c-.6-.6-1.3-.9-2.1-.9s-1.6.3-2.1.9c-.6.6-.9,1.3-.9,2.1s.3,1.6.9,2.1c.6.6,1.3.9,2.1.9Z"/>
+            <path id="m178caa18b3178" data-name="m178caa18b3" class="st54" d="M596.5,347.4c.8,0,1.6-.3,2.1-.9.6-.6.9-1.3.9-2.1s-.3-1.6-.9-2.1c-.6-.6-1.3-.9-2.1-.9s-1.6.3-2.1.9c-.6.6-.9,1.3-.9,2.1s.3,1.6.9,2.1c.6.6,1.3.9,2.1.9Z"/>
+            <path id="m178caa18b3179" data-name="m178caa18b3" class="st54" d="M599.1,347.6c.8,0,1.6-.3,2.1-.9.6-.6.9-1.3.9-2.1s-.3-1.6-.9-2.1c-.6-.6-1.3-.9-2.1-.9s-1.6.3-2.1.9c-.6.6-.9,1.3-.9,2.1s.3,1.6.9,2.1c.6.6,1.3.9,2.1.9Z"/>
+            <path id="m178caa18b3180" data-name="m178caa18b3" class="st54" d="M601.6,347.7c.8,0,1.6-.3,2.1-.9.6-.6.9-1.3.9-2.1s-.3-1.6-.9-2.1c-.6-.6-1.3-.9-2.1-.9s-1.6.3-2.1.9c-.6.6-.9,1.3-.9,2.1s.3,1.6.9,2.1c.6.6,1.3.9,2.1.9Z"/>
+            <path id="m178caa18b3181" data-name="m178caa18b3" class="st54" d="M604.2,347.8c.8,0,1.6-.3,2.1-.9.6-.6.9-1.3.9-2.1s-.3-1.6-.9-2.1c-.6-.6-1.3-.9-2.1-.9s-1.6.3-2.1.9c-.6.6-.9,1.3-.9,2.1s.3,1.6.9,2.1c.6.6,1.3.9,2.1.9Z"/>
+            <path id="m178caa18b3182" data-name="m178caa18b3" class="st54" d="M606.7,347.8c.8,0,1.6-.3,2.1-.9.6-.6.9-1.3.9-2.1s-.3-1.6-.9-2.1c-.6-.6-1.3-.9-2.1-.9s-1.6.3-2.1.9c-.6.6-.9,1.3-.9,2.1s.3,1.6.9,2.1c.6.6,1.3.9,2.1.9Z"/>
+            <path id="m178caa18b3183" data-name="m178caa18b3" class="st54" d="M609.3,347.8c.8,0,1.6-.3,2.1-.9.6-.6.9-1.3.9-2.1s-.3-1.6-.9-2.1c-.6-.6-1.3-.9-2.1-.9s-1.6.3-2.1.9c-.6.6-.9,1.3-.9,2.1s.3,1.6.9,2.1c.6.6,1.3.9,2.1.9Z"/>
+            <path id="m178caa18b3184" data-name="m178caa18b3" class="st54" d="M611.9,347.8c.8,0,1.6-.3,2.1-.9.6-.6.9-1.3.9-2.1s-.3-1.6-.9-2.1c-.6-.6-1.3-.9-2.1-.9s-1.6.3-2.1.9c-.6.6-.9,1.3-.9,2.1s.3,1.6.9,2.1c.6.6,1.3.9,2.1.9Z"/>
+            <path id="m178caa18b3185" data-name="m178caa18b3" class="st54" d="M614.4,347.8c.8,0,1.6-.3,2.1-.9.6-.6.9-1.3.9-2.1s-.3-1.6-.9-2.1c-.6-.6-1.3-.9-2.1-.9s-1.6.3-2.1.9c-.6.6-.9,1.3-.9,2.1s.3,1.6.9,2.1c.6.6,1.3.9,2.1.9Z"/>
+            <path id="m178caa18b3186" data-name="m178caa18b3" class="st54" d="M617,347.8c.8,0,1.6-.3,2.1-.9.6-.6.9-1.3.9-2.1s-.3-1.6-.9-2.1c-.6-.6-1.3-.9-2.1-.9s-1.6.3-2.1.9c-.6.6-.9,1.3-.9,2.1s.3,1.6.9,2.1c.6.6,1.3.9,2.1.9Z"/>
+            <path id="m178caa18b3187" data-name="m178caa18b3" class="st54" d="M619.6,347.8c.8,0,1.6-.3,2.1-.9.6-.6.9-1.3.9-2.1s-.3-1.6-.9-2.1c-.6-.6-1.3-.9-2.1-.9s-1.6.3-2.1.9c-.6.6-.9,1.3-.9,2.1s.3,1.6.9,2.1c.6.6,1.3.9,2.1.9Z"/>
+            <path id="m178caa18b3188" data-name="m178caa18b3" class="st54" d="M622.1,347.8c.8,0,1.6-.3,2.1-.9.6-.6.9-1.3.9-2.1s-.3-1.6-.9-2.1c-.6-.6-1.3-.9-2.1-.9s-1.6.3-2.1.9c-.6.6-.9,1.3-.9,2.1s.3,1.6.9,2.1c.6.6,1.3.9,2.1.9Z"/>
+            <path id="m178caa18b3189" data-name="m178caa18b3" class="st54" d="M624.7,347.8c.8,0,1.6-.3,2.1-.9.6-.6.9-1.3.9-2.1s-.3-1.6-.9-2.1c-.6-.6-1.3-.9-2.1-.9s-1.6.3-2.1.9c-.6.6-.9,1.3-.9,2.1s.3,1.6.9,2.1c.6.6,1.3.9,2.1.9Z"/>
+            <path id="m178caa18b3190" data-name="m178caa18b3" class="st54" d="M627.2,347.8c.8,0,1.6-.3,2.1-.9.6-.6.9-1.3.9-2.1s-.3-1.6-.9-2.1c-.6-.6-1.3-.9-2.1-.9s-1.6.3-2.1.9c-.6.6-.9,1.3-.9,2.1s.3,1.6.9,2.1c.6.6,1.3.9,2.1.9Z"/>
+            <path id="m178caa18b3191" data-name="m178caa18b3" class="st54" d="M629.8,347.8c.8,0,1.6-.3,2.1-.9.6-.6.9-1.3.9-2.1s-.3-1.6-.9-2.1c-.6-.6-1.3-.9-2.1-.9s-1.6.3-2.1.9c-.6.6-.9,1.3-.9,2.1s.3,1.6.9,2.1c.6.6,1.3.9,2.1.9Z"/>
+            <path id="m178caa18b3192" data-name="m178caa18b3" class="st54" d="M632.4,347.8c.8,0,1.6-.3,2.1-.9.6-.6.9-1.3.9-2.1s-.3-1.6-.9-2.1c-.6-.6-1.3-.9-2.1-.9s-1.6.3-2.1.9c-.6.6-.9,1.3-.9,2.1s.3,1.6.9,2.1c.6.6,1.3.9,2.1.9Z"/>
+            <path id="m178caa18b3193" data-name="m178caa18b3" class="st54" d="M634.9,347.8c.8,0,1.6-.3,2.1-.9.6-.6.9-1.3.9-2.1s-.3-1.6-.9-2.1c-.6-.6-1.3-.9-2.1-.9s-1.6.3-2.1.9c-.6.6-.9,1.3-.9,2.1s.3,1.6.9,2.1c.6.6,1.3.9,2.1.9Z"/>
+            <path id="m178caa18b3194" data-name="m178caa18b3" class="st54" d="M637.5,347.8c.8,0,1.6-.3,2.1-.9.6-.6.9-1.3.9-2.1s-.3-1.6-.9-2.1c-.6-.6-1.3-.9-2.1-.9s-1.6.3-2.1.9c-.6.6-.9,1.3-.9,2.1s.3,1.6.9,2.1c.6.6,1.3.9,2.1.9Z"/>
+            <path id="m178caa18b3195" data-name="m178caa18b3" class="st54" d="M640.1,347.8c.8,0,1.6-.3,2.1-.9.6-.6.9-1.3.9-2.1s-.3-1.6-.9-2.1c-.6-.6-1.3-.9-2.1-.9s-1.6.3-2.1.9c-.6.6-.9,1.3-.9,2.1s.3,1.6.9,2.1c.6.6,1.3.9,2.1.9Z"/>
+            <path id="m178caa18b3196" data-name="m178caa18b3" class="st54" d="M642.6,347.8c.8,0,1.6-.3,2.1-.9.6-.6.9-1.3.9-2.1s-.3-1.6-.9-2.1c-.6-.6-1.3-.9-2.1-.9s-1.6.3-2.1.9c-.6.6-.9,1.3-.9,2.1s.3,1.6.9,2.1c.6.6,1.3.9,2.1.9Z"/>
+            <path id="m178caa18b3197" data-name="m178caa18b3" class="st54" d="M645.2,347.8c.8,0,1.6-.3,2.1-.9.6-.6.9-1.3.9-2.1s-.3-1.6-.9-2.1c-.6-.6-1.3-.9-2.1-.9s-1.6.3-2.1.9c-.6.6-.9,1.3-.9,2.1s.3,1.6.9,2.1c.6.6,1.3.9,2.1.9Z"/>
+            <path id="m178caa18b3198" data-name="m178caa18b3" class="st54" d="M647.7,347.8c.8,0,1.6-.3,2.1-.9.6-.6.9-1.3.9-2.1s-.3-1.6-.9-2.1c-.6-.6-1.3-.9-2.1-.9s-1.6.3-2.1.9c-.6.6-.9,1.3-.9,2.1s.3,1.6.9,2.1c.6.6,1.3.9,2.1.9Z"/>
+          </g>
+        </g>
+      </g>
+      <g id="patch_3">
+        <path class="st38" d="M115.1,359.9V27.3"/>
+      </g>
+      <g id="patch_4">
+        <path class="st38" d="M673.1,359.9V27.3"/>
+      </g>
+      <g id="patch_5">
+        <path class="st38" d="M115.1,359.9h558"/>
+      </g>
+      <g id="patch_6">
+        <path class="st38" d="M115.1,27.3h558"/>
+      </g>
+      <g id="legend_1">
+        <g id="patch_7">
+          <path class="st23" d="M440.6,54.5h224.1c1.6,0,2.4-.8,2.4-2.4v-16.4c0-1.6-.8-2.4-2.4-2.4h-224.1c-1.6,0-2.4.8-2.4,2.4v16.4c0,1.6.8,2.4,2.4,2.4Z"/>
+        </g>
+        <g id="line2d_160">
+          <path class="st39" d="M443,43h24"/>
+          <path id="m178caa18b3199" data-name="m178caa18b3" class="st54" d="M455,46c.8,0,1.6-.3,2.1-.9.6-.6.9-1.3.9-2.1s-.3-1.6-.9-2.1c-.6-.6-1.3-.9-2.1-.9s-1.6.3-2.1.9c-.6.6-.9,1.3-.9,2.1s.3,1.6.9,2.1c.6.6,1.3.9,2.1.9Z"/>
+        </g>
+        <g id="text_12">
+          <g>
+            <path id="DejaVuSans-4d1" data-name="DejaVuSans-4d" d="M477.8,38.4h1.8l2.2,6,2.2-6h1.8v8.7h-1.2v-7.7l-2.3,6h-1.2l-2.3-6v7.7h-1.1v-8.7Z"/>
+            <path id="DejaVuSans-613" data-name="DejaVuSans-61" d="M491.1,43.9c-.9,0-1.5,0-1.8.3s-.5.5-.5,1,.1.7.4.9c.3.2.6.3,1,.3s1.1-.2,1.4-.6.5-1,.5-1.7v-.2h-1.1ZM493.2,43.5v3.7h-1.1v-1c-.2.4-.6.7-.9.9-.4.2-.8.3-1.3.3s-1.2-.2-1.6-.6c-.4-.4-.6-.9-.6-1.5s.2-1.3.7-1.7c.5-.4,1.2-.6,2.2-.6h1.5c0-.6-.2-1-.5-1.3s-.8-.4-1.4-.4-.7,0-1.1.1c-.4,0-.7.2-1,.4v-1c.4-.2.8-.3,1.1-.3.4,0,.7-.1,1.1-.1,1,0,1.7.2,2.1.7.5.5.7,1.2.7,2.2Z"/>
+            <path id="DejaVuSans-781" data-name="DejaVuSans-78" d="M500.9,40.6l-2.4,3.2,2.5,3.4h-1.3l-1.9-2.6-1.9,2.6h-1.3l2.5-3.4-2.3-3.1h1.3l1.7,2.3,1.7-2.3h1.3Z"/>
+            <path id="DejaVuSans-203" data-name="DejaVuSans-20" d="M501.4,47.2"/>
+            <path id="DejaVuSans-491" data-name="DejaVuSans-49" d="M506.4,38.4h1.2v8.7h-1.2v-8.7Z"/>
+            <path id="DejaVuSans-6d3" data-name="DejaVuSans-6d" d="M515,41.9c.3-.5.6-.8,1-1.1s.8-.3,1.3-.3,1.2.2,1.6.7c.4.5.6,1.2.6,2v4h-1.1v-3.9c0-.6-.1-1.1-.3-1.4-.2-.3-.6-.5-1-.5s-1,.2-1.3.6c-.3.4-.5.9-.5,1.5v3.7h-1.1v-3.9c0-.6-.1-1.1-.3-1.4s-.6-.5-1-.5-1,.2-1.3.6c-.3.4-.5.9-.5,1.5v3.7h-1.1v-6.6h1.1v1c.2-.4.5-.7.9-.9s.8-.3,1.2-.3.9.1,1.2.4c.3.2.6.6.7,1.1Z"/>
+            <path id="DejaVuSans-701" data-name="DejaVuSans-70" d="M522.6,46.2v3.5h-1.1v-9.1h1.1v1c.2-.4.5-.7.9-.9.3-.2.8-.3,1.2-.3.8,0,1.4.3,1.9.9.5.6.7,1.5.7,2.5s-.2,1.9-.7,2.5c-.5.6-1.1.9-1.9.9s-.9,0-1.2-.3c-.3-.2-.6-.5-.9-.9ZM526.3,43.9c0-.8-.2-1.4-.5-1.9s-.8-.7-1.3-.7-1,.2-1.3.7-.5,1.1-.5,1.9.2,1.4.5,1.9c.3.5.8.7,1.3.7s1-.2,1.3-.7c.3-.5.5-1.1.5-1.9Z"/>
+            <path id="DejaVuSans-723" data-name="DejaVuSans-72" d="M533,41.6c-.1,0-.3-.1-.4-.2-.1,0-.3,0-.5,0-.6,0-1.1.2-1.4.6s-.5,1-.5,1.7v3.5h-1.1v-6.6h1.1v1c.2-.4.5-.7.9-.9.4-.2.8-.3,1.3-.3s.2,0,.2,0c0,0,.2,0,.3,0v1.1Z"/>
+            <path id="DejaVuSans-6f1" data-name="DejaVuSans-6f" d="M536.4,41.4c-.6,0-1,.2-1.4.7s-.5,1.1-.5,1.9.2,1.4.5,1.9c.3.5.8.7,1.4.7s1-.2,1.4-.7c.3-.5.5-1.1.5-1.9s-.2-1.4-.5-1.8c-.3-.5-.8-.7-1.4-.7ZM536.4,40.5c.9,0,1.7.3,2.2.9.5.6.8,1.5.8,2.5s-.3,1.9-.8,2.5c-.5.6-1.3.9-2.2.9s-1.7-.3-2.2-.9c-.5-.6-.8-1.5-.8-2.5s.3-1.9.8-2.5c.5-.6,1.3-.9,2.2-.9Z"/>
+            <path id="DejaVuSans-761" data-name="DejaVuSans-76" d="M540.5,40.6h1.1l2.1,5.5,2.1-5.5h1.1l-2.5,6.6h-1.5l-2.5-6.6Z"/>
+            <path id="DejaVuSans-656" data-name="DejaVuSans-65" d="M553.9,43.6v.5h-5c0,.7.3,1.3.7,1.7.4.4,1,.6,1.7.6s.8,0,1.2-.2.8-.3,1.2-.5v1c-.4.2-.8.3-1.2.4s-.8.1-1.2.1c-1,0-1.9-.3-2.5-.9-.6-.6-.9-1.4-.9-2.5s.3-1.9.9-2.6c.6-.6,1.4-.9,2.3-.9s1.6.3,2.1.9c.5.6.8,1.3.8,2.3ZM552.9,43.3c0-.6-.2-1.1-.5-1.4-.3-.4-.7-.5-1.3-.5s-1.1.2-1.4.5-.6.8-.6,1.4h3.8Z"/>
+            <path id="DejaVuSans-6d4" data-name="DejaVuSans-6d" d="M560.8,41.9c.3-.5.6-.8,1-1.1s.8-.3,1.3-.3,1.2.2,1.6.7c.4.5.6,1.2.6,2v4h-1.1v-3.9c0-.6-.1-1.1-.3-1.4-.2-.3-.6-.5-1-.5s-1,.2-1.3.6c-.3.4-.5.9-.5,1.5v3.7h-1.1v-3.9c0-.6-.1-1.1-.3-1.4s-.6-.5-1-.5-1,.2-1.3.6c-.3.4-.5.9-.5,1.5v3.7h-1.1v-6.6h1.1v1c.2-.4.5-.7.9-.9s.8-.3,1.2-.3.9.1,1.2.4c.3.2.6.6.7,1.1Z"/>
+            <path id="DejaVuSans-657" data-name="DejaVuSans-65" d="M573,43.6v.5h-5c0,.7.3,1.3.7,1.7.4.4,1,.6,1.7.6s.8,0,1.2-.2.8-.3,1.2-.5v1c-.4.2-.8.3-1.2.4s-.8.1-1.2.1c-1,0-1.9-.3-2.5-.9-.6-.6-.9-1.4-.9-2.5s.3-1.9.9-2.6c.6-.6,1.4-.9,2.3-.9s1.6.3,2.1.9c.5.6.8,1.3.8,2.3ZM571.9,43.3c0-.6-.2-1.1-.5-1.4-.3-.4-.7-.5-1.3-.5s-1.1.2-1.4.5-.6.8-.6,1.4h3.8Z"/>
+            <path id="DejaVuSans-6e2" data-name="DejaVuSans-6e" d="M580.2,43.2v4h-1.1v-3.9c0-.6-.1-1.1-.4-1.4-.2-.3-.6-.5-1.1-.5s-1,.2-1.4.6c-.3.4-.5.9-.5,1.5v3.7h-1.1v-6.6h1.1v1c.3-.4.6-.7.9-.9.3-.2.8-.3,1.2-.3.8,0,1.3.2,1.7.7.4.5.6,1.2.6,2.1Z"/>
+            <path id="DejaVuSans-742" data-name="DejaVuSans-74" d="M583.5,38.8v1.9h2.2v.8h-2.2v3.6c0,.5,0,.9.2,1s.4.2.9.2h1.1v.9h-1.1c-.8,0-1.4-.2-1.7-.5-.3-.3-.5-.9-.5-1.7v-3.6h-.8v-.8h.8v-1.9h1.1Z"/>
+            <path id="DejaVuSans-204" data-name="DejaVuSans-20" d="M586,47.2"/>
+            <path id="DejaVuSans-281" data-name="DejaVuSans-28" d="M593.5,38.1c-.5.9-.9,1.8-1.2,2.7-.3.9-.4,1.8-.4,2.7s.1,1.8.4,2.7.6,1.8,1.2,2.7h-.9c-.6-.9-1-1.8-1.3-2.7-.3-.9-.4-1.8-.4-2.6s.1-1.7.4-2.6c.3-.9.7-1.8,1.3-2.7h.9Z"/>
+            <path id="DejaVuSans-44" d="M596.8,39.4v6.8h1.4c1.2,0,2.1-.3,2.7-.8.6-.5.8-1.4.8-2.6s-.3-2-.8-2.6-1.4-.8-2.7-.8h-1.4ZM595.6,38.4h2.4c1.7,0,2.9.4,3.7,1.1.8.7,1.2,1.8,1.2,3.3s-.4,2.6-1.2,3.3c-.8.7-2,1.1-3.7,1.1h-2.4v-8.7Z"/>
+            <path id="DejaVuSans-47" d="M610.8,45.9v-2.3h-1.9v-1h3.1v3.8c-.5.3-1,.6-1.5.7-.5.2-1.1.2-1.8.2-1.4,0-2.4-.4-3.2-1.2-.8-.8-1.2-1.9-1.2-3.3s.4-2.5,1.2-3.3c.8-.8,1.8-1.2,3.2-1.2s1.1,0,1.6.2c.5.1,1,.3,1.4.6v1.3c-.4-.4-.9-.7-1.4-.8s-1-.3-1.6-.3c-1.1,0-1.9.3-2.4.9-.5.6-.8,1.5-.8,2.7s.3,2.1.8,2.7c.5.6,1.3.9,2.4.9s.8,0,1.1-.1c.3,0,.6-.2.9-.3Z"/>
+            <path id="DejaVuSans-42" d="M615.4,43v3.2h1.9c.6,0,1.1-.1,1.4-.4.3-.3.5-.7.5-1.2s-.2-1-.5-1.2c-.3-.3-.8-.4-1.4-.4h-1.9ZM615.4,39.4v2.6h1.8c.6,0,1-.1,1.3-.3.3-.2.4-.5.4-1s-.1-.8-.4-1c-.3-.2-.7-.3-1.3-.3h-1.8ZM614.2,38.4h3c.9,0,1.6.2,2.1.6.5.4.7.9.7,1.6s-.1,1-.4,1.3-.6.5-1.1.6c.6.1,1,.4,1.4.8.3.4.5.9.5,1.5s-.3,1.4-.8,1.8c-.5.4-1.3.6-2.3.6h-3.1v-8.7Z"/>
+            <path id="DejaVuSans-531" data-name="DejaVuSans-53" d="M627.4,38.7v1.2c-.4-.2-.9-.4-1.3-.5-.4-.1-.8-.2-1.2-.2-.6,0-1.1.1-1.5.4-.3.2-.5.6-.5,1.1s.1.7.3.9c.2.2.7.4,1.3.5h.7c.9.3,1.5.6,2,1s.6,1,.6,1.7-.3,1.5-.9,1.9c-.6.4-1.4.7-2.5.7s-.9,0-1.3-.1c-.5,0-.9-.2-1.4-.4v-1.2c.5.3,1,.5,1.4.6.5.1.9.2,1.4.2.7,0,1.2-.1,1.6-.4.4-.3.6-.6.6-1.1s-.1-.8-.4-1-.7-.4-1.3-.5h-.7c-.9-.3-1.5-.6-1.9-1-.4-.4-.6-.9-.6-1.6s.3-1.4.8-1.8c.5-.4,1.3-.7,2.3-.7s.8,0,1.3.1c.4,0,.9.2,1.3.3Z"/>
+            <path id="DejaVuSans-2f" d="M631.7,38.4h1l-3,9.9h-1l3-9.9Z"/>
+            <path id="DejaVuSans-471" data-name="DejaVuSans-47" d="M639.8,45.9v-2.3h-1.9v-1h3.1v3.8c-.5.3-1,.6-1.5.7-.5.2-1.1.2-1.8.2-1.4,0-2.4-.4-3.2-1.2-.8-.8-1.2-1.9-1.2-3.3s.4-2.5,1.2-3.3c.8-.8,1.8-1.2,3.2-1.2s1.1,0,1.6.2c.5.1,1,.3,1.4.6v1.3c-.4-.4-.9-.7-1.4-.8s-1-.3-1.6-.3c-1.1,0-1.9.3-2.4.9-.5.6-.8,1.5-.8,2.7s.3,2.1.8,2.7c.5.6,1.3.9,2.4.9s.8,0,1.1-.1c.3,0,.6-.2.9-.3Z"/>
+            <path id="DejaVuSans-421" data-name="DejaVuSans-42" d="M644.3,43v3.2h1.9c.6,0,1.1-.1,1.4-.4.3-.3.5-.7.5-1.2s-.2-1-.5-1.2c-.3-.3-.8-.4-1.4-.4h-1.9ZM644.3,39.4v2.6h1.8c.6,0,1-.1,1.3-.3.3-.2.4-.5.4-1s-.1-.8-.4-1c-.3-.2-.7-.3-1.3-.3h-1.8ZM643.2,38.4h3c.9,0,1.6.2,2.1.6.5.4.7.9.7,1.6s-.1,1-.4,1.3-.6.5-1.1.6c.6.1,1,.4,1.4.8.3.4.5.9.5,1.5s-.3,1.4-.8,1.8c-.5.4-1.3.6-2.3.6h-3.1v-8.7Z"/>
+            <path id="DejaVuSans-532" data-name="DejaVuSans-53" d="M656.4,38.7v1.2c-.4-.2-.9-.4-1.3-.5-.4-.1-.8-.2-1.2-.2-.6,0-1.1.1-1.5.4-.3.2-.5.6-.5,1.1s.1.7.3.9c.2.2.7.4,1.3.5h.7c.9.3,1.5.6,2,1s.6,1,.6,1.7-.3,1.5-.9,1.9c-.6.4-1.4.7-2.5.7s-.9,0-1.3-.1c-.5,0-.9-.2-1.4-.4v-1.2c.5.3,1,.5,1.4.6.5.1.9.2,1.4.2.7,0,1.2-.1,1.6-.4.4-.3.6-.6.6-1.1s-.1-.8-.4-1-.7-.4-1.3-.5h-.7c-.9-.3-1.5-.6-1.9-1-.4-.4-.6-.9-.6-1.6s.3-1.4.8-1.8c.5-.4,1.3-.7,2.3-.7s.8,0,1.3.1c.4,0,.9.2,1.3.3Z"/>
+            <path id="DejaVuSans-291" data-name="DejaVuSans-29" d="M658.6,38.1h.9c.6.9,1,1.8,1.3,2.7.3.9.4,1.8.4,2.6s-.1,1.8-.4,2.6c-.3.9-.7,1.8-1.3,2.7h-.9c.5-.9.9-1.8,1.2-2.7.3-.9.4-1.8.4-2.7s-.1-1.8-.4-2.7c-.3-.9-.6-1.8-1.2-2.7Z"/>
+          </g>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

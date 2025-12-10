@@ -10,7 +10,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 import pandas as pd
 from Scripts_DGBS.probability_max_clique import *
-
+plt.rcParams.update({'font.size': 32})
 current_dir = os.path.dirname(__file__)
 plot_dir = os.path.join(current_dir, 'Plots')
 os.makedirs(plot_dir, exist_ok=True)
@@ -28,7 +28,7 @@ Adj=np.array([
 ])
 subgraph_1=np.array([1,1,1,1,0,0])
 loss=np.linspace(0,1,50)
-gamma_val=[0,0.2,0.5,1,2]
+gamma_val=[0,0.2,1,2]
 c=0.08
 cutoff=3
 results_df = pd.DataFrame(columns=['Loss','c', 'Gamma_value','Mean_photon_sqz','Mean_photon_disp','Probability','Adjacency_Matrix'])
@@ -63,15 +63,15 @@ formatted_time = now.strftime("%Y%m%d_%H%M%S")
 filename = f"results_{formatted_time}.csv"
 
 # Plot the probability loss as a function of loss grouped by different values of gamma_value
-plt.figure(figsize=(10, 6))
+plt.figure(figsize=(20, 12))
 for gamma in results_df['Gamma_value'].unique():
     subset = results_df[results_df['Gamma_value'] == gamma]
-    plt.plot(subset['Loss'], subset['Probability'], marker='o', linestyle='-', label=f'Gamma = {gamma:.2f}')
+    plt.plot(subset['Loss'], subset['Probability'], marker='o', linestyle='-', label=fr'$\gamma = {gamma:.2f}$')
 
 plt.xlabel('Loss')
 plt.ylabel('Probability')
 plt.title('Probability Loss as a function of Loss grouped by Gamma Value')
-plt.legend(loc='upper right')
+plt.legend(loc='upper left')
 plt.grid(True)
 plt.savefig(os.path.join(plot_dir, f"lossy_GBS_{formatted_time}.svg"))
 plt.show()

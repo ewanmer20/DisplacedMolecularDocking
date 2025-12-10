@@ -1,3 +1,4 @@
+#%%
 import sys
 import time
 import pandas as pd
@@ -33,6 +34,7 @@ number_of_cliques=20 # Number of cliques to generate per M
 gamma_truncation_factor=1 # Truncation factor for the gamma value
 gamma_number=100 # Number of gamma values to generate 
 M=np.arange(clique_size+offset_M, clique_size+number_of_M+offset_M-1, 2).astype(int)
+#%%
 print(M)
 start_time_init = time.time() 
 for i in range(len(M)):
@@ -42,7 +44,6 @@ for i in range(len(M)):
         subgraph_1=np.array(clique_vector)
         Adj=adj_matrix
         c_max=find_max_c(Adj)
-        c_array=np.linspace(0,c_max*c_truncation_factor,10)
         gamma_array=np.linspace(0,gamma_truncation_factor,gamma_number)
         MaxCliqueProb_array=np.zeros(len(gamma_array))
         for k in range(len(gamma_array)):
@@ -73,6 +74,12 @@ formatted_time = now.strftime("%Y%m%d_%H%M%S")
 filename = f"results_{formatted_time}.csv"
 results_df.to_csv(os.path.join(data_dir, filename), index=False)
 
+
+#%%
+formatted_time = "20251204_162741"
+filename=f"results_{formatted_time}.csv"
+filepath=os.path.join(data_dir, filename)
+results_df = pd.read_csv(filepath)
 # Calculate the average Max_Advantage grouped by M
 average_max_advantage = results_df.groupby('M')['Max_Advantage'].mean()
 variance_max_advantage = results_df.groupby('M')['Max_Advantage'].var()
@@ -95,8 +102,27 @@ print(f"Optimal parameters: fac = {fac_opt:.4f}, alpha = {alpha_opt:.4f}")
 # Plot the result
 fig, ax = plt.subplots(1, 3, figsize=(18, 6))
 fontsize=24
-ax[0].errorbar(average_max_advantage.index, average_max_advantage.values, yerr=variance_max_advantage.values, fmt='o', linestyle='-', color='b', ecolor='b', capsize=5)
+# Plot average max advantage
+ax[0].plot(average_max_advantage.index, average_max_advantage.values, marker='o', linestyle='-', color='b', label='Max Advantage')
 
+# Add a polynomial fit to the average max advantage (default degree = 2)
+poly_deg = 2
+# Prepare x and y for fitting
+x_adv = average_max_advantage.index.values.astype(float)
+y_adv = average_max_advantage.values
+if len(x_adv) > poly_deg:
+    coeffs_adv = np.polyfit(x_adv, y_adv, poly_deg)
+    p_adv = np.poly1d(coeffs_adv)
+    x_fit_adv = np.linspace(x_adv.min(), x_adv.max(), 200)
+    y_fit_adv = p_adv(x_fit_adv)
+    # Compute R^2 for the fit
+    ss_res_adv = np.sum((y_adv - p_adv(x_adv))**2)
+    ss_tot_adv = np.sum((y_adv - np.mean(y_adv))**2)
+    r2_adv = 1 - ss_res_adv / ss_tot_adv if ss_tot_adv != 0 else np.nan
+    ax[0].plot(x_fit_adv, y_fit_adv, linestyle='--', color='orange', label=f'Poly deg {poly_deg}, R²={r2_adv:.3f}')
+else:
+    # Not enough points to fit; skip fitting
+    coeffs_adv = None
 ax[1].plot(average_mean_disp.index, average_mean_disp.values, linestyle='None', color='y', marker='o', label='Mean Displacement')
 ax[1].plot(average_mean_disp.index, average_mean_disp.values / average_max_sqz.values, marker='o', color='r', linestyle='None', label='Ratio Disp/Sqz')
 ax[1].errorbar(average_max_sqz.index, average_max_sqz.values, yerr=3 * variance_max_sqz.values, fmt='o', linestyle='-', color='g', ecolor='g', capsize=5, label='Mean Squeezing')
@@ -107,7 +133,7 @@ Y_fit = monomial(X_fit, fac_opt, alpha_opt)
 ax[2].errorbar(average_gamma_value.index, average_gamma_value.values, yerr=variance_gamma_value.values, fmt='o', linestyle='-', color='r', ecolor='r', capsize=5)
 ax[2].plot(X_fit, Y_fit, linestyle='--', color='b', label=f'Fit: {fac_opt:.4f} * X**{alpha_opt:.4f}')
 
-ax[0].legend(['Max Advantage', 'Gamma Value'], fontsize=fontsize*0.5)
+ax[0].legend(fontsize=fontsize*0.5)
 ax[1].legend(fontsize=fontsize*0.5)
 ax[2].legend(['Gamma Value', f'Factor: {fac_opt:.4f}, Power{alpha_opt:.4f}'], fontsize=fontsize*0.5)
 ax[0].set_xlabel('M', fontsize=fontsize*0.75)
@@ -116,7 +142,6 @@ ax[2].set_xlabel('M', fontsize=fontsize*0.75)
 ax[0].set_ylabel('Advantage', fontsize=fontsize*0.75)
 ax[1].set_ylabel('Values', fontsize=fontsize*0.75)
 ax[2].set_ylabel('Average optimal gamma', fontsize=fontsize*0.75)
-ax[0].grid(True)
 ax[1].grid(True)
 ax[2].grid(True)
 ax[0].set_xticks(M)
@@ -133,3 +158,4 @@ fig.suptitle(f"Results for c={c_truncation_factor:.2f}*c_max, max_clique_size={c
 
 plt.savefig(os.path.join(plot_dir, f"average_max_advantage_{formatted_time}.svg"))
 plt.show()
+# %%
